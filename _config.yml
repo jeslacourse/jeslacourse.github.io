@@ -94,9 +94,9 @@ analytics:
 # Site Author
 author:
   name             : "Jes LaCourse"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazingly** average person."
-  location         : "Somewhere"
+  avatar           : "/assets/images/bio-photo.jpg"
+  bio              : "Data Science and Information Visualization"
+  location         : "Davis, CA"
   email            :
   links:
     - label: "Email"
