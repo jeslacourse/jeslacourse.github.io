@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Project in Progress"
+title                    : "JesLaCourse"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
+name                     : "Jessica"
 description              : "Web Portfolio in Progress."
 url                      : "https://jeslacourse.github.io/" # the base hostname & protocol for your site 
 baseurl                  : # the subpath of your site, e.g. "/blog"
