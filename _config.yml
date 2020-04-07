@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Jes LaCourse"
-  avatar           : "/assets/images/bio-photo.jpg"
+  avatar           : "/images/bio-photo.jpg"
   bio              : "Data Science and Information Visualization"
   location         : "University of California, Davis"
   email            :
