@@ -1,3 +1,8 @@
+---
+title: "Coursework"
+permalink: /coursework/
+---
+
 # Coursework 
 
 B.S. Statistics - Data Science Track
