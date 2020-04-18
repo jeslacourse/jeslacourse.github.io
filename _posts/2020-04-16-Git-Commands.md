@@ -6,11 +6,17 @@ Pleeease be careful about just blindly typing in git commands. As safe as git ve
 
 **Short version:**
 `git clone url`: Asking the remote (online) repository to make a local (PC) copy
+
 `git pull`: Including or "pulling down" changes from the remote repository to your local
+
 `git status`: Looking at the differences between the remote and local. Awesome tool for troubleshooting. 
+
 `git diff`: Shows changes between the remote file and the local
+
 `git add`: Prep stage getting ready to add new files that are local but you want to be remote. This is also where git starts tracking files if you've heard that term before. 
+
 `git commit`:  Takes the files to be updated to the remote repo, creates a "timestamp of sorts" and stages them to be included in the remote repo, i.e. you're committing the changes you've made up to a certain point. For us, this is usually just one commit (when we complete the file). 
+
 `git push`: Updates the remote repository
 
 **Git Pull**
