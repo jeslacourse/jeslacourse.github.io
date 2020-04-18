@@ -21,7 +21,7 @@ Pleeease be careful about just blindly typing in git commands. As safe as git ve
 `git push`: Updates the remote repository
 
 
-# A bit more in-depth
+### A bit more in-depth
 
 **Git Pull**
 So let's talk real quick about what `git pull` does, especially considering if you're pushing your changes  you likely have a complete project that shouldn't be altered much. `git pull` is pulling remote (online) changes down to your local (PC) repository. Disclaimer, I use Git Bash console for my commands, so RStudio will be slightly different, but the commands are the same.  For this class, we don't really `pull` assignments as much since we're simply using `git clone url` to create a local copy. ~~`git pull` is more effective in cases like #80 where there's been a revision.~~[For revisions see : #153] Assuming you've already cloned the file, `git pull` will "pull down" any changes made to the remote repository and include them in your local file. 
