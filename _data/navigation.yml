@@ -1,11 +1,11 @@
 # main links
 main:
     - title: "About"
-      url: _pages/about.md/
+      url: /about.md/
     - title: "Experience"
-     url: _pages/experience.md/
+     url: /experience.md/
     - title: "Coursework"
-      url: _pages/coursework.md/
+      url: /coursework.md/
     #- title: "Quick-Start Guide"
     # url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
     #- title: "Sitemap"
