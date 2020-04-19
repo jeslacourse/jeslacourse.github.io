@@ -21,7 +21,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Jessica"
 description              : "Web Portfolio in Progress."
-url                      : "https://jeslacourse.github.io/" # the base hostname & protocol for your site 
+url                      : "https://jeslacourse.github.io" # the base hostname & protocol for your site 
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "jeslacourse/jeslacourse.github.io" 
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
