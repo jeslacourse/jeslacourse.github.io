@@ -1,7 +1,6 @@
 ---
 title: "Coursework"
 permalink: /about/coursework/
-classes: wide
 toc: true
 ---
 
