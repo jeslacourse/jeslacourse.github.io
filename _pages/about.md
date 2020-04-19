@@ -4,8 +4,6 @@ permalink: /about/
 ---
 >If quarantine has brought me one gift, my once three-hour commute is now three hours each day to build a portfolio and digress on some of the more interesting topics in statistics, machine learning, and computer science. This of course, comes at the expense of turning the dining room into my new office but the  familial repercussions appear to be relatively minor. 
 
-# About the Author
-
 Hi, I'm `[object Object]`. 
 
 Kidding. My name is Jessica LaCourse. My primary background is in Statistics and Data Science. I also hold extensive knowledge in Geographic Information Systems (GIS) as well as a professional background in Financial Accounting and Business Administration. Outside of professional work, my projects are oriented toward community action with emphasis on voter advocacy and community organization.
