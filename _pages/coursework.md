@@ -7,6 +7,7 @@ toc: true
 
 
 B.S. Statistics - Data Science Track
+
 Minor - Computer Science 
 
 ## Highlights 
@@ -64,4 +65,4 @@ Fundamental concepts and methods in statistical learning with emphasis on superv
 
 ####  References:
 - [UC Davis College of Letters and Science, Department of Statistics - Course Descriptions](https://statistics.ucdavis.edu/courses/descriptions-undergrad)
-- [UC Davis College of Engineering, Department of Computer Science - Course List](https://cs.ucdavis.edu/schedules-classes)
+- [UC Davis College of Engineering, Department of Computer Science - Course Description](https://cs.ucdavis.edu/schedules-classes)
