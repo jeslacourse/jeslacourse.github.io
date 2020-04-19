@@ -1,6 +1,6 @@
 ---
 title: "Experience"
-permalink: /experience/
+permalink: /experience.html
 ---
 
 April 2020: This page is in progress!
