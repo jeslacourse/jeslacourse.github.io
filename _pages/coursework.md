@@ -2,6 +2,11 @@
 title: "Coursework"
 permalink: /about/coursework/
 toc: true
+categories: 
+  - about
+tags: 
+  - about
+  - coursework
 ---
 
 
