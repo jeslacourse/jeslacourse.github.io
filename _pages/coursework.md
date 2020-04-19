@@ -1,6 +1,6 @@
 ---
 title: "Coursework"
-permalink: /coursework.html
+permalink: /about/coursework/
 ---
 
 # Coursework 
