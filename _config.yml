@@ -117,6 +117,9 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: github.com/jeslacourse
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: linkedin.com/in/jessica-l-a241a858/
 
 # Reading Files
 include:
