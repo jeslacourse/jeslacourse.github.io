@@ -1,9 +1,10 @@
 ---
 title: "Coursework"
 permalink: /about/coursework/
+classes: wide
+toc: true
 ---
 
-# Coursework 
 
 B.S. Statistics - Data Science Track
 Minor - Computer Science 
