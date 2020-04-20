@@ -25,7 +25,7 @@ url                      : "https://jeslacourse.github.io" # the base hostname &
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "jeslacourse/jeslacourse.github.io" 
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     : "/images/masthead_white88.png"# path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -104,6 +104,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jeslacourse"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: linkedin.com/in/jessica-l-a241a858/      
     #- label: "Instagram"
      # icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
