@@ -3,7 +3,7 @@ main:
   - title: "About"
     url: /about/
   - title: "Experience"
-    url: /about/experience/
+    url: about/experience/
   - title: "Coursework"
     url: about/coursework/
     #- title: "Quick-Start Guide"
