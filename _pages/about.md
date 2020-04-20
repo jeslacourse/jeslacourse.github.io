@@ -32,6 +32,12 @@ Is it too cliché to name some of the biggest names? Probably. But I they highli
 [^3]:[Keele, Kenneth D., and Jane Roberts. Leonardo da Vinci: Anatomical Drawings from the Royal Library, Windsor Castle (1983)](https://books.google.com/books?id=tQFP3DH40foC&printsec=frontcover)
 [^4]:[Gray, Henry. Anatomy of the Human Body. 20e. (1910)](https://books.google.com/books?id=uaQMAAAAYAAJ&printsec=frontcover)
 
-###  Plain Language Statistics
+###  Plain-Language Statistics
 
 Simple mistakes and malicious manipulation alike can alter data into something unrecognizable. Having the tools to call out those transgressions is the first step, whereas my focus comes in teaching folks to see the issues in data visualization and manipulation for themselves. 
+
+### Out of Office
+
+We're certainly living under a new normal. But over the last several years, I've been lucky enough to dedicate my time out of the office to exploring many of our National Parks and other public lands. It's amazing how much you can see and do in two weeks, I promise you! My profile photo was taken on the rim of a cinder cone volcano in Lassen National Park. The photo used for my GitHub account was a candid taken while shooting Mt. St. Helens at Sunset. 
+
+If I'm not in the state, I'm likely out in one of Washington or Utah's beautiful parks or just simply out exploring what the rest of the West has to offer. I'm looking forward to more days out of the house, out of the office, and in the backcountry.
