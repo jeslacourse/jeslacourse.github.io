@@ -26,7 +26,7 @@ Varieties of categorical data, cross-classifications, contingency tables, tests 
 Essentials of using relational databases and SQL. Processing data in blocks. Scraping Web pages and using Web services/APIs. Basics of text mining. Interactive data visualization with Web technologies. Computational data workflow and best practices. Statistical methods. R.
 
 ### Database Systems
-[JellyDB - GitHub]([https://github.com/JellyDB](https://github.com/JellyDB))
+[JellyDB - GitHub](https://github.com/JellyDB)
 
 [Team development and testing of L-Store style database system](https://expolab.org/ecs165a-winter2020.html#Syllabus). Database modeling and design (E/R model, relational model), relational algebra, query languages, file and index structures, query processing, transaction management. Python. SQL. 
 
