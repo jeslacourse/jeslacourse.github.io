@@ -17,18 +17,22 @@ Minor - Computer Science
 ## Highlights 
 
 ### Big Data & High Performance Statistical Computing
-High-performance computing in high-level data analysis languages; different computational approaches and paradigms for efficient analysis of big data; interfaces to compiled languages; high-level parallel computing; MapReduce; parallel algorithms and reasoning. Team lead. R. SQL.
+High-performance computing in high-level data analysis languages; different computational approaches and paradigms for efficient analysis of big data; interfaces to compiled languages; high-level parallel computing; MapReduce; parallel algorithms and reasoning. Python. R. SQL.
 
 ### Categorical Data
 Varieties of categorical data, cross-classifications, contingency tables, tests for independence. Multidimensional tables and log-linear models, maximum likelihood estimation; tests of goodness-of-fit. Logit models, linear logistic models. Analysis of incomplete tables. Packaged computer programs, analysis of real data. R.
 
+Project: Byssinossis (Farmer's Lung Disease) Determination. Link TBU (Apr 2020).
+
 ### Data and Web Technologies for Data Analysis
-Essentials of using relational databases and SQL. Processing data in blocks. Scraping Web pages and using Web services/APIs. Basics of text mining. Interactive data visualization with Web technologies. Computational data workflow and best practices. Statistical methods. R.
+Essentials of using relational databases and SQL. Processing data in blocks. Scraping Web pages and using Web services/APIs. Basics of text mining. Interactive data visualization with Web technologies. Computational data workflow and best practices. Statistical methods. Team lead. R. SQL.
+
+Project: Temporal Birth Trends (2000-2015). Link TBU (Apr 2020). 
 
 ### Database Systems
-[JellyDB - GitHub](https://github.com/JellyDB)
-
 [Team development and testing of L-Store style database system](https://expolab.org/ecs165a-winter2020.html#Syllabus). Database modeling and design (E/R model, relational model), relational algebra, query languages, file and index structures, query processing, transaction management. Python. SQL. 
+
+Project: [JellyDB - GitHub](https://github.com/JellyDB)
 
 ### Machine Learning 
 Supervised & unsupervised learning, including classification, dimensionality reduction, regression & clustering using modern machine learning methods. Applications of machine learning in biology (oncology) and engineering. Python.
@@ -38,6 +42,8 @@ Supervised & unsupervised learning, including classification, dimensionality red
 
 ### Agent-Based Modeling
 Agent-based computer simulation and analysis with emphasis on learning how to model animals, including humans, to achieve insight into social and group behavior. Referred by instructor for continued studies in [mate-choice and evolutionary game-theory modeling](https://psychology.ucdavis.edu/research/research-labs/agent-based-models-lab-schank). Java. 
+
+Project: Effects of Similiarity and Attractiveness in Mate Selection.  Link TBU (Apr 2020).
 
 ### Algorithm Design and Analysis
 Complexity of algorithms, bounds on complexity, analysis methods. Searching, sorting, pattern matching, graph algorithms. Algorithm design techniques: divide-conquer, greedy, dynamic programming. Approximation methods. NP-complete problems. Python. 
@@ -52,11 +58,18 @@ Principles and practice of interdisciplinary, collaborative data analysis; compl
 Introduction to computing for data analysis and visualization, and simulation, using a high-level language. Computational reasoning, computationally intensive statistical methods, reading tabular and non-standard data. R.
 
 
-
 ## Statistical Foundation 
 
 ### ANOVA 
 Foundational experiment design. One- and Two-way ANOVA. Random effects modeling. R.
+
+Project: Bird-Nest Size Relationships.  Link TBU (Apr 2020).
+
+### Applied Linear Algebra
+
+Extensive Problem Solving. Applications of linear algebra; LU and QR matrix factorizations, eigenvalue and singular value matrix decompositions. Matlab. 
+
+Project: Classification of Handwritten Digits. Link TBU (Apr 2020).
 
 ### Mathematical Statistics
 Sampling, methods of estimation, bias-variance decomposition, sampling distributions, Fisher information, confidence intervals, and some elements of hypothesis testing.
