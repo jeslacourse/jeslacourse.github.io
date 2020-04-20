@@ -46,7 +46,7 @@ Seeking work with a community-oriented and socially conscious organization to pr
 
 ### EDUCATION
 
-#### UNIVERSITY OF CALIFORNIA, DAVIS, Davis, CA
+#### University of California, Davis, CA
 
 B.S. Statistics - Data Science Track    
 
@@ -55,18 +55,17 @@ B.S. Statistics - Data Science Track
 -   [Relevant Coursework](/about/coursework/)
     
 
-#### SIERRA COLLEGE, Rocklin, CA
+#### Sierra College, Rocklin, CA
 
-Geographic Information Systems Certificate, 2018
+A.S. Business Administration
     
-A.S. Business Administration, 2012
-    
-A.S Accountancy, 2012
-    
+A.S Accountancy
+ 
+Geographic Information Systems Certificate 
 
 ### PROFESSIONAL EXPERIENCE
 
-#### SENIOR ADMINISTRATOR Jan 2015 – Sept 2018
+#### Senior Administrator (Jan 2015 – Sept 2018)
 
 Financial report formatting and finalization for individual, corporate, and government entities
     
@@ -75,9 +74,9 @@ Direct communication of administrative needs and status to supervisor
 Training and support for 8-person administrative team, directly serving 140-person staff
     
 
-#### ACCOUNTS PAYABLE CLERK II Sep 2012 – Jan 2014
+#### Accounts Payable Clerk II (Sep 2012 – Jan 2014)
   
-#### CENSUS FOLLOW-UP ENUMERATOR / INTERVIEWER April – July 2010
+#### Census Follow-Up Enumerator/Interviewer (April – July 2010)
 
 Surveyed low response communities, including Spanish speaking neighborhoods  
     
@@ -117,27 +116,39 @@ Attended meetings with members and partners of the non-profit film organization 
 
 ### PROGRAMMING & SOFTWARE EXPERIENCE
 
-#### Programming Comprehension:
+#### Programming Comprehension
+Git with Bash
+
+OOP programming comprehension (3 years)
     
+-   Python (2 years)
+  - Anaconda Suite including Jupyter and Spyder IDE
+-   Java, C++ (1 year)
+
 R with RMarkdown (2 years)
     
 SQL, including PostgeSQL (3 years)
 
-OOP programming comprehension
-    
--   Python, Java, C++ (3 years)
+Jekyll in Ruby for Web Development (Recent)
 
-#### Specialized Software
+#### Specialized Software and Skills
 Type Speed: 55 AWP and 10 key by touch
-    
+
+Formatting: Markdown, HTML/CSS
+
+ArcGIS Desktop 10.1+ and Online: Mapping, spatial analytics, and data visualization resource
+
 Microsoft Office Suite: 10+ years professional experience working with Excel, Word, Outlook, PowerPoint and Access
+
+-   Access: Proficient; join & relationship competency, table building, queries, data integrity
+
+-   Excel: High proficiency; building and customizing workbooks, vlookup & filter tables
 
 -   Word: High proficiency; business report writing, template customization, automation
     
--   Excel: High proficiency; building and customizing workbooks, vlookup & filter tables
+RStudio for Analysis
+
     
--   Access: Proficient; join & relationship competency, table building, queries, data integrity
-    
-ArcGIS Desktop 10.1+ and Online: Mapping, spatial analytics, and data visualization resource
+
 
 
