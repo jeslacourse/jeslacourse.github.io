@@ -67,7 +67,9 @@ Geographic Information Systems Certificate
 
 #### Code Coach (Instructor) (Dec 2019 - )
 
-Develop personalized curriculum in Python and Drag-and-Drop languages for individuals and small groups of students aged 7-16
+Develop personalized, project-based curriculum for individuals and small groups of students aged 7-16
+- Primary Languages: Python and Drag-and-Drop (i.e. Snap, Scratch)  
+
 Adapted coursework to be taught remotely in private and/or small group sessions
 
 #### Senior Administrator (Jan 2015 – Sept 2018)
