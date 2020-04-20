@@ -129,7 +129,6 @@ Git with Bash
 OOP programming comprehension (3 years)
     
 -   Python (2 years)
-  - Anaconda Suite including Jupyter and Spyder IDE
 -   Java, C++ (1 year)
 
 R with RMarkdown (2 years)
@@ -144,6 +143,8 @@ Type Speed: 55 AWP and 10 key by touch
 Formatting: Markdown, HTML/CSS
 
 ArcGIS Desktop 10.1+ and Online: Mapping, spatial analytics, and data visualization resource
+
+Jupyter Notebooks (Anaconda Suite)
 
 Microsoft Office Suite: 10+ years professional experience working with Excel, Word, Outlook, PowerPoint and Access
 
