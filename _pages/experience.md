@@ -1,13 +1,13 @@
 ---
 title: "Experience"
 permalink: /about/experience/
-toc:true
+toc: true
 categories: 
   - about
 tags: 
   - about
-  - work experience
   - volunteer work
+  - work experience
 ---
 
 Seeking work with a community-oriented and socially conscious organization to promote social awareness through meaningful data interpretation and visualization
