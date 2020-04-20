@@ -1,3 +1,7 @@
+> The original post is a response to a class forum. This post is just a handy way to determine how the site will handle markdown language while also providing some interesting content. 
+
+
+
 # Git Commands
 
 This was originally part of a response to #151, but it should be good information for anyone trying to troubleshoot git version control. I've pulled some of the specific troubleshooting out and added a bunch of detail on the common commands. My hope is that it gives you guys a kind of understanding of what git is doing in the background. 
