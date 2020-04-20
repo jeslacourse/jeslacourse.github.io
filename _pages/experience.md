@@ -65,6 +65,11 @@ Geographic Information Systems Certificate
 
 ### PROFESSIONAL EXPERIENCE
 
+#### Code Coach (Instructor) (Dec 2019 - )
+
+Develop personalized curriculum in Python and Drag-and-Drop languages for individuals and small groups of students aged 7-16
+Adapted coursework to be taught remotely in private and/or small group sessions
+
 #### Senior Administrator (Jan 2015 – Sept 2018)
 
 Financial report formatting and finalization for individual, corporate, and government entities
