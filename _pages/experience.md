@@ -12,7 +12,7 @@ tags:
 
 Seeking work with a community-oriented and socially conscious organization to promote social awareness through meaningful data interpretation and visualization
 
-#### Data Management and Statistical Highlights
+**Data Management and Statistical Highlights**
 
 -   Creation and implementation of voter outreach GIS database for California's 25,000 precincts
     
@@ -29,7 +29,7 @@ Seeking work with a community-oriented and socially conscious organization to pr
 -   Custom built an intuitive, dynamic Excel vehicle maintenance workbook for 12 vehicle fleet with accompanying Fleet Procedures Manual
     
 
-#### Community Service and Leadership Highlights
+**Community Service and Leadership Highlights**
 
 -   Extensive and diverse 12+ years community service track record with emphasis on youth advocacy and voter advocacy within Placer County
     
