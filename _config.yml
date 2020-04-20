@@ -249,7 +249,9 @@ defaults:
   # _posts
   - scope:
       path: ""
-      type: posts
+      type: 
+        - posts
+        - pages
     values:
       layout: single
       author_profile: true
@@ -257,11 +259,11 @@ defaults:
       comments: # true
       share: true
       related: true
-defaults:
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
+#defaults:
+#  # _pages
+#  - scope:
+#      path: ""
+#      type: pages
+#    values:
+#      layout: single
+#      author_profile: true
