@@ -230,3 +230,32 @@ California, more specifically the Secretary of State, does not have an aggregate
 *Census Information*
 
 There is a modest learning curve that comes with the readability of Census data. With some research, there are resources available to decode file names, field names and field descriptions. Census data is also laden with concatenations and acronyms. Fortunately, the Census has made documentation widely available online.
+
+### Variance in Population
+
+The initial intent of this project was to create a canvass map for Northern California. Unfortunately, the state has a delegate distribution process that would make it very difficult to focus on the northern part of the state alone.
+
+With six delegates assigned to each Congressional District, then 105 delegates at‐large distributed after the primary election, it was increasingly apparent that the population heavy Los Angeles precincts should be included in dataset. The decision was made to prevent any major skewing of the prioritization process. It also had the added benefit of providing the same spatial analysis to what potentially
+could be the most delegate rich section of the state.
+
+Creating a scale that allowed for at least one high priority precinct in each Congressional District was essential. The statistical over-representation of more populated areas was considered acceptable, as they will ultimately have the largest influence on at‐large delegates.
+
+
+
+## Production
+
+Web Map, Limited Congressional Districts ‐ http://arcg.is/1TnmgNs
+
+I developed this project to challenge myself. Many aspects of this project were brand new to me and it was an absolute thrill to be able to troubleshoot my way through it.
+
+The data research proved more challenging than I expected, but good data is the literal cornerstone of a good project. Utilizing two completely different data sources, finding the shapefiles, inspecting the data tables then ensuring my joins would be adequate, took up the first third of my semester.
+
+Creating a formula that answered the question, “What gives a precinct a higher priority over another?” proved to be the largest challenge. My answer: a top priority precinct will have a moderate to high population density, high voter turnout in the 2012 General Election, and a high rate of Democrat and unaffiliated voters. These are the best areas to send an individual out into the field to canvass and expect not only a good number of contacts made, but fair majority of positive interactions.
+
+Converting data from vector to raster is old hat. But how do you convert a custom raster layer to fit the
+polygons of an established vector file? What would the data quality be like? What I loved about this project
+was the opportunity to dive right into the spatial analysis tools like the raster calculator and zonal statistics. This project’s two major shapefiles, 2012 Election Precincts and 2014 Census Block Groups, were not compatible with regard to sharing information back‐and‐forth. With the data converted to raster, I had a whole new picture to look at.
+
+Raster math allowed me to set equal rates for each of my three criteria, zero to one, then give each rate equal weight by multiplying the three rates together. What came next was all new. I have a raster map that no longer fits the shapes I started with. The Zonal Statistics toolset was an absolute treat to work with. Creating the statistics table based on the raster cells, limited to the precinct shapefile boundaries, was the most novel part of this project for me.
+
+An unexpected result of this project was the depth in which I was able to work with the raster data. Previous projects made rasters feel heavy and unnecessary. This project allowed me to manipulate data to the extent I needed to, then convert it back to vector data with the intent of using the shapefiles in an online environment. Had I not planned to create a web map, the raster data may have proven robust enough for its own project.
