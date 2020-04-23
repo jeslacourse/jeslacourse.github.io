@@ -204,8 +204,8 @@ The new table, `Multiplier_Table`, is joined to the `Precinct Boundary` shapefil
  By using the `Multiplier` raster and table as an intermediary, we’ve effectively converted our original census and precinct vector data into a dataset that fits neatly within the precinct boundaries.
 
 <figure class="half">
-    <a href="/assets/images/canvass/6.jpg"><img src="/assets/images/canvass/6.jpg" height="300"></a>
-    <a href="/assets/images/canvass/7.jpg"><img src="/assets/images/canvass/7.jpg" height="115" width = "129"></a>
+    <a href="/assets/images/canvass/6.jpg"><img src="/assets/images/canvass/6.jpg"></a>
+    <a href="/assets/images/canvass/7.jpg"><img src="/assets/images/canvass/7.jpg"></a>
     <figcaption>Precincts now prioritized based on voter turnout, registration demographic, and population density </figcaption>
 </figure>
 
