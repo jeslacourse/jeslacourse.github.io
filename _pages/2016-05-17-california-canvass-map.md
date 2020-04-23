@@ -1,12 +1,21 @@
 ---
-tags: vb, gis, spatial analysis
+title: "California Canvass Map"
+permalink: /ccmproject/
+categories: 
+  - GIS
+  - Statistics
+tags: 
+  - GIS 
+  - spatial analysis
+  - statistics
+  - volunteer work
 ---
 
 
 
 > I'll likely be revisiting this project in the future to see how my analysis has changed. With that said, I'm presenting this project as I did in 2016. So much has changed in the last four years. I'm excited to rework this project and pull in some fresh data. It should make for a very interesting before-and-after. 
 
-![washoe](D:\Google Drive\Media\jeslacourse.github.io\assets\images\canvass\washoe.PNG)
+[Washoe County Canvass, Feb 2016][\assets\images\canvass\washoe.PNG]
 
 *Washoe County Canvassing, Feb 2016*
 
@@ -41,26 +50,16 @@ It’s a given fault that canvassing efforts generally cannot reach all of the n
 
 We’ve established three criteria:
 
-High density areas are a big target. High density areas, in the context of
-this project, will be defined in two different ways.
+High density areas are a big target. High density areas, in the context of this project, will be defined in two different ways.
 
-1. Precincts with the highest rate of Democrat and “No Party
-    Preference (NPP)” counts.
+1. Precincts with the highest rate of Democrat and “No Party Preference (NPP)” counts.
 
-2. Areas with overall high population densities as well, since voters
-    can register or change their affiliation up until May 23rd, 2016.
+2. Areas with overall high population densities as well, since voters can register or change their affiliation up until May 23rd, 2016.
 
-  It’s important to know the difference between high population densities
-  and high voter registration densities. It’s not enough to know how many
-  people can vote. It’s more important, at this stage, to focus on confirmed
-  registered voter numbers. With that said,
+It’s important to know the difference between high population densities and high voter registration densities. It’s not enough to know how many people can vote. It’s more important, at this stage, to focus on confirmed registered voter numbers. With that said,
 
-3. Turnout, the quantity of registered voters that actually voted in
-    past elections, will weigh in on a precinct’s canvass priority.
-    In a hypothetical situation, a high turnout in a lower population precinct
-    may prove more valuable than a moderately low turnout in a higher
-    population area. Giving each value an equal weight will allow us to
-    quantitatively determine where to send our canvassers.
+3. Turnout, the quantity of registered voters that actually voted in past elections, will weigh in on a precinct’s canvass priority.
+    In a hypothetical situation, a high turnout in a lower population precinct may prove more valuable than a moderately low turnout in a higher population area. Giving each value an equal weight will allow us to quantitatively determine where to send our canvassers.
 
 ### Process
 #### Data Research
@@ -158,8 +157,8 @@ Block Group Density = Voting Age Adults/Block Group Land Area (sq. meters)
 #### Modifications to Jenks
 
 <figure class="half">
-    <a href="/assets/images/canvass/folsom1.jpg"><img src="/assets/images/canvass/folsom1.jpg"></a>
-    <a href="/assets/images/canvass/folsom2.jpg"><img src="/assets/images/canvass/folsom2.jpg"></a>
+    <a href="/assets/images/canvass/folsom1.jpg"><img src="/assets/images/canvass/folsom1.jpg" width="250" hspace="5"></a>
+    <a href="/assets/images/canvass/folsom2.jpg"><img src="/assets/images/canvass/folsom2.jpg" width="250" hspace="5"></a>
     <figcaption>(a) Jenks on Target Voters Layer and (b) Turnout Raster </figcaption>
 </figure>
 
@@ -175,14 +174,14 @@ Using the three newly created fields outlined in the *Custom Fields and Field Ca
 `Turnout_Rate_Raster`, `Target_Voter_Raster`, and `Census_Density_Raster`. The new rasters were added to the master geodatabase upon completion. A snippet of the turnout rate near Folsom Lake is shown above, (b). Areas of dark green have the highest turnouts. The scale moves through the light
 greens to yellows, oranges, then to bright red denoting zero turnout.
 
-![2rastermath](D:\Google Drive\Media\jeslacourse.github.io\assets\images\canvass\2rastermath.jpg)
+![Polygon to Raster](\assets\images\canvass\2rastermath.jpg)
 
 
 
 #### Raster Math
 <figure class="half">
-    <a href="/assets/images/canvass/3rastermath.jpg"><img src="/assets/images/canvass/3rastermath.jpg"></a>
-    <a href="/assets/images/canvass/4rastermath.jpg"><img src="/assets/images/canvass/4rastermath.jpg"></a>
+    <a href="/assets/images/canvass/3rastermath.jpg"><img src="/assets/images/canvass/3rastermath.jpg" width="350" hspace="5"></a>
+    <a href="/assets/images/canvass/4rastermath.jpg"><img src="/assets/images/canvass/4rastermath.jpg" width="350" hspace="5"></a>
     <figcaption>(a) The Multiplier and (b) Multiplier Raster with Precinct Poly Overlay </figcaption>
 </figure>
 Using the raster calculator, the three raster layers are multiplied together to produce a new raster, The_Multiplier. By multiplying the  raster layers together, equal weight is given to the turnout, target voters and population densities of a specific area. Precinct boundaries and census block group boundaries are completely disregarded in this step.
@@ -195,7 +194,7 @@ that several precincts are not well defined. This next step will resolve that.
 
 The *Zonal Statistics as Table tool*, below, takes the mean of each of the `Multiplier` raster layer within each precinct boundary. The mean information is then added to a newly created table (.dbf)
 
-![5](D:\Google Drive\Media\jeslacourse.github.io\assets\images\canvass\5.jpg)
+![Zonal Statistics](\assets\images\canvass\5.jpg)
 
 The new table, `Multiplier_Table`, is joined to the `Precinct Boundary` shapefile. The data is symbolized by the mean value the raster cells within each precinct.
 
@@ -210,8 +209,8 @@ The new table, `Multiplier_Table`, is joined to the `Precinct Boundary` shapefil
 #### Finishing Touches
 
 <figure class="half">
-    <a href="/assets/images/canvass/8.jpg"><img src="/assets/images/canvass/8.jpg"></a>
-    <a href="/assets/images/canvass/9.jpg"><img src="/assets/images/canvass/9.jpg"></a>
+    <a href="/assets/images/canvass/8.jpg"><img src="/assets/images/canvass/8.jpg" width="300" hspace="5"></a>
+    <a href="/assets/images/canvass/9.jpg"><img src="/assets/images/canvass/9.jpg" width="300" hspace="5"></a>
     <figcaption>Congressional District 13 (a) without and (b) with Highways, Hydrology and Cities </figcaption>
 </figure>
 
@@ -222,9 +221,8 @@ This map is heavily based on voting precinct boundaries and Congressional Distri
 ### Problems
 #### Data Sources
 *Precinct Information*
-California, more specifically the Secretary of State, does not have an aggregated list of general election votes and voter registrations by precinct available to the public. As a result, the 2012 demographic and voter information is sourced through a third party. The *Berkeley School of Law* information has aggregated datasets from the Statements of Vote (SOV) and Statements of Registration from California’s 58 counties, as collected by each county’s respective County Registrar of Voters or County Clerks.[1]
-Census Information
-There is a modest learning curve that comes with the readability of Census data. With some research, there are
-resources available to decode file names, field names and field descriptions.
-Census data is also laden with concatenations and acronyms. Fortunately, the Census has made
-documentation widely available online.
+
+California, more specifically the Secretary of State, does not have an aggregated list of general election votes and voter registrations by precinct available to the public. As a result, the 2012 demographic and voter information is sourced through a third party. The *Berkeley School of Law* information has aggregated datasets from the Statements of Vote (SOV) and Statements of Registration from California’s 58 counties, as collected by each county’s respective County Registrar of Voters or County Clerks.
+
+*Census Information*
+There is a modest learning curve that comes with the readability of Census data. With some research, there are resources available to decode file names, field names and field descriptions. Census data is also laden with concatenations and acronyms. Fortunately, the Census has made documentation widely available online.
