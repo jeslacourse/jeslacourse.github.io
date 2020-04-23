@@ -15,7 +15,7 @@ tags:
 
 > I'll likely be revisiting this project in the future to see how my analysis has changed. With that said, I'm presenting this project as I did in 2016. So much has changed in the last four years. I'm excited to rework this project and pull in some fresh data. It should make for a very interesting before-and-after. 
 
-[Washoe County Canvass, Feb 2016][\assets\images\canvass\washoe.PNG]
+![Washoe County Canvass, Feb 2016](\assets\images\canvass\washoe.PNG)
 
 *Washoe County Canvassing, Feb 2016*
 
