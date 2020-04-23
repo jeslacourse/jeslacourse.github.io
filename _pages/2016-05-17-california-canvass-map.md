@@ -233,10 +233,22 @@ There is a modest learning curve that comes with the readability of Census data.
 
 ### Variance in Population
 
+<figure class="half">
+    <a href="/assets/images/canvass/10.jpg"><img src="/assets/images/canvass/10.jpg"  hspace="5"></a>
+    <a href="/assets/images/canvass/11.jpg"><img src="/assets/images/canvass/11.jpg"  hspace="5"></a>
+    <figcaption>Congressional District 1, Lowest Density CD Still Has A
+Well Represented City – Chico, CA</figcaption>
+</figure>
+
 The initial intent of this project was to create a canvass map for Northern California. Unfortunately, the state has a delegate distribution process that would make it very difficult to focus on the northern part of the state alone.
 
 With six delegates assigned to each Congressional District, then 105 delegates at‐large distributed after the primary election, it was increasingly apparent that the population heavy Los Angeles precincts should be included in dataset. The decision was made to prevent any major skewing of the prioritization process. It also had the added benefit of providing the same spatial analysis to what potentially
 could be the most delegate rich section of the state.
+
+<figure>
+<a href="/assets/images/canvass/12.jpg"><img src="/assets/images/canvass/12.jpg"></a>
+<figcaption>Congressional District 12 – San Francisco
+Largely Overrepresented</figcaption></figure>
 
 Creating a scale that allowed for at least one high priority precinct in each Congressional District was essential. The statistical over-representation of more populated areas was considered acceptable, as they will ultimately have the largest influence on at‐large delegates.
 
