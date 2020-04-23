@@ -1,6 +1,5 @@
 ---
 title: "California Canvass Map"
-subtitle: "Grassroots Organization for the Democratic Campaign • Spring 2016"
 permalink: /ccmproject/
 categories: 
   - GIS
@@ -12,7 +11,7 @@ tags:
   - volunteer work
 ---
 
-
+"Grassroots Organization for the Democratic Campaign • Spring 2016"
 
 > I'll likely be revisiting this project in the future to see how my analysis has changed. With that said, I'm presenting this project as I did in 2016. So much has changed in the last four years. I'm excited to rework this project and pull in some fresh data. It should make for a very interesting before-and-after. 
 
@@ -100,11 +99,13 @@ will be most accurate at the block group level (block level unavailable).
 [^2]:  http://statewidedatabase.org/d10/index.html
 
 ### Data Management and Joins
+
 Before joining the data, some adjustments had to be made to make the information more palatable for
 mapping. Joins were made between the Precinct shapefile and both the voter turnout table and registration
 table. The Census block groups and demographic table were joined based on the block group ID number. The newly joined tables and shapefiles were then exported as three shapefiles into the master geodatabase.
 
 **Null Values**
+
 The precinct data tables included areas referred to as “unassigned”. For voter turnout this meant that the
 geographic area had no voters turn out. Likewise for registration, unassigned areas did not have any
 registered voters.
@@ -125,6 +126,7 @@ End If
 ```
 
 **Custom Fields and Field Calculations**
+
 Three custom fields were created for this project:
 
 - Turnout Rate
@@ -133,26 +135,26 @@ Three custom fields were created for this project:
 
 *Turnout Rate* – Calculate the percentage of registered voters that turned out to vote. Divide the number of vote by the number of registered voters accounted for.
 
-<center> <code>[Turnout] = [TOTREG]/[TOTVOTE]</code></center>
+<p><center> <code>[Turnout] = [TOTREG]/[TOTVOTE]</code></center></p>
 
 
 *Target Voters* – Calculate the percentage of total registered voters that have declared themselves as Democrats or have declined to state a party.
 
-<center> <code>[TV_Vote] = ([DEM]+[DCL])/[TOTREG_R]</code> <br>
-Target Vote = (Democrat + Decline to State)/Total Registered Voters </center>
+<p><center> <code>[TV_Vote] = ([DEM]+[DCL])/[TOTREG_R]</code> <br>
+Target Vote = (Democrat + Decline to State)/Total Registered Voters </center></p>
 
 
 *Census Density with Target Demographic* – a) Remove all children from each block group’s total counts, then,
 b) divide the adult count by the land area of their respective block group
 
-<center><code>[Voting_Age] = [B00001e1] ‐ ([B01001e3]‐[B01001e4]‐[ B01001e5]‐[B01001e27]‐[B01001e28]‐[ B01001e29])</code> <br>
-Voting Age = Total Count – (“Male <5” – “Male 5‐9” – “Male 10‐14” – “Female <5” – “Female 5‐9” – “Female 10‐14”)<br></center>
+<p><center><code>[Voting_Age] = [B00001e1] ‐ ([B01001e3]‐[B01001e4]‐[ B01001e5]‐[B01001e27]‐[B01001e28]‐[ B01001e29])</code> <br>
+Voting Age = Total Count – (“Male <5” – “Male 5‐9” – “Male 10‐14” – “Female <5” – “Female 5‐9” – “Female 10‐14”)<br></center></p>
 
-<center><code>[Census_Density] = [Voting_Age]/[ALAND]</code> <br>
-Block Group Density = Voting Age Adults/Block Group Land Area (sq. meters)</center>    
+<p><center><code>[Census_Density] = [Voting_Age]/[ALAND]</code> <br>
+Block Group Density = Voting Age Adults/Block Group Land Area (sq. meters)</center></p>
 
 
-### Modifications to Jenks
+**Modifications to Jenks **
 
 <figure class="half">
     <a href="/assets/images/canvass/folsom1.jpg"><img src="/assets/images/canvass/folsom1.jpg" height="250" hspace="5"></a>
@@ -166,7 +168,7 @@ In order to adequately show the difference between areas with no and low respect
 
 A section of the target voters map is above, (a). The white stripes over what is effectively Folsom Lake are areas with no registered voters. This contrasts the low Democrat and Decline to State (NPP) rates in the Lake’s surrounding neighborhoods, shown in red. The blue symbology in the northeast corner is an area of substantially higher Democrat/NPP rates.
 
-#### Polygon to Raster Conversion 
+### Polygon to Raster Conversion 
 
 Using the three newly created fields outlined in the *Custom Fields and Field Calculations* section, each of the three main shapefiles were converted to raster using the *Polygon to Raster* tool. Below is the conversion for the Turnout_Rate shapefile to raster. This process creates three new rasters:
 
@@ -177,7 +179,7 @@ greens to yellows, oranges, then to bright red denoting zero turnout.
 
 
 
-#### Raster Math
+### Raster Math
 <figure class="half">
     <a href="/assets/images/canvass/3rastermath.jpg"><img src="/assets/images/canvass/3rastermath.jpg" height="350" hspace="5"></a>
     <a href="/assets/images/canvass/4rastermath.jpg"><img src="/assets/images/canvass/4rastermath.jpg" height="350" hspace="5"></a>
@@ -188,7 +190,7 @@ Using the raster calculator, the three raster layers are multiplied together to 
 
 Above, (a), is Folsom Lake and it’s surrounding areas, primarily to the south and west. As we’ve seen with the vector and raster maps previously, the Lake holds a very low priority value with regard to canvassing. To the south, however, is the northern section of the City of Folsom. City of Folsom shows off it’s highest priority areas, in dark green, to it’s lowest, deep red. Gray areas hold no significant population, near zero election turnouts, or near zero Democrat/NPP numbers and are considered the lowest priority.
 
-#### Zonal Statistics
+### Zonal Statistics
 
 With the now blended `Multiplier` raster created, the information needs to be related back to the precinct shape files. The image, (b), shows the “blended” raster layer with the precinct overlaid. It’s clear
 that several precincts are not well defined. This next step will resolve that.
@@ -203,7 +205,7 @@ The new table, `Multiplier_Table`, is joined to the `Precinct Boundary` shapefil
 
 <figure class="half">
     <a href="/assets/images/canvass/6.jpg"><img src="/assets/images/canvass/6.jpg" height="300"></a>
-    <a href="/assets/images/canvass/7.jpg"><img src="/assets/images/canvass/7.jpg" height="115"></a>
+    <a href="/assets/images/canvass/7.jpg"><img src="/assets/images/canvass/7.jpg" height="115" width = "129"></a>
     <figcaption>Precincts now prioritized based on voter turnout, registration demographic, and population density </figcaption>
 </figure>
 
@@ -226,4 +228,5 @@ This map is heavily based on voting precinct boundaries and Congressional Distri
 California, more specifically the Secretary of State, does not have an aggregated list of general election votes and voter registrations by precinct available to the public. As a result, the 2012 demographic and voter information is sourced through a third party. The *Berkeley School of Law* information has aggregated datasets from the Statements of Vote (SOV) and Statements of Registration from California’s 58 counties, as collected by each county’s respective County Registrar of Voters or County Clerks.
 
 *Census Information*
+
 There is a modest learning curve that comes with the readability of Census data. With some research, there are resources available to decode file names, field names and field descriptions. Census data is also laden with concatenations and acronyms. Fortunately, the Census has made documentation widely available online.
