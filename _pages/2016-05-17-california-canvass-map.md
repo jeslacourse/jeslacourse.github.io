@@ -11,7 +11,7 @@ tags:
   - volunteer work
 ---
 
-"Grassroots Organization for the Democratic Campaign • Spring 2016"
+Grassroots Organization for the Democratic Campaign • Spring 2016
 
 > I'll likely be revisiting this project in the future to see how my analysis has changed. With that said, I'm presenting this project as I did in 2016. So much has changed in the last four years. I'm excited to rework this project and pull in some fresh data. It should make for a very interesting before-and-after. 
 
@@ -221,8 +221,8 @@ To improve the map’s readability, recognizable features like highways, lakes a
 
 This map is heavily based on voting precinct boundaries and Congressional District boundaries. These are two features that may not be inherently recognizable to the reader. More familiar boundaries (e.g. county lines, hydrologic features) have been added to improve readability.
 
-### Problems
-#### Data Sources
+## Problems
+### Data Sources
 *Precinct Information*
 
 California, more specifically the Secretary of State, does not have an aggregated list of general election votes and voter registrations by precinct available to the public. As a result, the 2012 demographic and voter information is sourced through a third party. The *Berkeley School of Law* information has aggregated datasets from the Statements of Vote (SOV) and Statements of Registration from California’s 58 counties, as collected by each county’s respective County Registrar of Voters or County Clerks.
