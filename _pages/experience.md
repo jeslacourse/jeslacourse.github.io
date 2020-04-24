@@ -14,7 +14,7 @@ Seeking work with a community-oriented and socially conscious organization to pr
 
 **Data Management and Statistical Highlights**
 
--   [Creation and implementation of voter outreach GIS database for California's 20,000 precincts](/ccmproject/)
+-   [Creation and implementation of voter outreach GIS database for California's 20,000 precincts](https://jeslacourse.github.io/ccmproject/)
     
 
 	-   Adopted in part by major 2016 Presidential candidate campaign
