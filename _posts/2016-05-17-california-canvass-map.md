@@ -37,11 +37,12 @@ Grassroots Organization for the Democratic Campaign • Spring 2016
 <figcaption>Final product, top left, with the three layers used for analysis and composition</figcaption>
 </figure>
 
+
 > I'll likely be revisiting this project in the future to see how my analysis has changed. With that said, I'm presenting this project as I did in 2016. So much has changed in the last four years. I'm excited to rework this project and pull in some fresh data. It should make for a very interesting before-and-after. 
 
 {% include gallery id="gallery" caption="Paper Map Examples at Regional, District and City Levels" %}
 
-----------------
+
 
 ![Washoe County Canvass, Feb 2016](\assets\images\canvass\washoe.PNG)
 
@@ -182,7 +183,7 @@ Voting Age = Total Count – (“Male <5” – “Male 5‐9” – “Male 10�
 Block Group Density = Voting Age Adults/Block Group Land Area (sq. meters)</center></p>
 
 
-**Modifications to Jenks **
+**Modifications to Jenks**
 
 <figure class="half">
     <a href="/assets/images/canvass/folsom1.jpg"><img src="/assets/images/canvass/folsom1.jpg" height="250" hspace="5"></a>
@@ -284,7 +285,7 @@ Creating a scale that allowed for at least one high priority precinct in each Co
 
 ## Production
 
-Web Map, Limited Congressional Districts ‐ http://arcg.is/1TnmgNs
+Web Map, Limited Congressional Districts ‐ ~~http://arcg.is/1TnmgNs~~ Link out of date
 
 I developed this project to challenge myself. Many aspects of this project were brand new to me and it was an absolute thrill to be able to troubleshoot my way through it.
 
