@@ -38,6 +38,11 @@ Simple mistakes and malicious manipulation alike can alter data into something u
 
 ### Out of Office
 
-We're certainly living under a new normal. But over the last several years, I've been lucky enough to dedicate my time out of the office to exploring many of our National Parks and other public lands. It's amazing how much you can see and do in two weeks, I promise you! My profile photo was taken on the rim of a cinder cone volcano in Lassen National Park. The photo used for my GitHub account was a candid taken while shooting Mt. St. Helens at Sunset. 
+<figure>
+<a href="/images/about/smith.jpg"><img src="/images/about/smith.jpg"></a>
+<figcaption>Smith Rock, OR. Summer 2019. </figcaption>
+</figure>
+
+We're certainly living with a new normal. But over the last several years, I've been lucky enough to dedicate my time out of the office to exploring many of our National Parks and other public lands. It's amazing how much you can see and do in two weeks, I promise you! My profile photo was taken on the rim of a cinder cone volcano in Lassen National Park. The photo used for my GitHub account was a candid taken while shooting Mt. St. Helens at Sunset. 
 
 If I'm not in the state, I'm likely out in one of Washington or Utah's beautiful parks or just simply out exploring what the rest of the West has to offer. I'm looking forward to more days out of the house, out of the office, and in the backcountry.
