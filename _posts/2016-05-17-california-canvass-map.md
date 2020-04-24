@@ -13,38 +13,35 @@ gallery:
   - url: /assets/images/canvass/GSA.png
     image_path: /assets/images/canvass/GSA.png
     alt: "Greater Sacramento Area"
-  - url: /assets/images/canvass/CD6.PNG
-    image_path: /assets/images/canvass/CD6.PNG
+  - url: /assets/images/canvass/CD6.png
+    image_path: /assets/images/canvass/CD6.png
     alt: "CD 6: Sacramento Area"
-  - url: /assets/images/canvass/CD13.PNG
-    image_path: /assets/images/canvass/CD13.PNG
+  - url: /assets/images/canvass/CD13.png
+    image_path: /assets/images/canvass/CD13.png
     alt: "CD 13: East Bay"
-  - url: /assets/images/canvass/Pacifica.PNG
-    image_path: /assets/images/canvass/Pacifica.PNG
+  - url: /assets/images/canvass/Pacifica.png
+    image_path: /assets/images/canvass/Pacifica.png
     alt: "City of Pacifica"
-  - url: /assets/images/canvass/Newark.PNG
-    image_path: /assets/images/canvass/Newark.PNG
+  - url: /assets/images/canvass/Newark.png
+    image_path: /assets/images/canvass/Newark.png
     alt: "City of Newark"
-  - url: /assets/images/canvass/CD28.PNG
-    image_path: /assets/images/canvass/CD28.PNG
+  - url: /assets/images/canvass/CD28.png
+    image_path: /assets/images/canvass/CD28.png
     alt: "CD 28: Eastern Los Angeles"
 ---
 
-Grassroots Organization for the Democratic Campaign • Spring 2016
+Grassroots Organization for Presidental Primary Campaigning • Spring 2016
 
 <figure>
 <a href="/assets/images/canvass/Marin.png"><img src="/assets/images/canvass/Marin.png"></a>
 <figcaption>Final product, top left, with the three layers used for analysis and composition</figcaption>
 </figure>
 
+{% include gallery id="gallery" caption="Paper Map Examples at Regional, District and City Levels" %}
 
 > I'll likely be revisiting this project in the future to see how my analysis has changed. With that said, I'm presenting this project as I did in 2016. So much has changed in the last four years. I'm excited to rework this project and pull in some fresh data. It should make for a very interesting before-and-after. 
 
-{% include gallery id="gallery" caption="Paper Map Examples at Regional, District and City Levels" %}
-
-
- 
- __________________________
+__________________________
  
 ![Washoe County Canvass, Feb 2016](\assets\images\canvass\washoe.PNG)
 
