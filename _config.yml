@@ -263,6 +263,7 @@ defaults:
       toc: true 
       toc_label: "Overview"
       toc_icon: "angle-double-down"
+      teaser: /images/teaser-default.JPG
   # _pages
   - scope:
       path: ""
