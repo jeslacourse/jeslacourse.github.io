@@ -9,11 +9,34 @@ tags:
   - spatial analysis
   - statistics
   - volunteer work
+gallery:
+  - url: "\assets\images\canvass\_GSA.PNG"
+    image_path: "\assets\images\canvass\_GSA.PNG"
+    alt: "Greater Sacramento Area"
+  - url: "\assets\images\canvass\_CD6.PNG"
+    image_path: "\assets\images\canvass\_CD6.PNG"
+    alt: "CD 6: Sacramento Area"
+  - url: "\assets\images\canvass\_CD13.PNG"
+    image_path: "\assets\images\canvass\_CD13.PNG"
+    alt: "CD 13: East Bay"
+  - url: "\assets\images\canvass\_Pacifica.PNG"
+    image_path: "\assets\images\canvass\_CD6.PNG"
+    alt: "City of Pacifica"
+  - url: "\assets\images\canvass\_Newark.PNG"
+    image_path: "\assets\images\canvass\_Newark.PNG"
+    alt: "City of Newark"
+  - url: "\assets\images\canvass\_CD28.PNG"
+    image_path: "\assets\images\canvass\_CD28.PNG"
+    alt: "CD 28: Eastern Los Angeles"
 ---
 
 Grassroots Organization for the Democratic Campaign • Spring 2016
 
 > I'll likely be revisiting this project in the future to see how my analysis has changed. With that said, I'm presenting this project as I did in 2016. So much has changed in the last four years. I'm excited to rework this project and pull in some fresh data. It should make for a very interesting before-and-after. 
+
+{% include gallery id="gallery" caption="Paper Map Examples at Regional, District and City Levels" %}
+----------------------------------
+
 
 ![Washoe County Canvass, Feb 2016](\assets\images\canvass\washoe.PNG)
 
