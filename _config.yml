@@ -98,15 +98,15 @@ author:
     #- label: "Email"
       # icon: "fas fa-fw fa-envelope-square"
       # url: mailto:your.name@email.com
-    #- label: "Twitter"
-      #icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/jeslacourse"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: https://linkedin.com/in/jessica-l-a241a858/      
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/jeslacourse"
     #- label: "Instagram"
      # icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -114,15 +114,15 @@ author:
 # Site Footer
 footer:
   #links:
-    #- label: "Twitter"
-    #   icon: "fab fa-fw fa-twitter-square"
-    #  # url:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/jeslacourse"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: github.com/jeslacourse
+      url: https://github.com/jeslacourse
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: linkedin.com/in/jessica-l-a241a858/
+      url: https://linkedin.com/in/jessica-l-a241a858/
 
 # Reading Files
 include:
