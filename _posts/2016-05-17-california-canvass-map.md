@@ -30,7 +30,8 @@ gallery:
     alt: "CD 28: Eastern Los Angeles"
 ---
 
-Grassroots Organization for Presidental Primary Campaigning • Spring 2016
+> I'll likely be revisiting this project in the future to see how my analysis has changed. With that said, I'm presenting this project as I did in 2016. So much has changed in the last four years. I'm excited to rework this project and pull in some fresh data. It should make for a very interesting before-and-after. 
+
 
 <figure>
 <a href="/assets/images/canvass/Marin.png"><img src="/assets/images/canvass/Marin.png"></a>
@@ -39,10 +40,12 @@ Grassroots Organization for Presidental Primary Campaigning • Spring 2016
 
 {% include gallery id="gallery" caption="Paper Map Examples at Regional, District and City Levels" %}
 
-> I'll likely be revisiting this project in the future to see how my analysis has changed. With that said, I'm presenting this project as I did in 2016. So much has changed in the last four years. I'm excited to rework this project and pull in some fresh data. It should make for a very interesting before-and-after. 
+__________________________
 
 __________________________
- 
+
+Grassroots Organization for Presidental Primary Campaigning • Spring 2016
+
 ![Washoe County Canvass, Feb 2016](\assets\images\canvass\washoe.PNG)
 
 *Washoe County Canvassing, Feb 2016*
