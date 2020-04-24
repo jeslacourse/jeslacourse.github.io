@@ -9,6 +9,8 @@ tags:
   - spatial analysis
   - statistics
   - volunteer work
+header:
+  teaser: /assets/images/canvass/folsom1.jpg
 gallery:
   - url: /assets/images/canvass/GSA.png
     image_path: /assets/images/canvass/GSA.png
