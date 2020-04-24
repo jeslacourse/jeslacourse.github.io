@@ -10,30 +10,30 @@ tags:
   - statistics
   - volunteer work
 gallery:
-  - url: /assets/images/canvass/_GSA.png
-    image_path: /assets/images/canvass/_GSA.png
+  - url: /assets/images/canvass/GSA.png
+    image_path: /assets/images/canvass/GSA.png
     alt: "Greater Sacramento Area"
-  - url: /assets/images/canvass/_CD6.PNG
-    image_path: /assets/images/canvass/_CD6.PNG
+  - url: /assets/images/canvass/CD6.PNG
+    image_path: /assets/images/canvass/CD6.PNG
     alt: "CD 6: Sacramento Area"
-  - url: /assets/images/canvass/_CD13.PNG
-    image_path: /assets/images/canvass/_CD13.PNG
+  - url: /assets/images/canvass/CD13.PNG
+    image_path: /assets/images/canvass/CD13.PNG
     alt: "CD 13: East Bay"
-  - url: /assets/images/canvass/_Pacifica.PNG
-    image_path: /assets/images/canvass/_CD6.PNG
+  - url: /assets/images/canvass/Pacifica.PNG
+    image_path: /assets/images/canvass/Pacifica.PNG
     alt: "City of Pacifica"
-  - url: /assets/images/canvass/_Newark.PNG
-    image_path: /assets/images/canvass/_Newark.PNG
+  - url: /assets/images/canvass/Newark.PNG
+    image_path: /assets/images/canvass/Newark.PNG
     alt: "City of Newark"
-  - url: /assets/images/canvass/_CD28.PNG
-    image_path: /assets/images/canvass/_CD28.PNG
+  - url: /assets/images/canvass/CD28.PNG
+    image_path: /assets/images/canvass/CD28.PNG
     alt: "CD 28: Eastern Los Angeles"
 ---
 
 Grassroots Organization for the Democratic Campaign • Spring 2016
 
 <figure>
-<a href="/assets/images/canvass/_Marin.png"><img src="/assets/images/canvass/_Marin.png"></a>
+<a href="/assets/images/canvass/Marin.png"><img src="/assets/images/canvass/Marin.png"></a>
 <figcaption>Final product, top left, with the three layers used for analysis and composition</figcaption>
 </figure>
 
@@ -43,7 +43,9 @@ Grassroots Organization for the Democratic Campaign • Spring 2016
 {% include gallery id="gallery" caption="Paper Map Examples at Regional, District and City Levels" %}
 
 
-
+ 
+ __________________________
+ 
 ![Washoe County Canvass, Feb 2016](\assets\images\canvass\washoe.PNG)
 
 *Washoe County Canvassing, Feb 2016*
