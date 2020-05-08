@@ -17,12 +17,6 @@ There seems to be a general misunderstanding that science can tell data what to 
 
 Whoa.[^1]  Slow down. One of my favorite things about statistics is the notion that a single dataset can tell many different stories by simply manipulating how the data are accessed and modeled. This fact, however, can and will be problematic. 
 
-At my core, I'm fiercely dedicated to shedding light on community and environmental issues. I sought out a background in statistics after seeing too much gray area in information distribution. 
-
-There seems to be a general misunderstanding that science can tell data what to say. I've been asked several times in my life,*"Make the data do [xyz]."* or similarly, *"Have the data show..."* 
-
-Whoa.[^1]  Slow down. One of my favorite things about statistics is the notion that a single dataset can tell many different stories by simply manipulating how the data are accessed and modeled. This fact, however, can and will be problematic. 
-
 That ambiguity is what moves statistics away from pure mathematics and into the middle ground between art and science.  It's this middle ground that fascinates me. Art and science are naturally complementary. Darwin wouldn't have made half the impact on the European World if he didn't return with his  beautifully detailed notes and sketches in Voyages on the Beagle.[^2] The same goes for da Vinci, a phenomenal artist and inventor to say the least. Better known for his paintings, his anatomical drawings were a hundred years ahead of their time[^3], and 350 years before Henry Gray. [^4]
 
 Is it too cliché to name some of the biggest names? Probably. But I they highlight the point I want to make so effectively. Your presentation of data is useless if your audience can't digest it. These names stick with us because their information was presented beautifully. Darwin, da Vinci, and Gray were undeniably brilliant scientists, yet it was their ability to connect with laymen that made their work so influential. 
