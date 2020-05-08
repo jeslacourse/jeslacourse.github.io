@@ -19,6 +19,7 @@ excerpt: "What's the most effective way to visualize comparisons between variabl
 <figcaption>Side-by-Side Comparison of (a) Generic Plot and (b) Faceted Plots with Highlight</figcaption>
 </figure>
 
+![](\assets/images/2020-04-30/plot-4.png)
 
 ## Visualizing Categorical Data
 
