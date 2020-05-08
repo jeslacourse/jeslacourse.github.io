@@ -33,8 +33,8 @@ Simple mistakes and malicious manipulation alike can alter data into something u
 ### Out of Office
 
 <figure>
-<a href="/images/about/smith.jpg"><img src="/images/about/smith.jpg"></a>
-<figcaption>Smith Rock, OR. Summer 2019. </figcaption>
+<a href="/images/about/smith.jpg"><img src="/images/about/ncnp.jpg"></a>
+<figcaption>Boston Basin, North Cascades. Summer 2019. </figcaption>
 </figure>
 
 We're certainly living with a new normal. But over the last several years, I've been lucky enough to dedicate my time out of the office to exploring many of our National Parks and other public lands. It's amazing how much you can see and do in two weeks, I promise you! My profile photo was taken on the rim of a cinder cone volcano in Lassen National Park. The photo used for my GitHub account was a candid taken while shooting Mt. St. Helens at Sunset. 
