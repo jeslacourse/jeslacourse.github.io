@@ -12,7 +12,8 @@ tags:
 header:
   teaser: assets/images/2020-04-30/plot-3.png
 excerpt: "What's the most effective way to visualize comparisons between variable factors? How do you share a lot of information without muddying up your visualizations? There definitely isn't one answer, but here's one solution: faceted plots with gghighlight."
-markdown: CommonMarkGhPages
+kramdown:
+  parse_block_html: true
 ---
 
 ![](\assets/images/2020-04-30/plot-4.png)
@@ -26,17 +27,16 @@ For sample data, Iâ€™m setting up two normal curves with offset sample means *xÌ
 
 [^2]:  The researcher that inspired this post needed to present characteristics for six separate factors in a concise manner.
 
-<details>
-    <summary>Show code</summary>
-    <p> #### Create Sample Data
-
+<details><summary>Show code</summary>
+    <p>
+      
 ``` r
 # create a sample dataset of two normal curves with given classes
 samples <- data.frame(val = rnorm(100, 2,2), pos = ("Righties")) %>% 
   rbind(data.frame(val = rnorm(100, -2,1), pos = ("Lefties")) )
 ```
-
-    </p>
+   
+   </p>
 
 </details><br>
 
@@ -74,7 +74,7 @@ samples %>%
 Or we can build our own custom summary table. In this case, we're only interested in adding mean and deviation to our visuals.
 
 <details>
-  <summary>Show `code`</summary><p>
+  <summary>Show code</summary><p>
 
 ``` r
 # create a custom summary, in this case, just the mean and sd
@@ -101,7 +101,7 @@ Generic ggplots tend to be a bit bland, which is fine in some cases. The generic
 *Generic Histogram (w/ Bare Bones Aesthetics)*
 
 <details>
-  <summary>Show `code`</summary>
+  <summary>Show code</summary>
 
 ``` r
 # Create a simple histogram (w/ bare bones aesthetics)
@@ -123,7 +123,7 @@ In our case, a generic plot shows us that the distribution is bimodal, but we re
 *Histograms Faceted by Categorical Factor*
 
 <details>
-  <summary>Show `code`</summary>
+  <summary>Show code</summary>
 
 ``` r
 ggplot(samples, aes(x=val,fill=pos)) + 
