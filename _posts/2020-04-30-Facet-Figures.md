@@ -25,12 +25,17 @@ For sample data, I’m setting up two normal curves with offset sample means *x�
 
 [^2]:  The researcher that inspired this post needed to present characteristics for six separate factors in a concise manner.
 
+<details><summary>Show code</summary>
+<p>
+
 ``` r
 # create a sample dataset of two normal curves with given classes
 samples <- data.frame(val = rnorm(100, 2,2), pos = ("Righties")) %>% 
   rbind(data.frame(val = rnorm(100, -2,1), pos = ("Lefties")) )
 ```
 
+</p>
+</details><br>
 |      |     Value | Position |
 | ---- | --------: | :------- |
 | 1   |   3.728539| Righties |
@@ -41,8 +46,9 @@ samples <- data.frame(val = rnorm(100, 2,2), pos = ("Righties")) %>%
 ## Statistics
 Summary statistics as a visual annotation are helpful when determining differences in factors. We have a couple of “out of the box” options through the use of `summary` and the like. 
 
-<details>
-  <summary>Show `code`</summary>
+<details><summary>Show code</summary>
+<p>
+
 ``` r
 # create generic statistical summary
 samples %>%
@@ -50,7 +56,9 @@ samples %>%
   map(~tidy(summary(.x))) %>%  # compute tidy summary of each var
   do.call(rbind, .) -> stats   # bind list elements into df
 ```
-</details>  
+
+</p>
+</details><br>
 
 |       |   Minimum |        Q1 |     Median |       Mean |       Q3 |  Maximum |
 | ----- | --------: | --------: | ---------: | ---------: | -------: | -------: |
@@ -59,7 +67,8 @@ samples %>%
 Or we can build our own custom summary table. In this case, we're only interested in adding mean and deviation to our visuals.
 
 <details>
-  <summary>Show `code`</summary>
+  <summary>Show `code`</summary><p>
+
 ``` r
 # create a custom summary, in this case, just the mean and sd
 summary_stats <- samples %>% 
@@ -67,7 +76,8 @@ summary_stats <- samples %>%
   summarize_at(vars(val),
              funs(Mean = mean, SD = sd))
 ```
-</details>
+</p>
+</details><br>
 
 | Position |  Mean |   SD |
 | :------- | ----: | ---: |
@@ -85,6 +95,7 @@ Generic ggplots tend to be a bit bland, which is fine in some cases. The generic
 
 <details>
   <summary>Show `code`</summary>
+
 ``` r
 # Create a simple histogram (w/ bare bones aesthetics)
 ggplot(samples, aes(x=val)) +
@@ -93,6 +104,7 @@ ggplot(samples, aes(x=val)) +
        x ="Sample Value", y= "Frequency") + # All Labels     
   theme_bw()                                # B&W Theme
 ```
+
 </details>
 
 
@@ -129,6 +141,7 @@ ggplot(samples, aes(x=val,fill=pos)) +
   ...               
 
 ```
+
 </details>
 
 Even without the summary statistics, it's much easier to discern the differences in two groups. At this stage, I've introduced the summary statistics and a mean line to increase comprehension. 
@@ -144,7 +157,7 @@ With that said, there are a handful of important features in this graphic that c
 *Histograms Faceted by Categorical Factor*
 
 <details>
-  <summary>Show `code`</summary>
+  <summary>Show code</summary><p>
 
 ```r
 ggplot(samples, aes(x=val,fill=pos)) + 
@@ -153,6 +166,7 @@ ggplot(samples, aes(x=val,fill=pos)) +
   <b>gghighlight::gghighlight()</b> # add gghighlight
   ...
 ```
+</p>
 </details>
 
 This is such a beautiful, yet deceptively simple trick to improving readability, a `gghighlight`![^3] It's worth noting that we don't need any additional arguments as the function is highlighting the given data per facet. Put another way, `gghighlight` is intuitive enough to figure out what should be grayed out and what should pop. Highlighting works with more than two factors as well. Anything that isn't the primary data simply sits in the background. 
