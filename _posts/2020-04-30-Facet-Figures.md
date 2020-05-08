@@ -12,6 +12,7 @@ tags:
 header:
   teaser: assets/images/2020-04-30/plot-3.png
 excerpt: "What's the most effective way to visualize comparisons between variable factors? How do you share a lot of information without muddying up your visualizations? There definitely isn't one answer, but here's one solution: faceted plots with gghighlight."
+markdown: CommonMarkGhPages
 ---
 
 ![](\assets/images/2020-04-30/plot-4.png)
@@ -25,8 +26,9 @@ For sample data, Iâ€™m setting up two normal curves with offset sample means *xÌ
 
 [^2]:  The researcher that inspired this post needed to present characteristics for six separate factors in a concise manner.
 
-<details><summary>Show code</summary>
-<p>
+<details>
+    <summary>Show code</summary>
+    <p> #### Create Sample Data
 
 ``` r
 # create a sample dataset of two normal curves with given classes
@@ -34,8 +36,13 @@ samples <- data.frame(val = rnorm(100, 2,2), pos = ("Righties")) %>%
   rbind(data.frame(val = rnorm(100, -2,1), pos = ("Lefties")) )
 ```
 
-</p>
+    </p>
+
 </details><br>
+
+
+
+
 |      |     Value | Position |
 | ---- | --------: | :------- |
 | 1   |   3.728539| Righties |
