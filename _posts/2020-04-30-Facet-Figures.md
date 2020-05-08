@@ -41,6 +41,8 @@ samples <- data.frame(val = rnorm(100, 2,2), pos = ("Righties")) %>%
 ## Statistics
 Summary statistics as a visual annotation are helpful when determining differences in factors. We have a couple of “out of the box” options through the use of `summary` and the like. 
 
+<details>
+  <summary>Show `code`</summary>
 ``` r
 # create generic statistical summary
 samples %>%
@@ -48,6 +50,7 @@ samples %>%
   map(~tidy(summary(.x))) %>%  # compute tidy summary of each var
   do.call(rbind, .) -> stats   # bind list elements into df
 ```
+</details>  
 
 |       |   Minimum |        Q1 |     Median |       Mean |       Q3 |  Maximum |
 | ----- | --------: | --------: | ---------: | ---------: | -------: | -------: |
@@ -55,6 +58,8 @@ samples %>%
 
 Or we can build our own custom summary table. In this case, we're only interested in adding mean and deviation to our visuals.
 
+<details>
+  <summary>Show `code`</summary>
 ``` r
 # create a custom summary, in this case, just the mean and sd
 summary_stats <- samples %>% 
@@ -62,6 +67,7 @@ summary_stats <- samples %>%
   summarize_at(vars(val),
              funs(Mean = mean, SD = sd))
 ```
+</details>
 
 | Position |  Mean |   SD |
 | :------- | ----: | ---: |
@@ -77,6 +83,8 @@ Generic ggplots tend to be a bit bland, which is fine in some cases. The generic
 ![](\assets/images/2020-04-30/plot-1.png)
 *Generic Histogram (w/ Bare Bones Aesthetics)*
 
+<details>
+  <summary>Show `code`</summary>
 ``` r
 # Create a simple histogram (w/ bare bones aesthetics)
 ggplot(samples, aes(x=val)) +
@@ -85,6 +93,8 @@ ggplot(samples, aes(x=val)) +
        x ="Sample Value", y= "Frequency") + # All Labels     
   theme_bw()                                # B&W Theme
 ```
+</details>
+
 
 In our case, a generic plot shows us that the distribution is bimodal, but we really can't determine a lot about the characteristics of either factors' distribution. We are somewhat lucky, in this case, that if we were to create a classifier based strictly off of the information above, we can see that the cutoff should be about `x=0`. Aside from that, it's difficult to read exactly what's going on.  
 
@@ -93,12 +103,8 @@ In our case, a generic plot shows us that the distribution is bimodal, but we re
 ![](\assets/images/2020-04-30/plot-2.png)
 *Histograms Faceted by Categorical Factor*
 
-Even without the summary statistics, it's much easier to discern the differences in two groups. At this stage, I've introduced the summary statistics and a mean line to increase comprehension. 
-
-With that said, there are a handful of important features in this graphic that can be easily overlooked: 
-
-1. Fix the y-axis. Without a fixed axis, we have no ability to quickly discern differences in distribution
-2. Drop the opacity of the histogram. Overlapping data can get lost in the shuffle.
+<details>
+  <summary>Show `code`</summary>
 
 ``` r
 ggplot(samples, aes(x=val,fill=pos)) + 
@@ -119,19 +125,26 @@ ggplot(samples, aes(x=val,fill=pos)) +
              inherit.aes=FALSE, 
              aes(vjust="inward", hjust = "inward",
                  x = Inf, y = Inf, family = "serif",
-                 label=paste("\nMean:",Mean,"\nSD:",SD, "\n"))) +  
+                 label=paste("\nMean:",Mean,"\nSD:",SD, "\n"))) 
+  ...               
 
 ```
+</details>
+
+Even without the summary statistics, it's much easier to discern the differences in two groups. At this stage, I've introduced the summary statistics and a mean line to increase comprehension. 
+
+With that said, there are a handful of important features in this graphic that can be easily overlooked: 
+
+1. Fix the y-axis. Without a fixed axis, we have no ability to quickly discern differences in distribution
+2. Drop the opacity of the histogram. Overlapping data can get lost in the shuffle.
+
 ## Adding That Highlight
 
 ![](\assets/images/2020-04-30/plot-3.png)
 *Histograms Faceted by Categorical Factor*
 
-This is such a beautiful, yet deceptively simple trick to improving readability, a `gghighlight`![^3] It's worth noting that we don't need any additional arguments as the function is highlighting the given data per facet. Put another way, `gghighlight` is intuitive enough to figure out what should be grayed out and what should pop. Highlighting works with more than two factors as well. Anything that isn't the primary data simply sits in the background. 
-
-We're just scraping the surface of what `gghighlight` can do for data viz. It's incredibly effective for singling out notable traits in a class, emphasizing trends, or simply comparing a subset of data to the rest of a sample.
-
-[^3]:  [RDocumentation: gghighlight](https://www.rdocumentation.org/packages/gghighlight/versions/0.0.1/topics/gghighlight).
+<details>
+  <summary>Show `code`</summary>
 
 ```r
 ggplot(samples, aes(x=val,fill=pos)) + 
@@ -139,8 +152,17 @@ ggplot(samples, aes(x=val,fill=pos)) +
   geom_density(alpha=.3) +
   <b>gghighlight::gghighlight()</b> # add gghighlight
   ...
-
 ```
+</details>
+
+This is such a beautiful, yet deceptively simple trick to improving readability, a `gghighlight`![^3] It's worth noting that we don't need any additional arguments as the function is highlighting the given data per facet. Put another way, `gghighlight` is intuitive enough to figure out what should be grayed out and what should pop. Highlighting works with more than two factors as well. Anything that isn't the primary data simply sits in the background. 
+
+We're just scraping the surface of what `gghighlight` can do for data viz. It's incredibly effective for singling out notable traits in a class, emphasizing trends, or simply comparing a subset of data to the rest of a sample.
+
+[^3]:  [RDocumentation: gghighlight](https://www.rdocumentation.org/packages/gghighlight/versions/0.0.1/topics/gghighlight).
+
+
+
 
 ## GGPlot Summary
 
