@@ -23,7 +23,7 @@ What's the most effective way to visualize comparisons between variable factors?
 
 For sample data, I’m setting up two normal curves with offset sample means *x̄* =  ± 2. While we're using two factors for simplicity, this method actual becomes more effective when the number of factors increases.[^2] For our sample data, Lefties are disperses around a mean left of center, while Righties collect right of center. The variances are modified as well to exaggerate the difference in factors, but we'll get into that in a second. 
 
-[^2: ] The researcher that inspired this post needed to present characteristics for six separate factors in a concise manner.
+[^2]:  The researcher that inspired this post needed to present characteristics for six separate factors in a concise manner.
 
 ``` r
 # create a sample dataset of two normal curves with given classes
@@ -72,7 +72,7 @@ summary_stats <- samples %>%
 
 Generic ggplots tend to be a bit bland, which is fine in some cases. The generic plot is almost identical to  R's `plot()` function.[^1]
 
-[^1: ] I'm oversimplifying a bit. This plot isn't *completely* generic. Titles, transparency, and theming aren't necessarily something you would get with base `plot()`.
+[^1]:  I'm oversimplifying a bit. This plot isn't *completely* generic. Titles, transparency, and theming aren't necessarily something you would get with base `plot()`.
 
 ![](\assets/images/2020-04-30/plot-1.png)
 *Generic Histogram (w/ Bare Bones Aesthetics)*
@@ -131,7 +131,7 @@ This is such a beautiful, yet deceptively simple trick to improving readability,
 
 We're just scraping the surface of what `gghighlight` can do for data viz. It's incredibly effective for singling out notable traits in a class, emphasizing trends, or simply comparing a subset of data to the rest of a sample.
 
-[^3: ] [RDocumentation: gghighlight](https://www.rdocumentation.org/packages/gghighlight/versions/0.0.1/topics/gghighlight).
+[^3]:  [RDocumentation: gghighlight](https://www.rdocumentation.org/packages/gghighlight/versions/0.0.1/topics/gghighlight).
 
 ```r
 ggplot(samples, aes(x=val,fill=pos)) + 
