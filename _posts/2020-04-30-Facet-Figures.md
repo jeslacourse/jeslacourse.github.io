@@ -14,12 +14,8 @@ header:
 excerpt: "What's the most effective way to visualize comparisons between variable factors? How do you share a lot of information without muddying up your visualizations? There definitely isn't one answer, but here's one solution: faceted plots with gghighlight."
 ---
 
-<figure>
-<a href="assets/images/2020-04-30/plot-4.png"><img src="assets/images/2020-04-30/plot-4.png"></a>
-<figcaption>Side-by-Side Comparison of (a) Generic Plot and (b) Faceted Plots with Highlight</figcaption>
-</figure>
-
 ![](\assets/images/2020-04-30/plot-4.png)
+*Side-by-Side Comparison of (a) Generic Plot and (b) Faceted Plots with Highlight*
 
 ## Visualizing Categorical Data
 
@@ -77,11 +73,9 @@ summary_stats <- samples %>%
 Generic ggplots tend to be a bit bland, which is fine in some cases. The generic plot is almost identical to  R's `plot()` function.[^1]
 
 [^1: ] I'm oversimplifying a bit. This plot isn't *completely* generic. Titles, transparency, and theming aren't necessarily something you would get with base `plot()`.
-<figure>
-<a href="assets/images/2020-04-30/plot-1.png"><img src="assets/images/2020-04-30/plot-1.png"></a>
-<figcaption>Generic Histogram (w/ Bare Bones Aesthetics)  </figcaption>
-</figure>
 
+![](\assets/images/2020-04-30/plot-1.png)
+*Generic Histogram (w/ Bare Bones Aesthetics)*
 
 ``` r
 # Create a simple histogram (w/ bare bones aesthetics)
@@ -95,10 +89,9 @@ ggplot(samples, aes(x=val)) +
 In our case, a generic plot shows us that the distribution is bimodal, but we really can't determine a lot about the characteristics of either factors' distribution. We are somewhat lucky, in this case, that if we were to create a classifier based strictly off of the information above, we can see that the cutoff should be about `x=0`. Aside from that, it's difficult to read exactly what's going on.  
 
 ## Faceted Plots 
-<figure>
-<a href="assets/images/2020-04-30/plot-2.png"><img src="assets/images/2020-04-30/plot-2.png"></a>
-<figcaption>Histograms Faceted by Categorical Factor </figcaption>
-</figure>
+
+![](\assets/images/2020-04-30/plot-2.png)
+*Histograms Faceted by Categorical Factor*
 
 Even without the summary statistics, it's much easier to discern the differences in two groups. At this stage, I've introduced the summary statistics and a mean line to increase comprehension. 
 
@@ -131,10 +124,8 @@ ggplot(samples, aes(x=val,fill=pos)) +
 ```
 ## Adding That Highlight
 
-<figure>
-<a href="assets/images/2020-04-30/plot-3.png"><img src="assets/images/2020-04-30/plot-3.png"></a>
-<figcaption>Faceted Histograms with Highlights</figcaption>
-</figure>
+![](\assets/images/2020-04-30/plot-3.png)
+*Histograms Faceted by Categorical Factor*
 
 This is such a beautiful, yet deceptively simple trick to improving readability, a `gghighlight`![^3] It's worth noting that we don't need any additional arguments as the function is highlighting the given data per facet. Put another way, `gghighlight` is intuitive enough to figure out what should be grayed out and what should pop. Highlighting works with more than two factors as well. Anything that isn't the primary data simply sits in the background. 
 
