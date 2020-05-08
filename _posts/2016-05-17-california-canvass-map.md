@@ -46,7 +46,7 @@ __________________________
 
 __________________________
 
-<center>Grassroots Organization for Presidental Primary Campaigning • Spring 2016</center>
+<center>Grassroots Organization for Presidental Primary Campaigning • Spring 2016</center><br>
 
 ![Washoe County Canvass, Feb 2016](\assets\images\canvass\washoe.PNG)
 
