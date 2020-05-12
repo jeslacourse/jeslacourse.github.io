@@ -68,8 +68,7 @@ samples %>%
 
 Or we can build our own custom summary table. In this case, we're only interested in adding mean and deviation to our visuals.
 
-<details>
-  <summary markdown = 'span'>Show code</summary><p>
+<details><summary markdown = 'span'>Show code</summary>
 
 ``` r
 # create a custom summary, in this case, just the mean and sd
