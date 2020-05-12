@@ -105,7 +105,7 @@ ggplot(samples, aes(x=val)) +
   theme_bw()                                # B&W Theme
 ```
 
-</details>
+</details><br>
 
 
 In our case, a generic plot shows us that the distribution is bimodal, but we really can't determine a lot about the characteristics of either factors' distribution. We are somewhat lucky, in this case, that if we were to create a classifier based strictly off of the information above, we can see that the cutoff should be about `x=0`. Aside from that, it's difficult to read exactly what's going on.  
@@ -165,7 +165,7 @@ ggplot(samples, aes(x=val,fill=pos)) +
   ...
 ```
 
-</details>
+</details><br>
 
 This is such a beautiful, yet deceptively simple trick to improving readability, a `gghighlight`![^3] It's worth noting that we don't need any additional arguments as the function is highlighting the given data per facet. Put another way, `gghighlight` is intuitive enough to figure out what should be grayed out and what should pop. Highlighting works with more than two factors as well. Anything that isn't the primary data simply sits in the background. 
 
