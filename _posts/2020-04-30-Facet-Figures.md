@@ -28,16 +28,13 @@ For sample data, I’m setting up two normal curves with offset sample means *x�
 [^2]:  The researcher that inspired this post needed to present characteristics for six separate factors in a concise manner.
 
 <details><summary markdown = 'span'>Show code</summary>
-    <p>
-      
+         
 ``` r
 # create a sample dataset of two normal curves with given classes
 samples <- data.frame(val = rnorm(100, 2,2), pos = ("Righties")) %>% 
   rbind(data.frame(val = rnorm(100, -2,1), pos = ("Lefties")) )
 ```
    
-   </p>
-
 </details><br>
 
 
@@ -53,8 +50,7 @@ samples <- data.frame(val = rnorm(100, 2,2), pos = ("Righties")) %>%
 ## Statistics
 Summary statistics as a visual annotation are helpful when determining differences in factors. We have a couple of “out of the box” options through the use of `summary` and the like. 
 
-<details><summary>Show code</summary>
-<p>
+<details><summary markdown = 'span'>Show code</summary>
 
 ``` r
 # create generic statistical summary
@@ -64,7 +60,6 @@ samples %>%
   do.call(rbind, .) -> stats   # bind list elements into df
 ```
 
-</p>
 </details><br>
 
 |       |   Minimum |        Q1 |     Median |       Mean |       Q3 |  Maximum |
@@ -83,7 +78,7 @@ summary_stats <- samples %>%
   summarize_at(vars(val),
              funs(Mean = mean, SD = sd))
 ```
-</p>
+
 </details><br>
 
 | Position |  Mean |   SD |
@@ -100,8 +95,7 @@ Generic ggplots tend to be a bit bland, which is fine in some cases. The generic
 ![](\assets/images/2020-04-30/plot-1.png)
 *Generic Histogram (w/ Bare Bones Aesthetics)*
 
-<details>
-  <summary>Show code</summary>
+<details><summary markdown = 'span'>Show code</summary>
 
 ``` r
 # Create a simple histogram (w/ bare bones aesthetics)
@@ -122,9 +116,8 @@ In our case, a generic plot shows us that the distribution is bimodal, but we re
 ![](\assets/images/2020-04-30/plot-2.png)
 *Histograms Faceted by Categorical Factor*
 
-<details>
-  <summary>Show code</summary>
-
+<details><summary markdown = 'span'>Show code</summary>
+  
 ``` r
 ggplot(samples, aes(x=val,fill=pos)) + 
   # Graphs
@@ -149,7 +142,7 @@ ggplot(samples, aes(x=val,fill=pos)) +
 
 ```
 
-</details>
+</details><br>
 
 Even without the summary statistics, it's much easier to discern the differences in two groups. At this stage, I've introduced the summary statistics and a mean line to increase comprehension. 
 
@@ -163,8 +156,7 @@ With that said, there are a handful of important features in this graphic that c
 ![](\assets/images/2020-04-30/plot-3.png)
 *Histograms Faceted by Categorical Factor*
 
-<details>
-  <summary>Show code</summary><p>
+<details><summary markdown = 'span'>Show code</summary>
 
 ```r
 ggplot(samples, aes(x=val,fill=pos)) + 
@@ -173,7 +165,7 @@ ggplot(samples, aes(x=val,fill=pos)) +
   <b>gghighlight::gghighlight()</b> # add gghighlight
   ...
 ```
-</p>
+
 </details>
 
 This is such a beautiful, yet deceptively simple trick to improving readability, a `gghighlight`![^3] It's worth noting that we don't need any additional arguments as the function is highlighting the given data per facet. Put another way, `gghighlight` is intuitive enough to figure out what should be grayed out and what should pop. Highlighting works with more than two factors as well. Anything that isn't the primary data simply sits in the background. 
