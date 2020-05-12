@@ -1,5 +1,6 @@
 ---
 title: "Highlights and Facets for Visualizing Categorical Data"
+permalink: /highlight-facet-histos/
 categories: 
   - Rstats
   - Statistics
@@ -12,8 +13,6 @@ tags:
 header:
   teaser: assets/images/2020-04-30/plot-3.png
 excerpt: "What's the most effective way to visualize comparisons between variable factors? How do you share a lot of information without muddying up your visualizations? There definitely isn't one answer, but here's one solution: faceted plots with gghighlight."
-kramdown:
-  parse_block_html: false
 ---
 
 ![](\assets/images/2020-04-30/plot-4.png)
