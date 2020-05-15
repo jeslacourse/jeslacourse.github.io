@@ -88,12 +88,14 @@
 
 .archive__item-teaser {
   position: relative;
+  float: left;
+  margin-right:15px;
   border-radius: $border-radius;
   overflow: hidden;
   
   img {
-    /*float: left;
-    margin-right:15px;*/
+    /*
+    */
     width: 120px;
   }
 }
