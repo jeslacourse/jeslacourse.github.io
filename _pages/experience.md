@@ -126,10 +126,10 @@ Attended meetings with members and partners of the non-profit film organization 
 #### Programming Comprehension
 Git with Bash
 
-OOP programming comprehension (3 years)
+OOP programming comprehension (6 years)
     
--   Python (2 years)
--   Java, C++ (1 year)
+-   Python (4 years)
+-   C++, Java, Javascript (1 year)
 
 R with RMarkdown (2 years)
     
