@@ -178,6 +178,7 @@ To improve readability and analysis, each feature is assigned a descriptive name
 
 
 *Table 2: Legible Dataframe*
+
 <table>
 <thead>
 <tr>
@@ -286,6 +287,85 @@ Kama
 Kama
 </td>
 </tr>
+<tr>
+<td style="text-align:right;">
+13.84
+</td>
+<td style="text-align:right;">
+13.94
+</td>
+<td style="text-align:right;">
+0.8955
+</td>
+<td style="text-align:right;">
+5.324
+</td>
+<td style="text-align:right;">
+3.379
+</td>
+<td style="text-align:right;">
+2.259
+</td>
+<td style="text-align:right;">
+4.805
+</td>
+<td style="text-align:left;">
+Kama
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+16.14
+</td>
+<td style="text-align:right;">
+14.99
+</td>
+<td style="text-align:right;">
+0.9034
+</td>
+<td style="text-align:right;">
+5.658
+</td>
+<td style="text-align:right;">
+3.562
+</td>
+<td style="text-align:right;">
+1.355
+</td>
+<td style="text-align:right;">
+5.175
+</td>
+<td style="text-align:left;">
+Kama
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14.38
+</td>
+<td style="text-align:right;">
+14.21
+</td>
+<td style="text-align:right;">
+0.8951
+</td>
+<td style="text-align:right;">
+5.386
+</td>
+<td style="text-align:right;">
+3.312
+</td>
+<td style="text-align:right;">
+2.462
+</td>
+<td style="text-align:right;">
+4.956
+</td>
+<td style="text-align:left;">
+Kama
+</td>
+</tr>
+</tbody>
 </table>
 
 
