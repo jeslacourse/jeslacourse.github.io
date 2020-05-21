@@ -16,7 +16,7 @@ tags:
 excerpt: "Feature selection is just as important as hyperparameter choice, yet many classifiers cherry-pick features without much empirical basis. While hyperparameters are easier to tweak, we must account for the impact of boosting these hyperparameters and the risk and impact of overfit."
 ---
 
-# Feature Choice in Classification of Wheat Kernels
+
 
 <center><b> Abstract</b></center>
 
