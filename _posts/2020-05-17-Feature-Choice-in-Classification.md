@@ -402,7 +402,7 @@ Area is highly correlated with the perimeter (r = 0.994), length (r=0.950), and 
 
 Given the distinctions in distribution, as well as the high correlation between the given factors, k-nearest neighbors with factors area, perimeter, length, and width as the classifying features. All features are given in millimeters and will not be standardized.
 
-For all experiments, `k=5`.
+All experiments are completed in *R* with `class::knn`, `k=5`. The train-test ratio will be set at 80/20 to provide an adequate test sample size, `n=42`. Training set, `n=168`. 
 
 ### K-Nearest Neighbors with Selected Features
 
