@@ -1,7 +1,9 @@
 ---
 title: "Feature Choice in Classification of Kernels"
 author: "Jessica LaCourse"
-teaser: assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-2.png
+header:
+ - title: "Feature Choice"
+ - teaser: assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-2.png
 permalink: /feature-choice/
 categories: 
   - Rstats
