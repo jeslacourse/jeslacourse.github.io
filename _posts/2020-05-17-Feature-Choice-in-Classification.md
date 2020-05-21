@@ -49,8 +49,8 @@ Each measurement is given in millimeters.
 ## Data Structure and Cleaning
 
 <center><i>Table 1: Raw Data Input</i><center>
-<center>
-<table>
+
+<table align = "center">
 <thead>
 <tr>
 <th style="text-align:right;">
@@ -160,7 +160,7 @@ V8
 </tr>
 </tbody>
 </table>
- </center>
+
 
 
 
@@ -172,8 +172,8 @@ To improve readability and analysis, each feature is assigned a descriptive name
 
 <center><i>Table 2: Legible Dataframe</i></center>
 
-<center>
-<table>
+
+<table align = "center">
 <thead>
 <tr>
 <th style="text-align:right;">
@@ -361,9 +361,6 @@ Kama
 </tr>
 </tbody>
 </table>
-</center>
-
-
 
 
 ### Missing Values 
@@ -372,7 +369,7 @@ Upon initial inspection, the data is complete and contains no missing values.
 
 ![](/assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-1.png)
 
-<center><i>Figure 1. Outlier and Quantile Analysis by Feature </i></center>
+<center><i>Figure 1. Outlier and Quantile Analysis by Feature </i></center><br>
 
 Two or three Kama kernel appears to fall outside the normal distribution in several categorical factors (Fig 1), but they are not far enough away from the rest of the level to warrant removal. With no major outliers and no missing values, data cleaning was a relatively simple process involving only the adjustment of
 variate names and factor levels.
@@ -382,7 +379,7 @@ variate names and factor levels.
 The wheats create distinctive groups when classified by area and perimeter. Length and width also provide significant groupings, while compactness, asymmetry, and groove have substantial overlap between the wheat variants (Fig 2). 
 ![](/assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-2.png)
 
-<center><i>Figure 2: Histograms with Density Overlays by Feature</i></center>
+<center><i>Figure 2: Histograms with Density Overlays by Feature</i></center><br>
 
 When classifying by wheat groove, in particular, the wheats fall into two distinctive groups, with Canadian and Kama wheats sharing nearly identical distributions.
 The groove on Rosa wheat is significantly longer and has almost no overlap with the opposing groups.
@@ -393,7 +390,7 @@ The groove on Rosa wheat is significantly longer and has almost no overlap with 
 With no categorical data, we can create a table of comparative values between all of our variates (Fig 3). 
 ![](/assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-4-1.png)
 
-<center><i>Figure 3: Correlation and Associativity </i></center>
+<center><i>Figure 3: Correlation and Associativity </i></center><br>
 
 Area is highly correlated with the perimeter (r = 0.994), length (r=0.950), and width (r=0.971) of a given kernel. These values are highly correlated with each other as well. Another notable factor, the kernel groove, is also highly correlated with the four noted factors. 
 
@@ -408,7 +405,7 @@ All experiments are completed in *R* with `class::knn`, `k=5`. The train-test ra
 
 <center><i>Table 3: Confusion Matrix: Classification with Area, Perimeter, Height and Width</i></center>
 
-<center>
+<table align = "center">
 <table>
 <thead>
 <tr>
@@ -471,7 +468,7 @@ Canadian
 </tr>
 </tbody>
 </table>
-</center>
+
 
 
 
@@ -483,8 +480,8 @@ The Kama distribution tails for length and width, as noted before overlap signif
 
 <center><i>Table 4: Confusion Matrix: Classification with Area and Perimeter</i></center>
 
-<center>
-<table>
+
+<table align = "center">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -546,7 +543,7 @@ Canadian
 </tr>
 </tbody>
 </table>
-</center>
+
 
 
 Removing height and width as factors increased the accuracy of our knn prediction to 95.24%, but that number on it’s own raises some suspicion (Table 4). The highly accurate result is likely more accidental, but it does show us that these features with more overlap in the tails do have a significant impact on the number of misclassified values.
@@ -555,8 +552,8 @@ Removing height and width as factors increased the accuracy of our knn predictio
 
 <center><i>Table 5: Confusion Matrix: Classification with All Features</i></center>
 
-<center>
-<table>
+
+<table align = "center">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -618,7 +615,7 @@ Canadian
 </tr>
 </tbody>
 </table>
-</center>
+
 
 As a control, we can train with all seven features. Given the significant overlap in compactness, asymmetry, and groove, the accuracy is expected to be lower than when strictly training with area and perimeter. The results are as expected, 90.47% (Table 5).
 
