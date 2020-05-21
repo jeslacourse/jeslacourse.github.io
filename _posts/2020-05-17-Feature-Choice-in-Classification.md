@@ -373,7 +373,7 @@ Kama
 
 ### Missing Values 
 
-![](Seeds_Report_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](/assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-1.png)
 
 *Figure 1. Outlier and Quantile Analysis by Feature *
 
@@ -395,7 +395,7 @@ The groove on Rosa wheat is significantly longer and has almost no overlap with 
 
 
 
-![](assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-2.png)
+![](/assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-2.png)
 
 *Figure 2: Histograms with Density Overlays by Feature*
 
@@ -405,7 +405,7 @@ The groove on Rosa wheat is significantly longer and has almost no overlap with 
 
 With no categorical data, we can create a table of comparative values between all of our variates (Fig 3). Area is highly correlated with the perimeter (r = 0.994), length (r=0.950), and width (r=0.971) of a given kernel. These values are highly correlated with each other as well. Another notable factor, the kernel groove, is also highly correlated with the four noted factors. 
 
-![](assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-4-1.png)
+![](/assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-4-1.png)
 
 *Figure 3: Correlation and Associativity *
 
@@ -639,4 +639,4 @@ Taking care to minimize inadvertent p-hacking should always be at the forefront 
 mind when building experiments.
 
 With that said, the analysis is based off of a single fixed training and test sample. Improvements can
-be made to the experiment by replicating the analysis with cross validation, bootstrapping, or k-folds to ensure repeatability.
+be made to the experiment by replicating the analysis with cross validation, bootstrapping, or k-folds to ensure replicability.
