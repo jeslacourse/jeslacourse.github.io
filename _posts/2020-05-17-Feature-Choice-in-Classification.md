@@ -18,7 +18,7 @@ excerpt: "Feature selection is just as important as hyperparameter choice, yet m
 
 <center><b> Abstract</b></center><br>
 
-<p style="text-align:right"> Frequently, k-nearest neighbors classification is applied with features chosen arbitrarily, while `k` is adjusted to improve the accuracy of the model. For this experiment, `k` is fixed. Using correlations with the strict acknowledgement that all features are continuous, a feature set with high correlation within itself is selection. Visual analysis using density and scatter plots show that these features also share distinct distributions and thusly make great candidates for k-nearest neighbors clustering. The four features return a well classified set, while tweaking the set by removing features with less distinctive groupings returns very high accuracy with an increased risk of overfit. Both features sets perform better than using all features with the same fixed hyperparameter. 
+<p style="text-align:justify"> Frequently, k-nearest neighbors classification is applied with features chosen arbitrarily, while `k` is adjusted to improve the accuracy of the model. For this experiment, `k` is fixed. Using correlations with the strict acknowledgement that all features are continuous, a feature set with high correlation within itself is selection. Visual analysis using density and scatter plots show that these features also share distinct distributions and thusly make great candidates for k-nearest neighbors clustering. The four features return a well classified set, while tweaking the set by removing features with less distinctive groupings returns very high accuracy with an increased risk of overfit. Both features sets perform better than using all features with the same fixed hyperparameter. 
 </p>
 
 
