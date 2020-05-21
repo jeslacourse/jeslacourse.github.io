@@ -48,7 +48,7 @@ Each measurement is given in millimeters.
 
 ## Data Structure and Cleaning
 
-<center><i>Table 1: Raw Data Input</i><center>
+<center><i>Table 1: Raw Data Input</i></center>
 
 <table align = "center">
 <thead>
