@@ -372,6 +372,8 @@ variate names and factor levels.
 ## Visualizations and Analysis
 
 The wheats create distinctive groups when classified by area and perimeter. Length and width also provide significant groupings, while compactness, asymmetry, and groove have substantial overlap between the wheat variants (Fig 2). 
+
+
 ![](/assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-2.png)
 
 <center><i>Figure 2: Histograms with Density Overlays by Feature</i></center><br>
@@ -387,7 +389,7 @@ With no categorical data, we can create a table of comparative values between al
 
 ![](/assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-4-1.png)
 
-<center><i>Figure 3: Correlation and Associativity </i></center><br>
+<center><i>Figure 3: Correlation and Associativity </i></center>
 
 Area is highly correlated with the perimeter (r = 0.994), length (r=0.950), and width (r=0.971) of a given kernel. These values are highly correlated with each other as well. Another notable factor, the kernel groove, is also highly correlated with the four noted factors. 
 
