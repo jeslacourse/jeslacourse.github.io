@@ -18,7 +18,7 @@ excerpt: "Feature selection is just as important as hyperparameter choice, yet m
 
 
 
-<center><b> Abstract</b></center>
+<center><b> Abstract</b></center><br>
 
 <center><p> Frequently, k-nearest neighbors classification is applied with features chosen arbitrarily, while `k` is adjusted to improve the accuracy of the model. For this experiment, `k` is fixed. Using correlations with the strict acknowledgement that all features are continuous, a feature set with high correlation within itself is selection. Visual analysis using density and scatter plots show that these features also share distinct distributions and thusly make great candidates for k-nearest neighbors clustering. The four features return a well classified set, while tweaking the set by removing features with less distinctive groupings returns very high accuracy with an increased risk of overfit. Both features sets perform better than using all features with the same fixed hyperparameter. 
     </p></center>
@@ -32,15 +32,7 @@ Feature selection is just as important as hyperparameter choice, yet many classi
 
 ## Data Information and Attributes
 
-The dataset is comprised of 210 sample kernels with three varieties of wheat, Kama, Rosa, and
-Canadian.
-
-Each wheat kernel is assigned seven attributes: grain area, perimeter, compactness, length and width
-of kernel, asymmetry coefficient and length of kernel groove.
-
-Each measurement is given in with millimeter-based units.
-
-### Sourcing Data
+### Data Source
 
 Wheat seed data provided by UCI’s Center for Machine Learning and Intelligent Systems.
 
@@ -56,8 +48,8 @@ Each measurement is given in millimeters.
 
 ## Data Structure and Cleaning
 
-*Table 1: Raw Data Input*
-
+<center><i>Table 1: Raw Data Input</i><center>
+<center>
 <table>
 <thead>
 <tr>
@@ -168,6 +160,7 @@ V8
 </tr>
 </tbody>
 </table>
+ </center>
 
 
 
@@ -177,8 +170,9 @@ To improve readability and analysis, each feature is assigned a descriptive name
 
 
 
-*Table 2: Legible Dataframe*
+<center><i>Table 2: Legible Dataframe</i></center>
 
+<center>
 <table>
 <thead>
 <tr>
@@ -367,61 +361,54 @@ Kama
 </tr>
 </tbody>
 </table>
+</center>
 
 
 
 
 ### Missing Values 
 
+Upon initial inspection, the data is complete and contains no missing values.
+
 ![](/assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-1.png)
 
-*Figure 1. Outlier and Quantile Analysis by Feature *
+<center><i>Figure 1. Outlier and Quantile Analysis by Feature </i></center>
 
-
-
-Upon initial inspection (Fig 1), the data appears to be complete and contains no missing values. Two
-or three Kama kernel appears to fall outside the normal distribution in several categorical factors, but
-they are not far enough away from the rest of the level to warrant removal. With no major outliers
-and no missing values, data cleaning was a relatively simple process involving only the adjustment of
+Two or three Kama kernel appears to fall outside the normal distribution in several categorical factors (Fig 1), but they are not far enough away from the rest of the level to warrant removal. With no major outliers and no missing values, data cleaning was a relatively simple process involving only the adjustment of
 variate names and factor levels.
 
 ## Visualizations and Analysis
 
-The wheats create distinctive groups when classified by area and perimeter. Length and width also
-provide significant groupings, while compactness, asymmetry, and groove have substantial overlap
-between the wheat variants (Fig 2). When classifying by wheat groove, in particular, the wheats fall
-into two distinctive groups, with Canadian and Kama wheats sharing nearly identical distributions.
-The groove on Rosa wheat is significantly longer and has almost no overlap with the opposing groups.
-
-
-
+The wheats create distinctive groups when classified by area and perimeter. Length and width also provide significant groupings, while compactness, asymmetry, and groove have substantial overlap between the wheat variants (Fig 2). 
 ![](/assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-2.png)
 
-*Figure 2: Histograms with Density Overlays by Feature*
+<center><i>Figure 2: Histograms with Density Overlays by Feature</i></center>
 
+When classifying by wheat groove, in particular, the wheats fall into two distinctive groups, with Canadian and Kama wheats sharing nearly identical distributions.
+The groove on Rosa wheat is significantly longer and has almost no overlap with the opposing groups.
 
 
 ### Correlation and Associativity
 
-With no categorical data, we can create a table of comparative values between all of our variates (Fig 3). Area is highly correlated with the perimeter (r = 0.994), length (r=0.950), and width (r=0.971) of a given kernel. These values are highly correlated with each other as well. Another notable factor, the kernel groove, is also highly correlated with the four noted factors. 
-
+With no categorical data, we can create a table of comparative values between all of our variates (Fig 3). 
 ![](/assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-4-1.png)
 
-*Figure 3: Correlation and Associativity *
+<center><i>Figure 3: Correlation and Associativity </i></center>
+
+Area is highly correlated with the perimeter (r = 0.994), length (r=0.950), and width (r=0.971) of a given kernel. These values are highly correlated with each other as well. Another notable factor, the kernel groove, is also highly correlated with the four noted factors. 
 
 
 ## Classification
 
-Given the distinctions in distribution, as well as the high correlation between the given factors,
-k-nearest neighbors with factors area, perimeter, length, and width as the classifying features. All
-features are given in millimeters and will not be standardized.
+Given the distinctions in distribution, as well as the high correlation between the given factors, k-nearest neighbors with factors area, perimeter, length, and width as the classifying features. All features are given in millimeters and will not be standardized.
 
 For all experiments, `k=5`.
 
 ### K-Nearest Neighbors with Selected Features
 
-*Table 3: Confusion Matrix: Classification with Area, Perimeter, Height and Width*
+<center><i>Table 3: Confusion Matrix: Classification with Area, Perimeter, Height and Width</i></center>
 
+<center>
 <table>
 <thead>
 <tr>
@@ -484,6 +471,7 @@ Canadian
 </tr>
 </tbody>
 </table>
+</center>
 
 
 
@@ -493,8 +481,9 @@ The Kama distribution tails for length and width, as noted before overlap signif
 
 ### K-Nearest Neighbors with Minimal Features
 
-*Table 4: Confusion Matrix: Classification with Area and Perimeter*
+<center><i>Table 4: Confusion Matrix: Classification with Area and Perimeter</i></center>
 
+<center>
 <table>
 <thead>
 <tr>
@@ -557,15 +546,16 @@ Canadian
 </tr>
 </tbody>
 </table>
-
+</center>
 
 
 Removing height and width as factors increased the accuracy of our knn prediction to 95.24%, but that number on it’s own raises some suspicion (Table 4). The highly accurate result is likely more accidental, but it does show us that these features with more overlap in the tails do have a significant impact on the number of misclassified values.
 
 ### K-Nearest Neighbors with All Features
 
-*Table 5: Confusion Matrix: Classification with All Features*
+<center><i>Table 5: Confusion Matrix: Classification with All Features</i></center>
 
+<center>
 <table>
 <thead>
 <tr>
@@ -628,7 +618,7 @@ Canadian
 </tr>
 </tbody>
 </table>
-
+</center>
 
 As a control, we can train with all seven features. Given the significant overlap in compactness, asymmetry, and groove, the accuracy is expected to be lower than when strictly training with area and perimeter. The results are as expected, 90.47% (Table 5).
 
