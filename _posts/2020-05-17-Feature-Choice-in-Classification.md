@@ -1,9 +1,7 @@
 ---
 title: "Feature Choice in Classification of Kernels"
-author: "Jessica LaCourse"
 header:
- - title: "Feature Choice"
- - teaser: assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-2.png
+  teaser: assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-2.png
 permalink: /feature-choice/
 categories: 
   - Rstats
@@ -15,9 +13,9 @@ tags:
   - rstats
   - ggplot
   - classification
-excerpt "Feature selection is just as important as hyperparameter choice, yet many classifiers cherry-pick features without much empirical basis. While hyperparameters are easier to tweak, we must account for the impact of boosting these hyperparameters and the risk and impact of overfit."
-
+excerpt: "Feature selection is just as important as hyperparameter choice, yet many classifiers cherry-pick features without much empirical basis. While hyperparameters are easier to tweak, we must account for the impact of boosting these hyperparameters and the risk and impact of overfit."
 ---
+
 # Feature Choice in Classification of Wheat Kernels
 
 ## Abstract
@@ -183,115 +181,7 @@ To improve readability and analysis, each feature is assigned a descriptive name
 
 *Table 2: Legible Dataframe*
 
-<table>
-<thead>
-<tr>
-<th style="text-align:right;">
-area
-</th>
-<th style="text-align:right;">
-perimeter
-</th>
-<th style="text-align:right;">
-compactness
-</th>
-<th style="text-align:right;">
-length
-</th>
-<th style="text-align:right;">
-width
-</th>
-<th style="text-align:right;">
-asymmetry
-</th>
-<th style="text-align:right;">
-groove
-</th>
-<th style="text-align:left;">
-wheat
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right;">
-15.26
-</td>
-<td style="text-align:right;">
-14.84
-</td>
-<td style="text-align:right;">
-0.8710
-</td>
-<td style="text-align:right;">
-5.763
-</td>
-<td style="text-align:right;">
-3.312
-</td>
-<td style="text-align:right;">
-2.221
-</td>
-<td style="text-align:right;">
-5.220
-</td>
-<td style="text-align:left;">
-Kama
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-14.88
-</td>
-<td style="text-align:right;">
-14.57
-</td>
-<td style="text-align:right;">
-0.8811
-</td>
-<td style="text-align:right;">
-5.554
-</td>
-<td style="text-align:right;">
-3.333
-</td>
-<td style="text-align:right;">
-1.018
-</td>
-<td style="text-align:right;">
-4.956
-</td>
-<td style="text-align:left;">
-Kama
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-14.29
-</td>
-<td style="text-align:right;">
-14.09
-</td>
-<td style="text-align:right;">
-0.9050
-</td>
-<td style="text-align:right;">
-5.291
-</td>
-<td style="text-align:right;">
-3.337
-</td>
-<td style="text-align:right;">
-2.699
-</td>
-<td style="text-align:right;">
-4.825
-</td>
-<td style="text-align:left;">
-Kama
-</td>
-</tr>
-</table>
+
 
 
 
