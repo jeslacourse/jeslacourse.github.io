@@ -48,7 +48,7 @@ Each measurement is given in millimeters.
 
 Our source data is a text file with headless, tab-separated data (Table 1).
 
-<br><center><i>Table 1: Raw Data Input</i></center>
+<center><i>Table 1: Raw Data Input</i></center>
 
 <table style="margin:auto;">
 <thead>
@@ -159,7 +159,7 @@ V8
 </td>
 </tr>
 </tbody>
-</table>
+</table><br>
 
 To improve readability and analysis, each feature is assigned a descriptive name. The response variable, ‘wheat‘, is factored into a categorical variable with levels "Kama", "Rosa", and "Canadian" replacing numeric variables 1,2, and 3, respectively (Table 2).
 
