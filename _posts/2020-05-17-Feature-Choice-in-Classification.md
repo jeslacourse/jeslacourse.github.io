@@ -1,5 +1,5 @@
 ---
-title: "Seed Data"
+title: "Feature Choice in Classification of Kernels"
 author: "Jessica LaCourse"
 teaser: assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-2.png
 permalink: /feature-choice/
@@ -16,19 +16,9 @@ tags:
 excerpt "Feature selection is just as important as hyperparameter choice, yet many classifiers cherry-pick features without much empirical basis. While hyperparameters are easier to tweak, we must account for the impact of boosting these hyperparameters and the risk and impact of overfit."
 
 ---
+# Feature Choice in Classification of Wheat Kernels
 
-<center>
-    <hr style="border:10px solid black;"> </hr>
-<h1>Feature Choice in Classification of Kernels</h1>
- <hr style="border:3px solid black"> </hr></center>
-
-<center><b>Jessica LaCourse</b><br>
-Department of Statistics, Undergraduate <br>
-University of California, Davis</center>
-
-
-
-<center><p><h4>Abstract</h4></p></center>
+## Abstract
 
 <center><p>The goal of our project is to look at the factors used to classify wheat kernels based on physical attributes. Frequently, k-nearest neighbors classification is applied with features chosen arbitrarily, while `k` is adjusted to improve the accuracy of the model. For this experiment, `k` is fixed. Using correlations with the strict acknowledgement that all features are continuous, a feature set with high correlation within itself is selection. Visual analysis using density and scatter plots show that these features also share distinct distributions and thusly make great candidates for k-nearest neighbors clustering. The four features return a well classified set, while tweaking the set by removing features with less distinctive groupings returns very high accuracy with an increased risk of overfit. Both features sets perform better than using all features with the same fixed hyperparameter. 
     </p></center>
