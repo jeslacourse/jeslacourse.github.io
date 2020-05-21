@@ -16,12 +16,10 @@ tags:
 excerpt: "Feature selection is just as important as hyperparameter choice, yet many classifiers cherry-pick features without much empirical basis. While hyperparameters are easier to tweak, we must account for the impact of boosting these hyperparameters and the risk and impact of overfit."
 ---
 
-
-
 <center><b> Abstract</b></center><br>
 
-<center><p> Frequently, k-nearest neighbors classification is applied with features chosen arbitrarily, while `k` is adjusted to improve the accuracy of the model. For this experiment, `k` is fixed. Using correlations with the strict acknowledgement that all features are continuous, a feature set with high correlation within itself is selection. Visual analysis using density and scatter plots show that these features also share distinct distributions and thusly make great candidates for k-nearest neighbors clustering. The four features return a well classified set, while tweaking the set by removing features with less distinctive groupings returns very high accuracy with an increased risk of overfit. Both features sets perform better than using all features with the same fixed hyperparameter. 
-    </p></center>
+<p style="text-align:right"> Frequently, k-nearest neighbors classification is applied with features chosen arbitrarily, while `k` is adjusted to improve the accuracy of the model. For this experiment, `k` is fixed. Using correlations with the strict acknowledgement that all features are continuous, a feature set with high correlation within itself is selection. Visual analysis using density and scatter plots show that these features also share distinct distributions and thusly make great candidates for k-nearest neighbors clustering. The four features return a well classified set, while tweaking the set by removing features with less distinctive groupings returns very high accuracy with an increased risk of overfit. Both features sets perform better than using all features with the same fixed hyperparameter. 
+</p>
 
 
 ## Introduction 
@@ -48,9 +46,9 @@ Each measurement is given in millimeters.
 
 ## Data Structure and Cleaning
 
-<center><i>Table 1: Raw Data Input</i></center>
+<br><center><i>Table 1: Raw Data Input</i></center>
 
-<table align = "center">
+<table style="margin:auto;">
 <thead>
 <tr>
 <th style="text-align:right;">
@@ -173,7 +171,7 @@ To improve readability and analysis, each feature is assigned a descriptive name
 <center><i>Table 2: Legible Dataframe</i></center>
 
 
-<table align = "center">
+<table style="margin:auto;">
 <thead>
 <tr>
 <th style="text-align:right;">
@@ -388,6 +386,8 @@ The groove on Rosa wheat is significantly longer and has almost no overlap with 
 ### Correlation and Associativity
 
 With no categorical data, we can create a table of comparative values between all of our variates (Fig 3). 
+
+
 ![](/assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-4-1.png)
 
 <center><i>Figure 3: Correlation and Associativity </i></center><br>
@@ -406,7 +406,7 @@ All experiments are completed in *R* with `class::knn`, `k=5`. The train-test ra
 <center><i>Table 3: Confusion Matrix: Classification with Area, Perimeter, Height and Width</i></center>
 
 
-<table>
+<table style="margin:auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -481,7 +481,7 @@ The Kama distribution tails for length and width, as noted before overlap signif
 <center><i>Table 4: Confusion Matrix: Classification with Area and Perimeter</i></center>
 
 
-<table>
+<table style="margin:auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -553,7 +553,7 @@ Removing height and width as factors increased the accuracy of our knn predictio
 <center><i>Table 5: Confusion Matrix: Classification with All Features</i></center>
 
 
-<table>
+<table style="margin:auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -619,7 +619,7 @@ Canadian
 
 As a control, we can train with all seven features. Given the significant overlap in compactness, asymmetry, and groove, the accuracy is expected to be lower than when strictly training with area and perimeter. The results are as expected, 90.47% (Table 5).
 
-### Conclusion
+## Conclusion
 The experiment shows the value of data exploration when choosing features. The experiment also
 shows that increasing the number of features doesn’t necessarily improve the accuracy of testing.
 Taking care to minimize inadvertent p-hacking should always be at the forefront of a researcher’s
