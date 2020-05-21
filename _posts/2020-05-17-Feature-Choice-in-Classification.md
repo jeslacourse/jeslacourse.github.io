@@ -405,7 +405,7 @@ All experiments are completed in *R* with `class::knn`, `k=5`. The train-test ra
 
 <center><i>Table 3: Confusion Matrix: Classification with Area, Perimeter, Height and Width</i></center>
 
-<table align = "center">
+
 <table>
 <thead>
 <tr>
@@ -481,7 +481,7 @@ The Kama distribution tails for length and width, as noted before overlap signif
 <center><i>Table 4: Confusion Matrix: Classification with Area and Perimeter</i></center>
 
 
-<table align = "center">
+<table>
 <thead>
 <tr>
 <th style="text-align:left;">
@@ -553,7 +553,7 @@ Removing height and width as factors increased the accuracy of our knn predictio
 <center><i>Table 5: Confusion Matrix: Classification with All Features</i></center>
 
 
-<table align = "center">
+<table>
 <thead>
 <tr>
 <th style="text-align:left;">
