@@ -18,12 +18,10 @@ excerpt: "Feature selection is just as important as hyperparameter choice, yet m
 
 # Feature Choice in Classification of Wheat Kernels
 
-## Abstract
+<center><b> Abstract</b></center>
 
-<center><p>The goal of our project is to look at the factors used to classify wheat kernels based on physical attributes. Frequently, k-nearest neighbors classification is applied with features chosen arbitrarily, while `k` is adjusted to improve the accuracy of the model. For this experiment, `k` is fixed. Using correlations with the strict acknowledgement that all features are continuous, a feature set with high correlation within itself is selection. Visual analysis using density and scatter plots show that these features also share distinct distributions and thusly make great candidates for k-nearest neighbors clustering. The four features return a well classified set, while tweaking the set by removing features with less distinctive groupings returns very high accuracy with an increased risk of overfit. Both features sets perform better than using all features with the same fixed hyperparameter. 
+<center><p> Frequently, k-nearest neighbors classification is applied with features chosen arbitrarily, while `k` is adjusted to improve the accuracy of the model. For this experiment, `k` is fixed. Using correlations with the strict acknowledgement that all features are continuous, a feature set with high correlation within itself is selection. Visual analysis using density and scatter plots show that these features also share distinct distributions and thusly make great candidates for k-nearest neighbors clustering. The four features return a well classified set, while tweaking the set by removing features with less distinctive groupings returns very high accuracy with an increased risk of overfit. Both features sets perform better than using all features with the same fixed hyperparameter. 
     </p></center>
-
-
 
 
 ## Introduction 
@@ -180,7 +178,115 @@ To improve readability and analysis, each feature is assigned a descriptive name
 
 
 *Table 2: Legible Dataframe*
-
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+area
+</th>
+<th style="text-align:right;">
+perimeter
+</th>
+<th style="text-align:right;">
+compactness
+</th>
+<th style="text-align:right;">
+length
+</th>
+<th style="text-align:right;">
+width
+</th>
+<th style="text-align:right;">
+asymmetry
+</th>
+<th style="text-align:right;">
+groove
+</th>
+<th style="text-align:left;">
+wheat
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+15.26
+</td>
+<td style="text-align:right;">
+14.84
+</td>
+<td style="text-align:right;">
+0.8710
+</td>
+<td style="text-align:right;">
+5.763
+</td>
+<td style="text-align:right;">
+3.312
+</td>
+<td style="text-align:right;">
+2.221
+</td>
+<td style="text-align:right;">
+5.220
+</td>
+<td style="text-align:left;">
+Kama
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14.88
+</td>
+<td style="text-align:right;">
+14.57
+</td>
+<td style="text-align:right;">
+0.8811
+</td>
+<td style="text-align:right;">
+5.554
+</td>
+<td style="text-align:right;">
+3.333
+</td>
+<td style="text-align:right;">
+1.018
+</td>
+<td style="text-align:right;">
+4.956
+</td>
+<td style="text-align:left;">
+Kama
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14.29
+</td>
+<td style="text-align:right;">
+14.09
+</td>
+<td style="text-align:right;">
+0.9050
+</td>
+<td style="text-align:right;">
+5.291
+</td>
+<td style="text-align:right;">
+3.337
+</td>
+<td style="text-align:right;">
+2.699
+</td>
+<td style="text-align:right;">
+4.825
+</td>
+<td style="text-align:left;">
+Kama
+</td>
+</tr>
+</table>
 
 
 
