@@ -1,8 +1,17 @@
 ---
 title: "Seed Data"
 author: "Jessica LaCourse"
+teaser: assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-2.png
+permalink: /feature-choice/
+categories: 
+  - Rstats
+  - Statistics
+  - Visualizations
+  - Classification
 tags: 
+  - dataviz
   - rstats
+  - ggplot
   - classification
 excerpt "Feature selection is just as important as hyperparameter choice, yet many classifiers cherry-pick features without much empirical basis. While hyperparameters are easier to tweak, we must account for the impact of boosting these hyperparameters and the risk and impact of overfit."
 
