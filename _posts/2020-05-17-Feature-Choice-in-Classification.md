@@ -1,5 +1,5 @@
 ---
-title: "Feature Choice in Classification of Wheat Kernels"
+title: "Feature Choice in Classification of Wheat"
 header:
   teaser: assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-2.png
 permalink: /feature-choice/
