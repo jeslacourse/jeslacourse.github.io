@@ -358,7 +358,6 @@ Kama
 </table>
 
 
-
 ### Missing Values 
 
 Upon initial inspection, the data is complete and contains no missing values.
@@ -468,7 +467,7 @@ Canadian
 </tr>
 </tbody>
 </table>
-<br>
+
 
 
 
@@ -543,7 +542,7 @@ Canadian
 </tr>
 </tbody>
 </table>
-<br>
+
 
 
 Removing height and width as factors increased the accuracy of our knn prediction to 95.24%, but that number on it’s own raises some suspicion (Table 4). The highly accurate result is likely more accidental, but it does show us that these features with more overlap in the tails do have a significant impact on the number of misclassified values.
@@ -615,7 +614,7 @@ Canadian
 </tr>
 </tbody>
 </table>
-<br>
+
 
 As a control, we can train with all seven features. Given the significant overlap in compactness, asymmetry, and groove, the accuracy is expected to be lower than when strictly training with area and perimeter. The results are as expected, 90.47% (Table 5).
 
