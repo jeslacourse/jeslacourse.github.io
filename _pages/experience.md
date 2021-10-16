@@ -126,16 +126,16 @@ Attended meetings with members and partners of the non-profit film organization 
 #### Programming Comprehension
 Git with Bash
 
-OOP programming comprehension (6 years)
+OOP programming comprehension (2014-)
     
--   Python (4 years)
+-   Python (2016-)
 -   C++, Java, Javascript (1 year)
 
-R with RMarkdown (2 years)
+R with RMarkdown (2018-)
     
-SQL, including PostgeSQL (3 years)
+SQL, including PostgeSQL and SQL Server (2015-)
 
-Jekyll in Ruby for Web Development (Recent)
+Jekyll in Ruby for Web Development (1 year)
 
 #### Specialized Software and Skills
 Type Speed: 55 AWP and 10 key by touch
