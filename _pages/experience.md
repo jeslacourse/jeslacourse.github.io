@@ -65,10 +65,14 @@ Geographic Information Systems Certificate
 
 ### PROFESSIONAL EXPERIENCE
 
+#### Research Analyst (Jul 2020 - )
+
+R-based Institutional Research 
+
 #### Code Coach (Instructor) (Dec 2019 - )
 
 Develop personalized, project-based curriculum for individuals and small groups of students aged 7-16
-- Primary Languages: Python and Drag-and-Drop (i.e. Snap, Scratch)  
+- Primary Languages: Python, C++, C#  
 
 Adapted coursework to be taught remotely in private and/or small group sessions
 
