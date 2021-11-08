@@ -10,6 +10,8 @@ table {
   font-size: $type-size-6;
   border-collapse: collapse;
   overflow-x: auto;
+  margin-left: auto;
+  margin-right: auto;
 
   & + table {
     margin-top: 1em;
