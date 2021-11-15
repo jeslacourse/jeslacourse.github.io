@@ -50,14 +50,17 @@
 .page__footer-copyright {
   font-family: $global-font-family;
   font-size: $type-size-7;
+  width:75%;
 }
 
 .page__footer-support {
   vertical-align: top;
   float: right;
+  width:25%;
 }
 
 .page__footer-follow {
+  width:75%;
     ul {
     margin: 0;
     padding: 0;
