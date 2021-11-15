@@ -48,12 +48,13 @@
 }
 
 .page__footer-copyright {
-  text.align: left; 
+  float: left; 
   font-family: $global-font-family;
   font-size: $type-size-7;
 }
 
 .page__footer-support {
+  float: right;
   text.align: right; 
 }
 
