@@ -1,12 +1,13 @@
 ---
-title: "Coursework"
-permalink: /about/coursework/
+title: "Projects"
+permalink: /about/projects/
 toc: true
 categories: 
   - about
 tags: 
   - about
   - coursework
+  - projects
 ---
 
 
