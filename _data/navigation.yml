@@ -4,8 +4,8 @@ main:
     url: /about/
   - title: "Experience"
     url: about/experience/
-  - title: "Coursework"
-    url: about/coursework/
+  - title: "Projects"
+    url: about/projects/
     #- title: "Quick-Start Guide"
     # url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
     #- title: "Sitemap"
