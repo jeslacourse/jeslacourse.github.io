@@ -48,7 +48,6 @@
 }
 
 .page__footer-copyright {
-  float: left; 
   font-family: $global-font-family;
   font-size: $type-size-7;
 }
@@ -59,8 +58,7 @@
 }
 
 .page__footer-follow {
-  text-align: left;
-  ul {
+    ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
