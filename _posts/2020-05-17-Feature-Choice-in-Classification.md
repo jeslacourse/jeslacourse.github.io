@@ -2,6 +2,9 @@
 title: "Feature Choice in Classification of Kernels"
 header:
   teaser: assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-2.png
+  overlay_image: assets/images/2020-05-17/unsplash.jpg
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+  caption: "Photo credit: [**@glenncarstenpeters**](https://unsplash.com)"
 permalink: /feature-choice/
 categories: 
   - Rstats
