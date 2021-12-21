@@ -362,7 +362,7 @@ Kama
 
 Upon initial inspection, the data is complete and contains no missing values.
 
-![](/assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-1.png)
+![](/assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-1.png){: .align-center}
 
 <center><i>Figure 1. Outlier and Quantile Analysis by Feature </i></center><br>
 
