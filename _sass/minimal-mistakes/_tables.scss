@@ -4,14 +4,15 @@
 
 table {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 1em;
-  width: 80%;
+  width: 50%;
   font-family: $global-font-family;
   font-size: $type-size-6;
   border-collapse: collapse;
   overflow-x: auto;
-  margin-left: auto;
-  margin-right: auto;
+  
 
   & + table {
     margin-top: 1em;
