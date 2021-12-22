@@ -12,6 +12,9 @@ tags:
   - gghighlight
 header:
   teaser: assets/images/2020-04-30/plot-3.png
+  overlay_image: assets/images/2020-04-30/tallac.png
+  overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+  caption: "Tallac at Sunset, [**@jeslacourse**](https://twitter.com/jeslacourse)"
 excerpt: "What's the most effective way to visualize comparisons between variable factors? How do you share a lot of information without muddying up your visualizations? There definitely isn't one answer, but here's one solution: faceted plots with gghighlight."
 ---
 
@@ -26,7 +29,7 @@ For sample data, Iâ€™m setting up two normal curves with offset sample means *xÌ
 
 [^2]:  The researcher that inspired this post needed to present characteristics for six separate factors in a concise manner.
 
-        
+
 ``` r
 # create a sample dataset of two normal curves with given classes
 samples <- data.frame(val = rnorm(100, 2,2), pos = ("Righties")) %>% 
@@ -99,7 +102,7 @@ In our case, a generic plot shows us that the distribution is bimodal, but we re
 
 ![](\assets/images/2020-04-30/plot-2.png)
 *Histograms Faceted by Categorical Factor*
-  
+
 ``` r
 ggplot(samples, aes(x=val,fill=pos)) + 
   # Graphs
