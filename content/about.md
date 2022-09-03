@@ -1,5 +1,6 @@
 ---
 title: "About the Author"
+slug: /about/
 permalink: /about/
 ---
 >If quarantine has brought me one gift, my once three-hour commute is now three hours each day to build a portfolio and digress on some of the more interesting topics in statistics, machine learning, and computer science. This of course, comes at the expense of turning the dining room into my new office but the familial repercussions appear to be relatively minor. 
