@@ -1,7 +1,6 @@
 ---
 title: "Experience"
 permalink: /about/experience/
-slug: /about/experience/
 toc: true
 categories: 
   - about

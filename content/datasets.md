@@ -1,7 +1,6 @@
 ---
 title: "Datasets"
 permalink: /datasets/
-slug: /datasets/
 toc: true
 categories: 
 

@@ -32,5 +32,3 @@ _site
 
 # Project files
 .Rmd
-Thumbs.db
-.hugo_build.lock

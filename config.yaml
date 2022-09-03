@@ -1,4 +1,4 @@
-baseurl: https://jeslacourse.github.io/
+baseurl: /
 languageCode: en-us
 title: jeslacourse
 theme: hyde
@@ -23,7 +23,7 @@ menu:
 params:
   MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs
   MathJaxVersion: 2.7.5
-  description: Web portfolio in progress
+  description: A website built through Hugo and blogdown.
   favicon: favicon.ico
   highlightjsCDN: //cdnjs.cloudflare.com/ajax/libs
   highlightjsLang:
