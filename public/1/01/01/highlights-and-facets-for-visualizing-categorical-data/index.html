@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.102.3" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Highlights and Facets for Visualizing Categorical Data &middot; jeslacourse</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="/"><h1>jeslacourse</h1></a>
+      <p class="lead">
+       A website built through Hugo and blogdown. 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/">Home</a> </li>
+        <li><a href="/about/"> About </a></li><li><a href="https://github.com/jeslacourse"> GitHub </a></li><li><a href="https://twitter.com/jeslacourse"> Twitter </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2022. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Highlights and Facets for Visualizing Categorical Data</h1>
+  <time datetime=0001-01-01T00:00:00Z class="post-date">Mon, Jan 1, 0001</time>
+  <p><img src="%5Cassets/images/2020-04-30/plot-4.png" alt="">
+<em>Side-by-Side Comparison of (a) Generic Plot and (b) Faceted Plots with Highlight</em></p>
+<h2 id="visualizing-categorical-data">Visualizing Categorical Data</h2>
+<p>What&rsquo;s the most effective way to visualize comparisons between variable factors? How do you share a lot of information without muddying up your visualizations? There definitely isn&rsquo;t one answer, but here&rsquo;s one solution: faceted plots with <code>gghighlight</code>.</p>
+<p>For sample data, I’m setting up two normal curves with offset sample means <em>x̄</em> =  ± 2. While we&rsquo;re using two factors for simplicity, this method actual becomes more effective when the number of factors increases.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> For our sample data, Lefties are disperses around a mean left of center, while Righties collect right of center. The variances are modified as well to exaggerate the difference in factors, but we&rsquo;ll get into that in a second.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># create a sample dataset of two normal curves with given classes</span>
+</span></span><span style="display:flex;"><span>samples <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">data.frame</span>(val <span style="color:#f92672">=</span> <span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>), pos <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#34;Righties&#34;</span>)) <span style="color:#f92672">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">rbind</span>(<span style="color:#a6e22e">data.frame</span>(val <span style="color:#f92672">=</span> <span style="color:#a6e22e">rnorm</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">-2</span>,<span style="color:#ae81ff">1</span>), pos <span style="color:#f92672">=</span> (<span style="color:#e6db74">&#34;Lefties&#34;</span>)) )
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:right">Value</th>
+<th style="text-align:left">Position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:right">3.728539</td>
+<td style="text-align:left">Righties</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:right">1.465043</td>
+<td style="text-align:left">Righties</td>
+</tr>
+<tr>
+<td>101</td>
+<td style="text-align:right">-0.210901</td>
+<td style="text-align:left">Lefties</td>
+</tr>
+<tr>
+<td>102</td>
+<td style="text-align:right">-2.117621</td>
+<td style="text-align:left">Lefties</td>
+</tr>
+</tbody>
+</table>
+<h2 id="statistics">Statistics</h2>
+<p>Summary statistics as a visual annotation are helpful when determining differences in factors. We have a couple of “out of the box” options through the use of <code>summary</code> and the like.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># create generic statistical summary</span>
+</span></span><span style="display:flex;"><span>samples <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">select_if</span>(is.numeric)  <span style="color:#f92672">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">map</span>(<span style="color:#f92672">~</span><span style="color:#a6e22e">tidy</span>(<span style="color:#a6e22e">summary</span>(.x))) <span style="color:#f92672">%&gt;%</span>  <span style="color:#75715e"># compute tidy summary of each var</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">do.call</span>(rbind, .) <span style="color:#f92672">-&gt;</span> stats   <span style="color:#75715e"># bind list elements into df</span>
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:right">Minimum</th>
+<th style="text-align:right">Q1</th>
+<th style="text-align:right">Median</th>
+<th style="text-align:right">Mean</th>
+<th style="text-align:right">Q3</th>
+<th style="text-align:right">Maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Value</td>
+<td style="text-align:right">-4.915701</td>
+<td style="text-align:right">-2.159441</td>
+<td style="text-align:right">-0.8809261</td>
+<td style="text-align:right">-0.0567143</td>
+<td style="text-align:right">1.785081</td>
+<td style="text-align:right">6.861341</td>
+</tr>
+</tbody>
+</table>
+<p>Or we can build our own custom summary table. In this case, we&rsquo;re only interested in adding mean and deviation to our visuals.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># create a custom summary, in this case, just the mean and sd</span>
+</span></span><span style="display:flex;"><span>summary_stats <span style="color:#f92672">&lt;-</span> samples <span style="color:#f92672">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">group_by</span>(pos) <span style="color:#f92672">%&gt;%</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">summarize_at</span>(<span style="color:#a6e22e">vars</span>(val),
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">funs</span>(Mean <span style="color:#f92672">=</span> mean, SD <span style="color:#f92672">=</span> sd))
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th style="text-align:left">Position</th>
+<th style="text-align:right">Mean</th>
+<th style="text-align:right">SD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Righties</td>
+<td style="text-align:right">1.92</td>
+<td style="text-align:right">2.22</td>
+</tr>
+<tr>
+<td style="text-align:left">Lefties</td>
+<td style="text-align:right">-2.03</td>
+<td style="text-align:right">0.98</td>
+</tr>
+</tbody>
+</table>
+<h2 id="generic-plots">Generic Plots</h2>
+<p>Generic ggplots tend to be a bit bland, which is fine in some cases. The generic plot is almost identical to  R&rsquo;s <code>plot()</code> function.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p><img src="%5Cassets/images/2020-04-30/plot-1.png" alt="">
+<em>Generic Histogram (w/ Bare Bones Aesthetics)</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#75715e"># Create a simple histogram (w/ bare bones aesthetics)</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(samples, <span style="color:#a6e22e">aes</span>(x<span style="color:#f92672">=</span>val)) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_histogram</span>(alpha<span style="color:#f92672">=</span> <span style="color:#ae81ff">0.7</span>, bins <span style="color:#f92672">=</span> <span style="color:#ae81ff">40</span>) <span style="color:#f92672">+</span>   <span style="color:#75715e"># 70% opacity, 40 slices</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">labs</span>(title <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Distribution of Lefties and Righties&#34;</span>, 
+</span></span><span style="display:flex;"><span>       x <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Sample Value&#34;</span>, y<span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Frequency&#34;</span>) <span style="color:#f92672">+</span> <span style="color:#75715e"># All Labels     </span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">theme_bw</span>()                                <span style="color:#75715e"># B&amp;W Theme</span>
+</span></span></code></pre></div><p>In our case, a generic plot shows us that the distribution is bimodal, but we really can&rsquo;t determine a lot about the characteristics of either factors&rsquo; distribution. We are somewhat lucky, in this case, that if we were to create a classifier based strictly off of the information above, we can see that the cutoff should be about <code>x=0</code>. Aside from that, it&rsquo;s difficult to read exactly what&rsquo;s going on.</p>
+<h2 id="faceted-plots">Faceted Plots</h2>
+<p><img src="%5Cassets/images/2020-04-30/plot-2.png" alt="">
+<em>Histograms Faceted by Categorical Factor</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(samples, <span style="color:#a6e22e">aes</span>(x<span style="color:#f92672">=</span>val,fill<span style="color:#f92672">=</span>pos)) <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Graphs</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_histogram</span>(<span style="color:#a6e22e">aes</span>(y<span style="color:#f92672">=</span>..density..),binwidth<span style="color:#f92672">=</span><span style="color:#ae81ff">.5</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">.5</span>, position<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;identity&#34;</span>) <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_density</span>(alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">.3</span>) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># One figure per class</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">facet_grid</span>(.~pos, scales <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;fixed&#34;</span>)<span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Mean line</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_vline</span>(data <span style="color:#f92672">=</span> summary_stats, mapping <span style="color:#f92672">=</span> <span style="color:#a6e22e">aes</span>(xintercept <span style="color:#f92672">=</span> Mean), 
+</span></span><span style="display:flex;"><span>             linetype<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dotted&#34;</span>, 
+</span></span><span style="display:flex;"><span>             color <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;blue&#34;</span>, size<span style="color:#f92672">=</span><span style="color:#ae81ff">0.7</span>) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Annotations</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_text</span>(data<span style="color:#f92672">=</span>summary_stats, 
+</span></span><span style="display:flex;"><span>             inherit.aes<span style="color:#f92672">=</span><span style="color:#66d9ef">FALSE</span>, 
+</span></span><span style="display:flex;"><span>             <span style="color:#a6e22e">aes</span>(vjust<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;inward&#34;</span>, hjust <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;inward&#34;</span>,
+</span></span><span style="display:flex;"><span>                 x <span style="color:#f92672">=</span> <span style="color:#66d9ef">Inf</span>, y <span style="color:#f92672">=</span> <span style="color:#66d9ef">Inf</span>, family <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;serif&#34;</span>,
+</span></span><span style="display:flex;"><span>                 label<span style="color:#f92672">=</span><span style="color:#a6e22e">paste</span>(<span style="color:#e6db74">&#34;\nMean:&#34;</span>,Mean,<span style="color:#e6db74">&#34;\nSD:&#34;</span>,SD, <span style="color:#e6db74">&#34;\n&#34;</span>))) 
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">...</span>               
+</span></span></code></pre></div><p>Even without the summary statistics, it&rsquo;s much easier to discern the differences in two groups. At this stage, I&rsquo;ve introduced the summary statistics and a mean line to increase comprehension.</p>
+<p>With that said, there are a handful of important features in this graphic that can be easily overlooked:</p>
+<ol>
+<li>Fix the y-axis. Without a fixed axis, we have no ability to quickly discern differences in distribution</li>
+<li>Drop the opacity of the histogram. Overlapping data can get lost in the shuffle.</li>
+</ol>
+<h2 id="adding-that-highlight">Adding That Highlight</h2>
+<p><img src="%5Cassets/images/2020-04-30/plot-3.png" alt="">
+<em>Histograms Faceted by Categorical Factor</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#a6e22e">ggplot</span>(samples, <span style="color:#a6e22e">aes</span>(x<span style="color:#f92672">=</span>val,fill<span style="color:#f92672">=</span>pos)) <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_histogram</span>(<span style="color:#a6e22e">aes</span>(y<span style="color:#f92672">=</span>..density..),binwidth<span style="color:#f92672">=</span><span style="color:#ae81ff">.5</span>, alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">.5</span>, position<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;identity&#34;</span>) <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">geom_density</span>(alpha<span style="color:#f92672">=</span><span style="color:#ae81ff">.3</span>) <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span>b<span style="color:#f92672">&gt;</span>gghighlight<span style="color:#f92672">::</span><span style="color:#a6e22e">gghighlight</span>()<span style="color:#f92672">&lt;/</span>b<span style="color:#f92672">&gt;</span> <span style="color:#75715e"># add gghighlight</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">...</span>
+</span></span></code></pre></div><p>This is such a beautiful, yet deceptively simple trick to improving readability, a <code>gghighlight</code>!<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> It&rsquo;s worth noting that we don&rsquo;t need any additional arguments as the function is highlighting the given data per facet. Put another way, <code>gghighlight</code> is intuitive enough to figure out what should be grayed out and what should pop. Highlighting works with more than two factors as well. Anything that isn&rsquo;t the primary data simply sits in the background.</p>
+<p>We&rsquo;re just scraping the surface of what <code>gghighlight</code> can do for data viz. It&rsquo;s incredibly effective for singling out notable traits in a class, emphasizing trends, or simply comparing a subset of data to the rest of a sample.</p>
+<h2 id="ggplot-summary">GGPlot Summary</h2>
+<p>There are a lot of bits and pieces to these graphs, here&rsquo;s a quick recap on what role each piece plays.</p>
+<p><code>geom_histogram</code>: creates histogram, plotting feature values against
+their frequencies</p>
+<ul>
+<li>
+<p><code>y=..density..</code> shifts the y-axis to a relative frequency</p>
+</li>
+<li>
+<p><code>bin_width</code>: the number of “slices” that we cut our data into. Play
+with this number! Can be relative, 0-1, or a number of slices
+(i.e. <code>binwidth = 10</code> for ten equal sized bins)</p>
+</li>
+<li>
+<p><code>alpha</code>: the transparency of our data, from fully transparent (0.0)
+to opaque (1.0)</p>
+</li>
+<li>
+<p><code>position</code>: relationship between the classes, can be “identity”,
+“stack”, “dodge”. Using <code>facet_grid</code>, “identity” has the added
+benefit of creating equal axes for each figure.</p>
+</li>
+</ul>
+<p><code>geom_density</code>: smooths the histogram into a density plot, with y-axis
+as the relative frequency for a point</p>
+<p><code>geom_vline</code>: vertical line, in this case used to create a mean line</p>
+<p><code>gghighlight</code>: great way to show our data compared to the relative
+spread. Creates a “shadow” of the overall distribution.</p>
+<p><code>facet_grid</code>: breaks visuals into individual figures by feature.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>The researcher that inspired this post needed to present characteristics for six separate factors in a concise manner.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>I&rsquo;m oversimplifying a bit. This plot isn&rsquo;t <em>completely</em> generic. Titles, transparency, and theming aren&rsquo;t necessarily something you would get with base <code>plot()</code>.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://www.rdocumentation.org/packages/gghighlight/versions/0.0.1/topics/gghighlight">RDocumentation: gghighlight</a>.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

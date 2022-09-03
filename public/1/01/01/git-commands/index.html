@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.102.3" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Git Commands &middot; jeslacourse</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="/"><h1>jeslacourse</h1></a>
+      <p class="lead">
+       A website built through Hugo and blogdown. 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="/">Home</a> </li>
+        <li><a href="/about/"> About </a></li><li><a href="https://github.com/jeslacourse"> GitHub </a></li><li><a href="https://twitter.com/jeslacourse"> Twitter </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2022. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Git Commands</h1>
+  <time datetime=0001-01-01T00:00:00Z class="post-date">Mon, Jan 1, 0001</time>
+  <blockquote>
+<p>The original post is a response to a class forum. This post is just a handy way to determine how the site will handle markdown language while also providing some interesting content.</p>
+</blockquote>
+<p>This was originally part of a response to #151, but it should be good information for anyone trying to troubleshoot git version control. I&rsquo;ve pulled some of the specific troubleshooting out and added a bunch of detail on the common commands. My hope is that it gives you guys a kind of understanding of what git is doing in the background.</p>
+<p>Pleeease be careful about just blindly typing in git commands. As safe as git version control is, you run a real risk of overwriting your files by just trying to <code>pull</code> simply when git asks you to.</p>
+<h3 id="short-version">Short version:</h3>
+<p><code>git clone url</code>: Asking the remote (online) repository to make a local (PC) copy</p>
+<p><code>git pull</code>: Including or &ldquo;pulling down&rdquo; changes from the remote repository to your local</p>
+<p><code>git status</code>: Looking at the differences between the remote and local. Awesome tool for troubleshooting.</p>
+<p><code>git diff</code>: Shows changes between the remote file and the local</p>
+<p><code>git add</code>: Prep stage getting ready to add new files that are local but you want to be remote. This is also where git starts tracking files if you&rsquo;ve heard that term before.</p>
+<p><code>git commit</code>:  Takes the files to be updated to the remote repo, creates a &ldquo;timestamp of sorts&rdquo; and stages them to be included in the remote repo, i.e. you&rsquo;re committing the changes you&rsquo;ve made up to a certain point. For us, this is usually just one commit (when we complete the file).</p>
+<p><code>git push</code>: Updates the remote repository</p>
+<h3 id="a-bit-more-in-depth">A bit more in-depth</h3>
+<p><strong>Git Pull</strong>
+So let&rsquo;s talk real quick about what <code>git pull</code> does, especially considering if you&rsquo;re pushing your changes  you likely have a complete project that shouldn&rsquo;t be altered much. <code>git pull</code> is pulling remote (online) changes down to your local (PC) repository. Disclaimer, I use Git Bash console for my commands, so RStudio will be slightly different, but the commands are the same.  For this class, we don&rsquo;t really <code>pull</code> assignments as much since we&rsquo;re simply using <code>git clone url</code> to create a local copy. <del><code>git pull</code> is more effective in cases like #80 where there&rsquo;s been a revision.</del>[For revisions see : #153] Assuming you&rsquo;ve already cloned the file, <code>git pull</code> will &ldquo;pull down&rdquo; any changes made to the remote repository and include them in your local file.</p>
+<p><strong>Git Status and Diff</strong>
+But you&rsquo;ve been working on your files before the changes were made remotely, right? Now you have a high risk of merge conflicts. Try out <code>git status</code> to see what files have changed.</p>
+<p>Mine looks like this:</p>
+<pre tabindex="0"><code>$ git status
+On branch master
+Your branch is up-to-date with &#39;origin/master&#39;. # where your conflict is 
+Changes not staged for commit:
+  (use &#34;git add &lt;file&gt;...&#34; to update what will be committed)
+  (use &#34;git checkout -- &lt;file&gt;...&#34; to discard changes in working directory)
+
+        modified:   q1.Rmd
+        modified:   q2.Rmd
+        modified:   q3.Rmd
+
+Untracked files:
+  (use &#34;git add &lt;file&gt;...&#34; to include in what will be committed)
+
+        .RData
+        .Rhistory
+        q1.html
+        q2.html
+
+no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;)
+</code></pre><p>The first few lines are telling me that I&rsquo;m on the main branch (we won&rsquo;t talk about branches much here, so this won&rsquo;t change for the time being) and that my (local) branch, or copy of the repo, is up-to-date with the remote repository, called &lsquo;origin/master&rsquo;.</p>
+<p>After that we start to see file status changes. I&rsquo;m currently working on <code>q3.Rmd</code>, and haven&rsquo;t pushed any changes yet, so it&rsquo;s intuitive that my modified files would be the three <code>*.Rmd</code> files.</p>
+<p>If for some reason <code>status tells me that I'm </code>x commits behind master<code>I can look at the difference between my repo and the remote repo line-by-line with</code>git diff`.</p>
+<pre tabindex="0"><code>$ git diff 
+diff --git a/q1.Rmd b/q1.Rmd 
+index 5b76ee4..7dfe81a 100644  #commit references
+--- a/q1.Rmd                   # remote file
++++ b/q1.Rmd                   # local file
+@@ -1,5 +1,6 @@                # lines changes
+ ---
+ title: &#34;Question 1&#34;
++author: &#34;Jessica LaCourse&#34;
+ ---
+
+@@ -15,32 +16,75 @@ The `walk` function is very similar to the `map` function except that it doesn&#39;t
+</code></pre><p>Here, <code>a/q1.Rmd</code> <code>b/q1.Rmd</code> are my remote and local files being compared, respectively. Values between the <code>@</code> symbols are line references and the <code>+</code> is a line, an author tag at the start of assignment 1,  I added to the start of the file. Intuitively, you can also have <code>-</code> changes for lines deleted. <code>git diff</code> is especially handy when you are working in a team and the remote repo is changing while you&rsquo;re working locally.</p>
+<p><strong>Git Add, Commit and Push</strong> 
+The local repository doesn&rsquo;t have a copy of <code>q1.html</code> or <code>q2.html</code> so I&rsquo;ll tell bash &ldquo;Hey, when I push, I want to push these files, too&rdquo; with the command <code>git add q1.html q2.html</code> (and ultimately q3 as well).</p>
+<p>I&rsquo;ve added my files, now I want to commit them, <code>git commit -m &quot;Complete Assignments&quot;</code>, where <code>-m</code> is called a flag saying &ldquo;I want to include the message, &lsquo;Complete assignment&rsquo;&rdquo;.</p>
+<p>From there, I can push my changes, <code>git push origin master</code>.</p>
+<p>Once I push my changes, all five files (three <code>*.Rmd</code>s and two <code>*.htmls</code> will push to the local repository.</p>
+<p><strong>So why are <code>git add</code>, <code>git commit</code>, and <code>git push</code> three different commands?</strong> 
+It could be one right?</p>
+<p>The first, I hope it&rsquo;s a bit intuitive as to why <code>git add</code> is it&rsquo;s own command. You don&rsquo;t necessarily want to add ALL the files in a folder to the remote repo. There is a command, use it wisely, to add all new files <code>git add .</code> Similarly, to add all changes, added and deleted files, etc. There&rsquo;s <code>git add -A</code> where dot and <code>-A</code> respectively are flags for &ldquo;all new&rdquo; and &ldquo;all&rdquo; changes.</p>
+<p>I&rsquo;m not the only one whose committed a file, gotten the message that it was successful, then&hellip; it&rsquo;s not there. It&rsquo;s not where it&rsquo;s supposed to be! Why isn&rsquo;t my file online? 
+There&rsquo;s some nuance in the difference between <code>git commit</code> and <code>git push</code>. The way I think of it is that <code>git commit</code> is kind of like putting a bookmark in my book, while <code>git push</code> is talking about the latest changes (between this time and the last time I dropped a bookmark in my book) with a(n obviously Zoom) book club or something larger than myself. Does that make sense? <code>commit</code> logs changes locally, while <code>push</code> updates our remote repository with our changes.</p>
+<p>For this class, we only <code>commit</code> and <code>push</code> once, usually. But when you&rsquo;re working on a larger project you can absolutely <code>commit</code> and <code>push</code> to a repo dozens or hundreds of times.</p>
+<p>Edit: Formatting, added <code>git diff</code> information</p>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

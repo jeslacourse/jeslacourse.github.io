@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>projects on jeslacourse</title>
+    <link>/tags/projects/</link>
+    <description>Recent content in projects on jeslacourse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/tags/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Projects</title>
+      <link>/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/</guid>
+      <description>B.S. Statistics - Data Science Track
+Minor - Computer Science
+Highlights Big Data &amp;amp; High Performance Statistical Computing High-performance computing in high-level data analysis languages; different computational approaches and paradigms for efficient analysis of big data; interfaces to compiled languages; high-level parallel computing; MapReduce; parallel algorithms and reasoning. Python. R. SQL.
+Categorical Data Varieties of categorical data, cross-classifications, contingency tables, tests for independence. Multidimensional tables and log-linear models, maximum likelihood estimation; tests of goodness-of-fit.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,6 +1,6 @@
 baseurl: /
 languageCode: en-us
-title: A Hugo website
+title: jeslacourse
 theme: hyde
 googleAnalytics: ''
 disqusShortname: ''
@@ -17,9 +17,9 @@ menu:
     - name: About
       url: /about/
     - name: GitHub
-      url: https://github.com/rstudio/blogdown
+      url: https://github.com/jeslacourse
     - name: Twitter
-      url: https://twitter.com/rstudio
+      url: https://twitter.com/jeslacourse
 params:
   MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs
   MathJaxVersion: 2.7.5
