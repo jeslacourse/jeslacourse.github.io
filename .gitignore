@@ -28,7 +28,11 @@ codekit-config.json
 _asset_bundler_cache
 _site
 .Rproj.user
-.Rproj
+*.Rproj
 
 # Project files
-.Rmd
+*.Rmd
+
+# Hugo
+Thumbs.db 
+.hugo_build.lock

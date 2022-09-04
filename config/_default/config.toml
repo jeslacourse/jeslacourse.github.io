@@ -6,9 +6,12 @@ baseURL = "https://jeslacourse.github.io/"
 defaultContentLanguage = "en"
 theme = "congo"
 
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
+
 enableRobotsTXT = true
 paginate = 10
 summaryLength = 0
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+

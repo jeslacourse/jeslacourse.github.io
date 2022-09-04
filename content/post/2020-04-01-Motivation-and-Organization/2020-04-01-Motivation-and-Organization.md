@@ -1,5 +1,6 @@
 ---
-Title: "Motivation and Organization"
+title: "Motivation and Organization"
+date: 2020-04-01
 toc: False
 ---
 

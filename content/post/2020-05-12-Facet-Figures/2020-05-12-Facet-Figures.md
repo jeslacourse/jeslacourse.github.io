@@ -1,5 +1,6 @@
 ---
 title: "Highlights and Facets for Visualizing Categorical Data"
+date: 2020-05-12
 permalink: /highlight-facet-histos/
 categories: 
   - Rstats
@@ -18,7 +19,7 @@ header:
 excerpt: "What's the most effective way to visualize comparisons between variable factors? How do you share a lot of information without muddying up your visualizations? There definitely isn't one answer, but here's one solution: faceted plots with gghighlight."
 ---
 
-![](\assets/images/2020-04-30/plot-4.png)
+![](/facet/plot-4.png)
 *Side-by-Side Comparison of (a) Generic Plot and (b) Faceted Plots with Highlight*
 
 ## Visualizing Categorical Data
@@ -83,7 +84,7 @@ Generic ggplots tend to be a bit bland, which is fine in some cases. The generic
 
 [^1]:  I'm oversimplifying a bit. This plot isn't *completely* generic. Titles, transparency, and theming aren't necessarily something you would get with base `plot()`.
 
-![](\assets/images/2020-04-30/plot-1.png)
+![](/facet/plot-1.png)
 *Generic Histogram (w/ Bare Bones Aesthetics)*
 
 ``` r
@@ -100,7 +101,7 @@ In our case, a generic plot shows us that the distribution is bimodal, but we re
 
 ## Faceted Plots 
 
-![](\assets/images/2020-04-30/plot-2.png)
+![](/facet/plot-2.png)
 *Histograms Faceted by Categorical Factor*
 
 ``` r
@@ -137,7 +138,7 @@ With that said, there are a handful of important features in this graphic that c
 
 ## Adding That Highlight
 
-![](\assets/images/2020-04-30/plot-3.png)
+![](/facet/plot-3.png)
 *Histograms Faceted by Categorical Factor*
 
 

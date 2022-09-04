@@ -14,9 +14,9 @@ dateFormat = "January 2, 2006"
 
 [author]
    name = "Jes LaCourse"
-  # image = "img/author.jpg"
-  # headline = "I'm only human"
-  # bio = "A little bit about you"
+   image = "images/bio-photo.jpg"
+   #bio = "Senior Reseacher with Sierra College"
+   headline = "Statistics and Data Science"
    links = [
   #   { email = "mailto:hello@your_domain.com" },
   #   { link = "https://link-to-some-website.com/" },

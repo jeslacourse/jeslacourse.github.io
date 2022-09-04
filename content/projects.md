@@ -1,5 +1,6 @@
 ---
 title: "Projects"
+showDate: False
 slug: /projects/
 toc: true
 categories: 
