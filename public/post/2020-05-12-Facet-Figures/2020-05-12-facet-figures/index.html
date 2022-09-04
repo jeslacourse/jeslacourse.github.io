@@ -1,0 +1,696 @@
+
+
+<!DOCTYPE html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head>
+  <meta charset="utf-8" />
+  
+    <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>Highlights and Facets for Visualizing Categorical Data &middot; jes lacourse</title>
+    <meta name="title" content="Highlights and Facets for Visualizing Categorical Data &middot; jes lacourse" />
+  
+  
+  
+  
+  
+  <link rel="canonical" href="https://jeslacourse.github.io/post/2020-05-12-facet-figures/2020-05-12-facet-figures/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.3552466d62941f854cc764b706ab5b2e3616325dd23313577f99ff83f095a09e436d4734656eb0ab9f588d93c251fdf636660a728c2f6ccb49697325daac8a6c.css"
+    integrity="sha512-NVJGbWKUH4VMx2S3BqtbLjYWMl3SMxNXf5n/g/CVoJ5DbUc0ZW6wq59YjZPCUf32NmYKcowvbMtJaXMl2qyKbA=="
+  />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.badab316c9287a5a42a843e4eb45da65bb3d194a5a0f5fa4a3e516160e67df0b8c65f4f19a8e146436e29d583699e6cb41d6bbe99e05e1dbaa877763bad9f8e2.js" integrity="sha512-utqzFskoelpCqEPk60XaZbs9GUpaD1&#43;ko&#43;UWFg5n3wuMZfTxmo4UZDbinVg2mebLQda76Z4F4duqh3djutn44g=="></script>
+  
+  
+  
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Highlights and Facets for Visualizing Categorical Data" />
+<meta property="og:description" content="Side-by-Side Comparison of (a) Generic Plot and (b) Faceted Plots with Highlight" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jeslacourse.github.io/post/2020-05-12-facet-figures/2020-05-12-facet-figures/" /><meta property="article:section" content="post" />
+
+<meta property="og:site_name" content="jes lacourse" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Highlights and Facets for Visualizing Categorical Data"/>
+<meta name="twitter:description" content="Side-by-Side Comparison of (a) Generic Plot and (b) Faceted Plots with Highlight"/>
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Highlights and Facets for Visualizing Categorical Data",
+    "headline": "Highlights and Facets for Visualizing Categorical Data",
+    
+    "abstract": "Side-by-Side Comparison of (a) Generic Plot and (b) Faceted Plots with Highlight",
+    "inLanguage": "en",
+    "url" : "https:\/\/jeslacourse.github.io\/post\/2020-05-12-facet-figures\/2020-05-12-facet-figures\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Jes LaCourse"
+    },
+    
+    
+    
+    
+    
+    
+    "keywords": ["dataviz","rstats","ggplot","gghighlight"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "937"
+  }]
+  </script>
+
+
+  
+  <meta name="author" content="Jes LaCourse" />
+  
+    
+      <link href="https://github.com/jeslacourse" rel="me" />
+    
+      <link href="https://linkedin.com/in/jeslacourse" rel="me" />
+    
+      <link href="https://twitter.com/jeslacourse" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 dark:bg-neutral-600 focus:translate-y-0"
+        href="#main-content"
+        ><span class="font-bold ltr:pr-2 rtl:pl-2 text-primary-600 dark:text-primary-400"
+          >&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold sm:py-10 text-neutral-900 dark:text-neutral print:hidden">
+  <nav class="flex justify-between">
+    
+    <div>
+      
+        <a
+          class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+          rel="me"
+          href="/"
+          >jes lacourse</a
+        >
+      
+
+    </div>
+    
+    
+      <ul class="flex flex-col list-none ltr:text-right rtl:text-left sm:flex-row">
+        
+          
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href=""
+                title=""
+                >Blog</a
+              >
+            </li>
+          
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="/categories/"
+                title="Categories"
+                >Categories</a
+              >
+            </li>
+          
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="/tags/"
+                title="Tags"
+                >Tags</a
+              >
+            </li>
+          
+        
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Highlights and Facets for Visualizing Categorical Data
+      </h1>
+      <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">January 1, 0001</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+      </div>
+    </header>
+    <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
+      
+      <div class="min-w-0 min-h-0 max-w-prose">
+        <p>
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="%5Cassets/images/2020-04-30/plot-4.png" alt="" />
+      
+    </figure>
+  
+
+
+<em>Side-by-Side Comparison of (a) Generic Plot and (b) Faceted Plots with Highlight</em></p>
+<h2 id="visualizing-categorical-data" class="relative group">Visualizing Categorical Data <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#visualizing-categorical-data" aria-label="Anchor">#</a></span></h2>
+<p>What&rsquo;s the most effective way to visualize comparisons between variable factors? How do you share a lot of information without muddying up your visualizations? There definitely isn&rsquo;t one answer, but here&rsquo;s one solution: faceted plots with <code>gghighlight</code>.</p>
+<p>For sample data, I’m setting up two normal curves with offset sample means <em>x̄</em> =  ± 2. While we&rsquo;re using two factors for simplicity, this method actual becomes more effective when the number of factors increases.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> For our sample data, Lefties are disperses around a mean left of center, while Righties collect right of center. The variances are modified as well to exaggerate the difference in factors, but we&rsquo;ll get into that in a second.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># create a sample dataset of two normal curves with given classes</span>
+</span></span><span class="line"><span class="cl"><span class="n">samples</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">val</span> <span class="o">=</span> <span class="nf">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">),</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#34;Righties&#34;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">rbind</span><span class="p">(</span><span class="nf">data.frame</span><span class="p">(</span><span class="n">val</span> <span class="o">=</span> <span class="nf">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">,</span> <span class="m">-2</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="s">&#34;Lefties&#34;</span><span class="p">))</span> <span class="p">)</span>
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:right">Value</th>
+<th style="text-align:left">Position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align:right">3.728539</td>
+<td style="text-align:left">Righties</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align:right">1.465043</td>
+<td style="text-align:left">Righties</td>
+</tr>
+<tr>
+<td>101</td>
+<td style="text-align:right">-0.210901</td>
+<td style="text-align:left">Lefties</td>
+</tr>
+<tr>
+<td>102</td>
+<td style="text-align:right">-2.117621</td>
+<td style="text-align:left">Lefties</td>
+</tr>
+</tbody>
+</table>
+<h2 id="statistics" class="relative group">Statistics <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#statistics" aria-label="Anchor">#</a></span></h2>
+<p>Summary statistics as a visual annotation are helpful when determining differences in factors. We have a couple of “out of the box” options through the use of <code>summary</code> and the like.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># create generic statistical summary</span>
+</span></span><span class="line"><span class="cl"><span class="n">samples</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">select_if</span><span class="p">(</span><span class="n">is.numeric</span><span class="p">)</span>  <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">map</span><span class="p">(</span><span class="o">~</span><span class="nf">tidy</span><span class="p">(</span><span class="nf">summary</span><span class="p">(</span><span class="n">.x</span><span class="p">)))</span> <span class="o">%&gt;%</span>  <span class="c1"># compute tidy summary of each var</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span> <span class="n">.)</span> <span class="o">-&gt;</span> <span class="n">stats</span>   <span class="c1"># bind list elements into df</span>
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:right">Minimum</th>
+<th style="text-align:right">Q1</th>
+<th style="text-align:right">Median</th>
+<th style="text-align:right">Mean</th>
+<th style="text-align:right">Q3</th>
+<th style="text-align:right">Maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Value</td>
+<td style="text-align:right">-4.915701</td>
+<td style="text-align:right">-2.159441</td>
+<td style="text-align:right">-0.8809261</td>
+<td style="text-align:right">-0.0567143</td>
+<td style="text-align:right">1.785081</td>
+<td style="text-align:right">6.861341</td>
+</tr>
+</tbody>
+</table>
+<p>Or we can build our own custom summary table. In this case, we&rsquo;re only interested in adding mean and deviation to our visuals.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># create a custom summary, in this case, just the mean and sd</span>
+</span></span><span class="line"><span class="cl"><span class="n">summary_stats</span> <span class="o">&lt;-</span> <span class="n">samples</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">group_by</span><span class="p">(</span><span class="n">pos</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">summarize_at</span><span class="p">(</span><span class="nf">vars</span><span class="p">(</span><span class="n">val</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">             <span class="nf">funs</span><span class="p">(</span><span class="n">Mean</span> <span class="o">=</span> <span class="n">mean</span><span class="p">,</span> <span class="n">SD</span> <span class="o">=</span> <span class="n">sd</span><span class="p">))</span>
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th style="text-align:left">Position</th>
+<th style="text-align:right">Mean</th>
+<th style="text-align:right">SD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Righties</td>
+<td style="text-align:right">1.92</td>
+<td style="text-align:right">2.22</td>
+</tr>
+<tr>
+<td style="text-align:left">Lefties</td>
+<td style="text-align:right">-2.03</td>
+<td style="text-align:right">0.98</td>
+</tr>
+</tbody>
+</table>
+<h2 id="generic-plots" class="relative group">Generic Plots <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#generic-plots" aria-label="Anchor">#</a></span></h2>
+<p>Generic ggplots tend to be a bit bland, which is fine in some cases. The generic plot is almost identical to  R&rsquo;s <code>plot()</code> function.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="%5Cassets/images/2020-04-30/plot-1.png" alt="" />
+      
+    </figure>
+  
+
+
+<em>Generic Histogram (w/ Bare Bones Aesthetics)</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Create a simple histogram (w/ bare bones aesthetics)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">val</span><span class="p">))</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_histogram</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span> <span class="m">0.7</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="m">40</span><span class="p">)</span> <span class="o">+</span>   <span class="c1"># 70% opacity, 40 slices</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">labs</span><span class="p">(</span><span class="n">title</span> <span class="o">=</span><span class="s">&#34;Distribution of Lefties and Righties&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">       <span class="n">x</span> <span class="o">=</span><span class="s">&#34;Sample Value&#34;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span> <span class="s">&#34;Frequency&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="c1"># All Labels     </span>
+</span></span><span class="line"><span class="cl">  <span class="nf">theme_bw</span><span class="p">()</span>                                <span class="c1"># B&amp;W Theme</span>
+</span></span></code></pre></div><p>In our case, a generic plot shows us that the distribution is bimodal, but we really can&rsquo;t determine a lot about the characteristics of either factors&rsquo; distribution. We are somewhat lucky, in this case, that if we were to create a classifier based strictly off of the information above, we can see that the cutoff should be about <code>x=0</code>. Aside from that, it&rsquo;s difficult to read exactly what&rsquo;s going on.</p>
+<h2 id="faceted-plots" class="relative group">Faceted Plots <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#faceted-plots" aria-label="Anchor">#</a></span></h2>
+<p>
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="%5Cassets/images/2020-04-30/plot-2.png" alt="" />
+      
+    </figure>
+  
+
+
+<em>Histograms Faceted by Categorical Factor</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">val</span><span class="p">,</span><span class="n">fill</span><span class="o">=</span><span class="n">pos</span><span class="p">))</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">  <span class="c1"># Graphs</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_histogram</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">..density..</span><span class="p">),</span><span class="n">binwidth</span><span class="o">=</span><span class="m">.5</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="m">.5</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s">&#34;identity&#34;</span><span class="p">)</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_density</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="m">.3</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">  <span class="c1"># One figure per class</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">facet_grid</span><span class="p">(</span><span class="n">.~pos</span><span class="p">,</span> <span class="n">scales</span> <span class="o">=</span> <span class="s">&#34;fixed&#34;</span><span class="p">)</span><span class="o">+</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c1"># Mean line</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_vline</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">summary_stats</span><span class="p">,</span> <span class="n">mapping</span> <span class="o">=</span> <span class="nf">aes</span><span class="p">(</span><span class="n">xintercept</span> <span class="o">=</span> <span class="n">Mean</span><span class="p">),</span> 
+</span></span><span class="line"><span class="cl">             <span class="n">linetype</span><span class="o">=</span><span class="s">&#34;dotted&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">             <span class="n">color</span> <span class="o">=</span> <span class="s">&#34;blue&#34;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">0.7</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Annotations</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_text</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">summary_stats</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">             <span class="n">inherit.aes</span><span class="o">=</span><span class="kc">FALSE</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">             <span class="nf">aes</span><span class="p">(</span><span class="n">vjust</span><span class="o">=</span><span class="s">&#34;inward&#34;</span><span class="p">,</span> <span class="n">hjust</span> <span class="o">=</span> <span class="s">&#34;inward&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">x</span> <span class="o">=</span> <span class="kc">Inf</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="kc">Inf</span><span class="p">,</span> <span class="n">family</span> <span class="o">=</span> <span class="s">&#34;serif&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">label</span><span class="o">=</span><span class="nf">paste</span><span class="p">(</span><span class="s">&#34;\nMean:&#34;</span><span class="p">,</span><span class="n">Mean</span><span class="p">,</span><span class="s">&#34;\nSD:&#34;</span><span class="p">,</span><span class="n">SD</span><span class="p">,</span> <span class="s">&#34;\n&#34;</span><span class="p">)))</span> 
+</span></span><span class="line"><span class="cl">  <span class="kc">...</span>               
+</span></span></code></pre></div><p>Even without the summary statistics, it&rsquo;s much easier to discern the differences in two groups. At this stage, I&rsquo;ve introduced the summary statistics and a mean line to increase comprehension.</p>
+<p>With that said, there are a handful of important features in this graphic that can be easily overlooked:</p>
+<ol>
+<li>Fix the y-axis. Without a fixed axis, we have no ability to quickly discern differences in distribution</li>
+<li>Drop the opacity of the histogram. Overlapping data can get lost in the shuffle.</li>
+</ol>
+<h2 id="adding-that-highlight" class="relative group">Adding That Highlight <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#adding-that-highlight" aria-label="Anchor">#</a></span></h2>
+<p>
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" src="%5Cassets/images/2020-04-30/plot-3.png" alt="" />
+      
+    </figure>
+  
+
+
+<em>Histograms Faceted by Categorical Factor</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span><span class="n">samples</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">val</span><span class="p">,</span><span class="n">fill</span><span class="o">=</span><span class="n">pos</span><span class="p">))</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_histogram</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">..density..</span><span class="p">),</span><span class="n">binwidth</span><span class="o">=</span><span class="m">.5</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="m">.5</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s">&#34;identity&#34;</span><span class="p">)</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl">  <span class="nf">geom_density</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="m">.3</span><span class="p">)</span> <span class="o">+</span>
+</span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="n">b</span><span class="o">&gt;</span><span class="n">gghighlight</span><span class="o">::</span><span class="nf">gghighlight</span><span class="p">()</span><span class="o">&lt;/</span><span class="n">b</span><span class="o">&gt;</span> <span class="c1"># add gghighlight</span>
+</span></span><span class="line"><span class="cl">  <span class="kc">...</span>
+</span></span></code></pre></div><p>This is such a beautiful, yet deceptively simple trick to improving readability, a <code>gghighlight</code>!<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> It&rsquo;s worth noting that we don&rsquo;t need any additional arguments as the function is highlighting the given data per facet. Put another way, <code>gghighlight</code> is intuitive enough to figure out what should be grayed out and what should pop. Highlighting works with more than two factors as well. Anything that isn&rsquo;t the primary data simply sits in the background.</p>
+<p>We&rsquo;re just scraping the surface of what <code>gghighlight</code> can do for data viz. It&rsquo;s incredibly effective for singling out notable traits in a class, emphasizing trends, or simply comparing a subset of data to the rest of a sample.</p>
+<h2 id="ggplot-summary" class="relative group">GGPlot Summary <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ggplot-summary" aria-label="Anchor">#</a></span></h2>
+<p>There are a lot of bits and pieces to these graphs, here&rsquo;s a quick recap on what role each piece plays.</p>
+<p><code>geom_histogram</code>: creates histogram, plotting feature values against
+their frequencies</p>
+<ul>
+<li>
+<p><code>y=..density..</code> shifts the y-axis to a relative frequency</p>
+</li>
+<li>
+<p><code>bin_width</code>: the number of “slices” that we cut our data into. Play
+with this number! Can be relative, 0-1, or a number of slices
+(i.e. <code>binwidth = 10</code> for ten equal sized bins)</p>
+</li>
+<li>
+<p><code>alpha</code>: the transparency of our data, from fully transparent (0.0)
+to opaque (1.0)</p>
+</li>
+<li>
+<p><code>position</code>: relationship between the classes, can be “identity”,
+“stack”, “dodge”. Using <code>facet_grid</code>, “identity” has the added
+benefit of creating equal axes for each figure.</p>
+</li>
+</ul>
+<p><code>geom_density</code>: smooths the histogram into a density plot, with y-axis
+as the relative frequency for a point</p>
+<p><code>geom_vline</code>: vertical line, in this case used to create a mean line</p>
+<p><code>gghighlight</code>: great way to show our data compared to the relative
+spread. Creates a “shadow” of the overall distribution.</p>
+<p><code>facet_grid</code>: breaks visuals into individual figures by feature.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>The researcher that inspired this post needed to present characteristics for six separate factors in a concise manner.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>I&rsquo;m oversimplifying a bit. This plot isn&rsquo;t <em>completely</em> generic. Titles, transparency, and theming aren&rsquo;t necessarily something you would get with base <code>plot()</code>.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><a href="https://www.rdocumentation.org/packages/gghighlight/versions/0.0.1/topics/gghighlight">RDocumentation: gghighlight</a>.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+      </div>
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  <div class="flex">
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] leading-3 text-neutral-500 dark:text-neutral-400 uppercase">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          Jes LaCourse
+        </div>
+      
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/jeslacourse"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://linkedin.com/in/jeslacourse"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://twitter.com/jeslacourse"
+          target="_blank"
+          aria-label="Twitter"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+
+  </span>
+
+</a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group" href="/post/2020-04-01-motivation-and-organization/2020-04-01-motivation-and-organization/">
+              <span
+                class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Motivation and Organization</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">January 1, 0001</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group" href="/post/2020-04-16-git-commands/2020-04-16-git-commands/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Git Commands</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">January 1, 0001</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+          <div
+            class="absolute top-[100vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-0"
+          >
+            <a
+              href="#the-top"
+              class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5.5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
+        
+      </main><footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2022
+            Jes LaCourse
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    
+    
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>

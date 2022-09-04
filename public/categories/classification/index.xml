@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Classification on jeslacourse</title>
+    <title>Classification on jes lacourse</title>
     <link>https://jeslacourse.github.io/categories/classification/</link>
-    <description>Recent content in Classification on jeslacourse</description>
+    <description>Recent content in Classification on jes lacourse</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://jeslacourse.github.io/categories/classification/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://jeslacourse.github.io/categories/classification/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Feature Choice in Classification of Kernels</title>
-      <link>https://jeslacourse.github.io/1/01/01/feature-choice-in-classification-of-kernels/</link>
+      <link>https://jeslacourse.github.io/post/2020-05-17-feature-choice-in-classification/2020-05-17-feature-choice-in-classification/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jeslacourse.github.io/1/01/01/feature-choice-in-classification-of-kernels/</guid>
-      <description>Abstract
-Frequently, k-nearest neighbors classification is applied with features chosen arbitrarily, while `k` is adjusted to improve the accuracy of the model. For this experiment, `k` is fixed. Using correlations with the strict acknowledgement that all features are continuous, a feature set with high correlation within itself is selection. Visual analysis using density and scatter plots show that these features also share distinct distributions and thusly make great candidates for k-nearest neighbors clustering.</description>
+      <guid>https://jeslacourse.github.io/post/2020-05-17-feature-choice-in-classification/2020-05-17-feature-choice-in-classification/</guid>
+      <description>Abstract</description>
     </item>
     
   </channel>

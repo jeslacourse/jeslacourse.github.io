@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>about on jeslacourse</title>
+    <title>about on jes lacourse</title>
     <link>https://jeslacourse.github.io/categories/about/</link>
-    <description>Recent content in about on jeslacourse</description>
+    <description>Recent content in about on jes lacourse</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://jeslacourse.github.io/categories/about/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://jeslacourse.github.io/categories/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Experience</title>
       <link>https://jeslacourse.github.io/experience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jeslacourse.github.io/experience/</guid>
-      <description>Seeking work with a community-oriented and socially conscious organization to promote social awareness through meaningful data interpretation and visualization
-Data Management and Statistical Highlights
-Creation and implementation of voter outreach GIS database for California&amp;rsquo;s 20,000 precincts
-Adopted in part by major 2016 Presidential candidate campaign Primary role in data management/conversion project of approximately 500,000 entries
-Earned commendations and national recognition from top management within firm
-Custom built an intuitive, dynamic Excel vehicle maintenance workbook for 12 vehicle fleet with accompanying Fleet Procedures Manual</description>
+      <description>Seeking work with a community-oriented and socially conscious organization to promote social awareness through meaningful data interpretation and visualization</description>
     </item>
     
     <item>
@@ -26,10 +21,7 @@ Custom built an intuitive, dynamic Excel vehicle maintenance workbook for 12 veh
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jeslacourse.github.io/projects/</guid>
-      <description>B.S. Statistics - Data Science Track
-Minor - Computer Science
-Highlights Big Data &amp;amp; High Performance Statistical Computing High-performance computing in high-level data analysis languages; different computational approaches and paradigms for efficient analysis of big data; interfaces to compiled languages; high-level parallel computing; MapReduce; parallel algorithms and reasoning. Python. R. SQL.
-Categorical Data Varieties of categorical data, cross-classifications, contingency tables, tests for independence. Multidimensional tables and log-linear models, maximum likelihood estimation; tests of goodness-of-fit.</description>
+      <description>B.S. Statistics - Data Science Track</description>
     </item>
     
   </channel>

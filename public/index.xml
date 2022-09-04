@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>jeslacourse</title>
+    <title>jes lacourse</title>
     <link>https://jeslacourse.github.io/</link>
-    <description>Recent content on jeslacourse</description>
+    <description>Recent content on jes lacourse</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="https://jeslacourse.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello R Markdown</title>
-      <link>https://jeslacourse.github.io/2020/12/01/hello-r-markdown/</link>
+      <link>https://jeslacourse.github.io/post/2020-12-01-r-rmarkdown/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>https://jeslacourse.github.io/2020/12/01/hello-r-markdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+      <guid>https://jeslacourse.github.io/post/2020-12-01-r-rmarkdown/</guid>
+      <description>R MarkdownThis is an R Markdown document.</description>
     </item>
     
     <item>
@@ -24,19 +22,16 @@ summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jeslacourse.github.io/about/</guid>
-      <description>If quarantine has brought me one gift, my once three-hour commute is now three hours each day to build a portfolio and digress on some of the more interesting topics in statistics, machine learning, and computer science. This of course, comes at the expense of turning the dining room into my new office but the familial repercussions appear to be relatively minor.
-Hi, I&amp;rsquo;m [object Object].
-Kidding. My name is Jessica LaCourse and my primary background is in Statistics and Data Science.</description>
+      <description>If quarantine has brought me one gift, my once three-hour commute is now three hours each day to build a portfolio and digress on some of the more interesting topics in statistics, machine learning, and computer science.</description>
     </item>
     
     <item>
       <title>California Canvass Map</title>
-      <link>https://jeslacourse.github.io/1/01/01/california-canvass-map/</link>
+      <link>https://jeslacourse.github.io/post/2020-04-18-california-canvass-map/2020-04-18-california-canvass-map/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jeslacourse.github.io/1/01/01/california-canvass-map/</guid>
-      <description>I&amp;rsquo;ll likely be revisiting this project in the future to see how my analysis has changed. With that said, I&amp;rsquo;m presenting this project as I did in 2016. So much has changed in the last four years. I&amp;rsquo;m excited to rework this project and pull in some fresh data. It should make for a very interesting before-and-after.
-Final product, top left, with the three layers used for analysis and composition{% include gallery id=&amp;ldquo;gallery&amp;rdquo; caption=&amp;ldquo;Paper Map Examples at Regional, District and City Levels&amp;rdquo; %}</description>
+      <guid>https://jeslacourse.github.io/post/2020-04-18-california-canvass-map/2020-04-18-california-canvass-map/</guid>
+      <description>I&amp;rsquo;ll likely be revisiting this project in the future to see how my analysis has changed.</description>
     </item>
     
     <item>
@@ -45,9 +40,7 @@ Final product, top left, with the three layers used for analysis and composition
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jeslacourse.github.io/datasets/</guid>
-      <description>Datasets
-Birth Data - Forked from /538/data/
-https://github.com/jeslacourse/data/blob/master/births/US_births_2000-2014_SSA.csv</description>
+      <description>Datasets</description>
     </item>
     
     <item>
@@ -56,52 +49,43 @@ https://github.com/jeslacourse/data/blob/master/births/US_births_2000-2014_SSA.c
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jeslacourse.github.io/experience/</guid>
-      <description>Seeking work with a community-oriented and socially conscious organization to promote social awareness through meaningful data interpretation and visualization
-Data Management and Statistical Highlights
-Creation and implementation of voter outreach GIS database for California&amp;rsquo;s 20,000 precincts
-Adopted in part by major 2016 Presidential candidate campaign Primary role in data management/conversion project of approximately 500,000 entries
-Earned commendations and national recognition from top management within firm
-Custom built an intuitive, dynamic Excel vehicle maintenance workbook for 12 vehicle fleet with accompanying Fleet Procedures Manual</description>
+      <description>Seeking work with a community-oriented and socially conscious organization to promote social awareness through meaningful data interpretation and visualization</description>
     </item>
     
     <item>
       <title>Feature Choice in Classification of Kernels</title>
-      <link>https://jeslacourse.github.io/1/01/01/feature-choice-in-classification-of-kernels/</link>
+      <link>https://jeslacourse.github.io/post/2020-05-17-feature-choice-in-classification/2020-05-17-feature-choice-in-classification/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jeslacourse.github.io/1/01/01/feature-choice-in-classification-of-kernels/</guid>
-      <description>Abstract
-Frequently, k-nearest neighbors classification is applied with features chosen arbitrarily, while `k` is adjusted to improve the accuracy of the model. For this experiment, `k` is fixed. Using correlations with the strict acknowledgement that all features are continuous, a feature set with high correlation within itself is selection. Visual analysis using density and scatter plots show that these features also share distinct distributions and thusly make great candidates for k-nearest neighbors clustering.</description>
+      <guid>https://jeslacourse.github.io/post/2020-05-17-feature-choice-in-classification/2020-05-17-feature-choice-in-classification/</guid>
+      <description>Abstract</description>
     </item>
     
     <item>
       <title>Git Commands</title>
-      <link>https://jeslacourse.github.io/1/01/01/git-commands/</link>
+      <link>https://jeslacourse.github.io/post/2020-04-16-git-commands/2020-04-16-git-commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jeslacourse.github.io/1/01/01/git-commands/</guid>
-      <description>The original post is a response to a class forum. This post is just a handy way to determine how the site will handle markdown language while also providing some interesting content.
-This was originally part of a response to #151, but it should be good information for anyone trying to troubleshoot git version control. I&amp;rsquo;ve pulled some of the specific troubleshooting out and added a bunch of detail on the common commands.</description>
+      <guid>https://jeslacourse.github.io/post/2020-04-16-git-commands/2020-04-16-git-commands/</guid>
+      <description>The original post is a response to a class forum.</description>
     </item>
     
     <item>
       <title>Highlights and Facets for Visualizing Categorical Data</title>
-      <link>https://jeslacourse.github.io/1/01/01/highlights-and-facets-for-visualizing-categorical-data/</link>
+      <link>https://jeslacourse.github.io/post/2020-05-12-facet-figures/2020-05-12-facet-figures/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jeslacourse.github.io/1/01/01/highlights-and-facets-for-visualizing-categorical-data/</guid>
-      <description>Side-by-Side Comparison of (a) Generic Plot and (b) Faceted Plots with Highlight
-Visualizing Categorical Data What&amp;rsquo;s the most effective way to visualize comparisons between variable factors? How do you share a lot of information without muddying up your visualizations? There definitely isn&amp;rsquo;t one answer, but here&amp;rsquo;s one solution: faceted plots with gghighlight.
-For sample data, I’m setting up two normal curves with offset sample means x̄ = ± 2. While we&amp;rsquo;re using two factors for simplicity, this method actual becomes more effective when the number of factors increases.</description>
+      <guid>https://jeslacourse.github.io/post/2020-05-12-facet-figures/2020-05-12-facet-figures/</guid>
+      <description>Side-by-Side Comparison of (a) Generic Plot and (b) Faceted Plots with Highlight</description>
     </item>
     
     <item>
       <title>Motivation and Organization</title>
-      <link>https://jeslacourse.github.io/1/01/01/motivation-and-organization/</link>
+      <link>https://jeslacourse.github.io/post/2020-04-01-motivation-and-organization/2020-04-01-motivation-and-organization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jeslacourse.github.io/1/01/01/motivation-and-organization/</guid>
-      <description>I&amp;rsquo;m excited. It&amp;rsquo;s been a long road trying to find the right platform to build on. Fortunately, hosting on GitHub Pages, along with the incredible development of the Jekyll-based Minimal Mistakes theme has made web-development a (relatively) seamless task for integrating my projects from GitHub. I&amp;rsquo;ll post source code and repositories as reasonable. Some of the projects are University-based and don&amp;rsquo;t change much year-to-year. In those cases, sorry kids. Check out the end result but we can&amp;rsquo;t make it that easy for you.</description>
+      <guid>https://jeslacourse.github.io/post/2020-04-01-motivation-and-organization/2020-04-01-motivation-and-organization/</guid>
+      <description>I&amp;rsquo;m excited.</description>
     </item>
     
     <item>
@@ -110,7 +94,7 @@ For sample data, I’m setting up two normal curves with offset sample means x̄
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jeslacourse.github.io/404/</guid>
-      <description>Show code# calculating user coordinates x &amp;lt;- rnorm(100) + 2 y &amp;lt;- 2 * x + 1.5 * rnorm(x) + 2 plot(jitter(x), y, pch = 20, xlab = &amp;#34;Pages&amp;#34;, ylab = &amp;#34;Awesomeness&amp;#34;, main = &amp;#34;You Are Here&amp;#34;) Oops, let&amp;rsquo;s get you back on track &amp;mdash; Try searching by tag or category.</description>
+      <description>Show code# calculating user coordinates x &amp;lt;- rnorm(100) + 2 y &amp;lt;- 2 * x + 1.</description>
     </item>
     
     <item>
@@ -119,10 +103,7 @@ For sample data, I’m setting up two normal curves with offset sample means x̄
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jeslacourse.github.io/projects/</guid>
-      <description>B.S. Statistics - Data Science Track
-Minor - Computer Science
-Highlights Big Data &amp;amp; High Performance Statistical Computing High-performance computing in high-level data analysis languages; different computational approaches and paradigms for efficient analysis of big data; interfaces to compiled languages; high-level parallel computing; MapReduce; parallel algorithms and reasoning. Python. R. SQL.
-Categorical Data Varieties of categorical data, cross-classifications, contingency tables, tests for independence. Multidimensional tables and log-linear models, maximum likelihood estimation; tests of goodness-of-fit.</description>
+      <description>B.S. Statistics - Data Science Track</description>
     </item>
     
   </channel>

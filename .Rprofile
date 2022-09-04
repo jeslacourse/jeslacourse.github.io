@@ -19,7 +19,7 @@ options(
   blogdown.generator = 'hugo',
   #blogdown.generator = 'jekyll', 
   #blogdown.method = 'custom',
-  blogdown.subdir = '_posts'
+  #blogdown.subdir = '_posts'
 )
 
 # fix Hugo version
