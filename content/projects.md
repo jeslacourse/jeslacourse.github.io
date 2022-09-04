@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-permalink: /about/projects/
+slug: /projects/
 toc: true
 categories: 
   - about

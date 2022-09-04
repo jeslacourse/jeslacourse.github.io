@@ -1,4 +1,4 @@
-baseurl: /
+baseurl: https://jeslacourse.github.io/
 languageCode: en-us
 title: jeslacourse
 theme: hyde
@@ -16,10 +16,10 @@ menu:
   main:
     - name: About
       url: /about/
-    - name: GitHub
-      url: https://github.com/jeslacourse
-    - name: Twitter
-      url: https://twitter.com/jeslacourse
+    - name: Experience
+      url: /experience/
+    - name: Projects
+      url: /projects/
 params:
   MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs
   MathJaxVersion: 2.7.5

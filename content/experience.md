@@ -1,6 +1,6 @@
 ---
 title: "Experience"
-permalink: /about/experience/
+slug: /experience/
 toc: true
 categories: 
   - about

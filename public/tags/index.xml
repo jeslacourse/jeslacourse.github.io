@@ -2,161 +2,161 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on jeslacourse</title>
-    <link>/tags/</link>
+    <link>https://jeslacourse.github.io/tags/</link>
     <description>Recent content in Tags on jeslacourse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="https://jeslacourse.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>plot</title>
-      <link>/tags/plot/</link>
+      <link>https://jeslacourse.github.io/tags/plot/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>/tags/plot/</guid>
+      <guid>https://jeslacourse.github.io/tags/plot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Markdown</title>
-      <link>/tags/r-markdown/</link>
+      <link>https://jeslacourse.github.io/tags/r-markdown/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>/tags/r-markdown/</guid>
+      <guid>https://jeslacourse.github.io/tags/r-markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>regression</title>
-      <link>/tags/regression/</link>
+      <link>https://jeslacourse.github.io/tags/regression/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>/tags/regression/</guid>
+      <guid>https://jeslacourse.github.io/tags/regression/</guid>
       <description></description>
     </item>
     
     <item>
       <title>about</title>
-      <link>/tags/about/</link>
+      <link>https://jeslacourse.github.io/tags/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/about/</guid>
+      <guid>https://jeslacourse.github.io/tags/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>classification</title>
-      <link>/tags/classification/</link>
+      <link>https://jeslacourse.github.io/tags/classification/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/classification/</guid>
+      <guid>https://jeslacourse.github.io/tags/classification/</guid>
       <description></description>
     </item>
     
     <item>
       <title>coursework</title>
-      <link>/tags/coursework/</link>
+      <link>https://jeslacourse.github.io/tags/coursework/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/coursework/</guid>
+      <guid>https://jeslacourse.github.io/tags/coursework/</guid>
       <description></description>
     </item>
     
     <item>
       <title>datasets</title>
-      <link>/tags/datasets/</link>
+      <link>https://jeslacourse.github.io/tags/datasets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/datasets/</guid>
+      <guid>https://jeslacourse.github.io/tags/datasets/</guid>
       <description></description>
     </item>
     
     <item>
       <title>dataviz</title>
-      <link>/tags/dataviz/</link>
+      <link>https://jeslacourse.github.io/tags/dataviz/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/dataviz/</guid>
+      <guid>https://jeslacourse.github.io/tags/dataviz/</guid>
       <description></description>
     </item>
     
     <item>
       <title>gghighlight</title>
-      <link>/tags/gghighlight/</link>
+      <link>https://jeslacourse.github.io/tags/gghighlight/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/gghighlight/</guid>
+      <guid>https://jeslacourse.github.io/tags/gghighlight/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ggplot</title>
-      <link>/tags/ggplot/</link>
+      <link>https://jeslacourse.github.io/tags/ggplot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/ggplot/</guid>
+      <guid>https://jeslacourse.github.io/tags/ggplot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GIS</title>
-      <link>/tags/gis/</link>
+      <link>https://jeslacourse.github.io/tags/gis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/gis/</guid>
+      <guid>https://jeslacourse.github.io/tags/gis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>projects</title>
-      <link>/tags/projects/</link>
+      <link>https://jeslacourse.github.io/tags/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/projects/</guid>
+      <guid>https://jeslacourse.github.io/tags/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rstats</title>
-      <link>/tags/rstats/</link>
+      <link>https://jeslacourse.github.io/tags/rstats/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/rstats/</guid>
+      <guid>https://jeslacourse.github.io/tags/rstats/</guid>
       <description></description>
     </item>
     
     <item>
       <title>spatial analysis</title>
-      <link>/tags/spatial-analysis/</link>
+      <link>https://jeslacourse.github.io/tags/spatial-analysis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/spatial-analysis/</guid>
+      <guid>https://jeslacourse.github.io/tags/spatial-analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>statistics</title>
-      <link>/tags/statistics/</link>
+      <link>https://jeslacourse.github.io/tags/statistics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/statistics/</guid>
+      <guid>https://jeslacourse.github.io/tags/statistics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>volunteer work</title>
-      <link>/tags/volunteer-work/</link>
+      <link>https://jeslacourse.github.io/tags/volunteer-work/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/volunteer-work/</guid>
+      <guid>https://jeslacourse.github.io/tags/volunteer-work/</guid>
       <description></description>
     </item>
     
     <item>
       <title>work experience</title>
-      <link>/tags/work-experience/</link>
+      <link>https://jeslacourse.github.io/tags/work-experience/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/work-experience/</guid>
+      <guid>https://jeslacourse.github.io/tags/work-experience/</guid>
       <description></description>
     </item>
     

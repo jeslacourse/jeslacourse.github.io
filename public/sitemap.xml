@@ -2,97 +2,93 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/categories/</loc>
+    <loc>https://jeslacourse.github.io/categories/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>/2020/12/01/hello-r-markdown/</loc>
+    <loc>https://jeslacourse.github.io/2020/12/01/hello-r-markdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>https://jeslacourse.github.io/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>/tags/plot/</loc>
+    <loc>https://jeslacourse.github.io/tags/plot/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>/post/</loc>
+    <loc>https://jeslacourse.github.io/post/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>/categories/r/</loc>
+    <loc>https://jeslacourse.github.io/categories/r/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>/tags/r-markdown/</loc>
+    <loc>https://jeslacourse.github.io/tags/r-markdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>/tags/regression/</loc>
+    <loc>https://jeslacourse.github.io/tags/regression/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://jeslacourse.github.io/tags/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>/tags/about/</loc>
+    <loc>https://jeslacourse.github.io/tags/about/</loc>
   </url><url>
-    <loc>/categories/about/</loc>
+    <loc>https://jeslacourse.github.io/categories/about/</loc>
   </url><url>
-    <loc>/about/</loc>
+    <loc>https://jeslacourse.github.io/about/</loc>
   </url><url>
-    <loc>/1/01/01/california-canvass-map/</loc>
+    <loc>https://jeslacourse.github.io/1/01/01/california-canvass-map/</loc>
   </url><url>
-    <loc>/tags/classification/</loc>
+    <loc>https://jeslacourse.github.io/tags/classification/</loc>
   </url><url>
-    <loc>/categories/classification/</loc>
+    <loc>https://jeslacourse.github.io/categories/classification/</loc>
   </url><url>
-    <loc>/tags/coursework/</loc>
+    <loc>https://jeslacourse.github.io/tags/coursework/</loc>
   </url><url>
-    <loc>/tags/datasets/</loc>
+    <loc>https://jeslacourse.github.io/tags/datasets/</loc>
   </url><url>
-    <loc>/categories/datasets/</loc>
+    <loc>https://jeslacourse.github.io/categories/datasets/</loc>
   </url><url>
-    <loc>/datasets/</loc>
+    <loc>https://jeslacourse.github.io/datasets/</loc>
   </url><url>
-    <loc>/tags/dataviz/</loc>
+    <loc>https://jeslacourse.github.io/tags/dataviz/</loc>
   </url><url>
-    <loc>/experience/</loc>
+    <loc>https://jeslacourse.github.io/experience/</loc>
   </url><url>
-    <loc>/1/01/01/feature-choice-in-classification-of-kernels/</loc>
+    <loc>https://jeslacourse.github.io/1/01/01/feature-choice-in-classification-of-kernels/</loc>
   </url><url>
-    <loc>/tags/gghighlight/</loc>
+    <loc>https://jeslacourse.github.io/tags/gghighlight/</loc>
   </url><url>
-    <loc>/tags/ggplot/</loc>
+    <loc>https://jeslacourse.github.io/tags/ggplot/</loc>
   </url><url>
-    <loc>/tags/gis/</loc>
+    <loc>https://jeslacourse.github.io/tags/gis/</loc>
   </url><url>
-    <loc>/categories/gis/</loc>
+    <loc>https://jeslacourse.github.io/categories/gis/</loc>
   </url><url>
-    <loc>/1/01/01/git-commands/</loc>
+    <loc>https://jeslacourse.github.io/1/01/01/git-commands/</loc>
   </url><url>
-    <loc>/1/01/01/highlights-and-facets-for-visualizing-categorical-data/</loc>
+    <loc>https://jeslacourse.github.io/1/01/01/highlights-and-facets-for-visualizing-categorical-data/</loc>
   </url><url>
-    <loc>/1/01/01/motivation-and-organization/</loc>
+    <loc>https://jeslacourse.github.io/1/01/01/motivation-and-organization/</loc>
   </url><url>
-    <loc>/404/</loc>
+    <loc>https://jeslacourse.github.io/404/</loc>
   </url><url>
-    <loc>/category-archive/</loc>
+    <loc>https://jeslacourse.github.io/tags/projects/</loc>
   </url><url>
-    <loc>/tag-archive/</loc>
+    <loc>https://jeslacourse.github.io/projects/</loc>
   </url><url>
-    <loc>/tags/projects/</loc>
+    <loc>https://jeslacourse.github.io/tags/rstats/</loc>
   </url><url>
-    <loc>/projects/</loc>
+    <loc>https://jeslacourse.github.io/categories/rstats/</loc>
   </url><url>
-    <loc>/tags/rstats/</loc>
+    <loc>https://jeslacourse.github.io/tags/spatial-analysis/</loc>
   </url><url>
-    <loc>/categories/rstats/</loc>
+    <loc>https://jeslacourse.github.io/tags/statistics/</loc>
   </url><url>
-    <loc>/tags/spatial-analysis/</loc>
+    <loc>https://jeslacourse.github.io/categories/statistics/</loc>
   </url><url>
-    <loc>/tags/statistics/</loc>
+    <loc>https://jeslacourse.github.io/categories/visualizations/</loc>
   </url><url>
-    <loc>/categories/statistics/</loc>
+    <loc>https://jeslacourse.github.io/tags/volunteer-work/</loc>
   </url><url>
-    <loc>/categories/visualizations/</loc>
-  </url><url>
-    <loc>/tags/volunteer-work/</loc>
-  </url><url>
-    <loc>/tags/work-experience/</loc>
+    <loc>https://jeslacourse.github.io/tags/work-experience/</loc>
   </url>
 </urlset>
