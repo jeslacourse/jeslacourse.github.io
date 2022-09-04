@@ -12,7 +12,7 @@
 
 [[main]]
   name = "Blog"
-  pageRef = "posts"
+  pageRef = "/"
   weight = 10
 
 [[main]]
