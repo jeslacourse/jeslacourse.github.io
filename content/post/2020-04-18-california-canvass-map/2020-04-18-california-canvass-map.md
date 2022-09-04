@@ -11,25 +11,25 @@ tags:
   - statistics
   - volunteer work
 header:
-  teaser: /assets/images/canvass/folsom1.jpg
+  teaser: /canvass/folsom1.jpg
 gallery:
-  - url: /assets/images/canvass/GSA.png
-    image_path: /assets/images/canvass/GSA.png
+  - url: /canvass/GSA.png
+    image_path: /canvass/GSA.png
     alt: "Greater Sacramento Area"
-  - url: /assets/images/canvass/CD6.png
-    image_path: /assets/images/canvass/CD6.png
+  - url: /canvass/CD6.png
+    image_path: /canvass/CD6.png
     alt: "CD 6: Sacramento Area"
-  - url: /assets/images/canvass/CD13.png
-    image_path: /assets/images/canvass/CD13.png
+  - url: /canvass/CD13.png
+    image_path: /canvass/CD13.png
     alt: "CD 13: East Bay"
-  - url: /assets/images/canvass/Pacifica.png
-    image_path: /assets/images/canvass/Pacifica.png
+  - url: /canvass/Pacifica.png
+    image_path: /canvass/Pacifica.png
     alt: "City of Pacifica"
-  - url: /assets/images/canvass/Newark.png
-    image_path: /assets/images/canvass/Newark.png
+  - url: /canvass/Newark.png
+    image_path: /canvass/Newark.png
     alt: "City of Newark"
-  - url: /assets/images/canvass/CD28.png
-    image_path: /assets/images/canvass/CD28.png
+  - url: /canvass/CD28.png
+    image_path: /canvass/CD28.png
     alt: "CD 28: Eastern Los Angeles"
 ---
 
@@ -37,7 +37,7 @@ gallery:
 
 
 <figure>
-<a href="/assets/images/canvass/Marin.png"><img src="/assets/images/canvass/Marin.png"></a>
+<a href="/canvass/Marin.png"><img src="/canvass/Marin.png"></a>
 <figcaption>Final product, top left, with the three layers used for analysis and composition</figcaption>
 </figure>
 
@@ -49,7 +49,7 @@ __________________________
 
 <center>Grassroots Organization for Presidental Primary Campaigning • Spring 2016</center><br>
 
-![Washoe County Canvass, Feb 2016](\assets\images\canvass\washoe.PNG)
+![Washoe County Canvass, Feb 2016](\canvass\washoe.PNG)
 
 *Washoe County Canvassing, Feb 2016*
 
@@ -191,8 +191,8 @@ Block Group Density = Voting Age Adults/Block Group Land Area (sq. meters)</cent
 **Modifications to Jenks**
 
 <figure class="half">
-    <a href="/assets/images/canvass/folsom1.jpg"><img src="/assets/images/canvass/folsom1.jpg" height="250" hspace="5"></a>
-    <a href="/assets/images/canvass/folsom2.jpg"><img src="/assets/images/canvass/folsom2.jpg" height="250" hspace="5"></a>
+    <a href="/canvass/folsom1.jpg"><img src="/canvass/folsom1.jpg" height="250" hspace="5"></a>
+    <a href="/canvass/folsom2.jpg"><img src="/canvass/folsom2.jpg" height="250" hspace="5"></a>
     <figcaption>(a) Jenks on Target Voters Layer and (b) Turnout Raster </figcaption>
 </figure>
 
@@ -209,14 +209,14 @@ Using the three newly created fields outlined in the *Custom Fields and Field Ca
 `Turnout_Rate_Raster`, `Target_Voter_Raster`, and `Census_Density_Raster`. The new rasters were added to the master geodatabase upon completion. A snippet of the turnout rate near Folsom Lake is shown above, (b). Areas of dark green have the highest turnouts. The scale moves through the light
 greens to yellows, oranges, then to bright red denoting zero turnout.
 
-![Polygon to Raster](\assets\images\canvass\2rastermath.jpg)
+![Polygon to Raster](\canvass\2rastermath.jpg)
 
 
 
 ### Raster Math
 <figure class="half">
-    <a href="/assets/images/canvass/3rastermath.jpg"><img src="/assets/images/canvass/3rastermath.jpg" height="350" hspace="5"></a>
-    <a href="/assets/images/canvass/4rastermath.jpg"><img src="/assets/images/canvass/4rastermath.jpg" height="350" hspace="5"></a>
+    <a href="/canvass/3rastermath.jpg"><img src="/canvass/3rastermath.jpg" height="350" hspace="5"></a>
+    <a href="/canvass/4rastermath.jpg"><img src="/canvass/4rastermath.jpg" height="350" hspace="5"></a>
     <figcaption>(a) The Multiplier and (b) Multiplier Raster with Precinct Poly Overlay </figcaption>
 </figure>
 
@@ -231,23 +231,23 @@ that several precincts are not well defined. This next step will resolve that.
 
 The *Zonal Statistics as Table tool*, below, takes the mean of each of the `Multiplier` raster layer within each precinct boundary. The mean information is then added to a newly created table (.dbf)
 
-![Zonal Statistics](\assets\images\canvass\5.jpg)
+![Zonal Statistics](\canvass\5.jpg)
 
 The new table, `Multiplier_Table`, is joined to the `Precinct Boundary` shapefile. The data is symbolized by the mean value the raster cells within each precinct.
 
  By using the `Multiplier` raster and table as an intermediary, we’ve effectively converted our original census and precinct vector data into a dataset that fits neatly within the precinct boundaries.
 
 <figure class="half">
-    <a href="/assets/images/canvass/6.jpg"><img src="/assets/images/canvass/6.jpg"></a>
-    <a href="/assets/images/canvass/7.jpg"><img src="/assets/images/canvass/7.jpg"></a>
+    <a href="/canvass/6.jpg"><img src="/canvass/6.jpg"></a>
+    <a href="/canvass/7.jpg"><img src="/canvass/7.jpg"></a>
     <figcaption>Precincts now prioritized based on voter turnout, registration demographic, and population density </figcaption>
 </figure>
 
 ### Finishing Touches
 
 <figure class="half">
-    <a href="/assets/images/canvass/8.jpg"><img src="/assets/images/canvass/8.jpg" height="340" hspace="5"></a>
-    <a href="/assets/images/canvass/9.jpg"><img src="/assets/images/canvass/9.jpg" height="340" hspace="5"></a>
+    <a href="/canvass/8.jpg"><img src="/canvass/8.jpg" height="340" hspace="5"></a>
+    <a href="/canvass/9.jpg"><img src="/canvass/9.jpg" height="340" hspace="5"></a>
     <figcaption>Congressional District 13 (a) without and (b) with Highways, Hydrology and Cities </figcaption>
 </figure>
 
@@ -268,8 +268,8 @@ There is a modest learning curve that comes with the readability of Census data.
 ### Variance in Population
 
 <figure class="half">
-    <a href="/assets/images/canvass/10.jpg"><img src="/assets/images/canvass/10.jpg"  hspace="5"></a>
-    <a href="/assets/images/canvass/11.jpg"><img src="/assets/images/canvass/11.jpg"  hspace="5"></a>
+    <a href="/canvass/10.jpg"><img src="/canvass/10.jpg"  hspace="5"></a>
+    <a href="/canvass/11.jpg"><img src="/canvass/11.jpg"  hspace="5"></a>
     <figcaption>Congressional District 1, Lowest Density CD Still Has A
 Well Represented City – Chico, CA</figcaption>
 </figure>
@@ -280,7 +280,7 @@ With six delegates assigned to each Congressional District, then 105 delegates a
 could be the most delegate rich section of the state.
 
 <figure>
-<a href="/assets/images/canvass/12.jpg"><img src="/assets/images/canvass/12.jpg"></a>
+<a href="/canvass/12.jpg"><img src="/canvass/12.jpg"></a>
 <figcaption>Congressional District 12 – San Francisco
 Largely Overrepresented</figcaption></figure>
 

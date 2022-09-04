@@ -259,7 +259,7 @@
 <p>I&rsquo;ll likely be revisiting this project in the future to see how my analysis has changed. With that said, I&rsquo;m presenting this project as I did in 2016. So much has changed in the last four years. I&rsquo;m excited to rework this project and pull in some fresh data. It should make for a very interesting before-and-after.</p>
 </blockquote>
 <figure>
-<a href="/assets/images/canvass/Marin.png"><img src="/assets/images/canvass/Marin.png"></a>
+<a href="/canvass/Marin.png"><img src="/canvass/Marin.png"></a>
 <figcaption>Final product, top left, with the three layers used for analysis and composition</figcaption>
 </figure>
 <p>{% include gallery id=&ldquo;gallery&rdquo; caption=&ldquo;Paper Map Examples at Regional, District and City Levels&rdquo; %}</p>
@@ -385,8 +385,8 @@ Voting Age = Total Count – (“Male <5” – “Male 5‐9” – “Male 10�
 Block Group Density = Voting Age Adults/Block Group Land Area (sq. meters)</center></p>
 <p><strong>Modifications to Jenks</strong></p>
 <figure class="half">
-    <a href="/assets/images/canvass/folsom1.jpg"><img src="/assets/images/canvass/folsom1.jpg" height="250" hspace="5"></a>
-    <a href="/assets/images/canvass/folsom2.jpg"><img src="/assets/images/canvass/folsom2.jpg" height="250" hspace="5"></a>
+    <a href="/canvass/folsom1.jpg"><img src="/canvass/folsom1.jpg" height="250" hspace="5"></a>
+    <a href="/canvass/folsom2.jpg"><img src="/canvass/folsom2.jpg" height="250" hspace="5"></a>
     <figcaption>(a) Jenks on Target Voters Layer and (b) Turnout Raster </figcaption>
 </figure>
 <p>All vector maps were symbolized using the Jenks method with four breaks (five sections).</p>
@@ -412,8 +412,8 @@ greens to yellows, oranges, then to bright red denoting zero turnout.</p>
 </p>
 <h3 id="raster-math" class="relative group">Raster Math <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#raster-math" aria-label="Anchor">#</a></span></h3>
 <figure class="half">
-    <a href="/assets/images/canvass/3rastermath.jpg"><img src="/assets/images/canvass/3rastermath.jpg" height="350" hspace="5"></a>
-    <a href="/assets/images/canvass/4rastermath.jpg"><img src="/assets/images/canvass/4rastermath.jpg" height="350" hspace="5"></a>
+    <a href="/canvass/3rastermath.jpg"><img src="/canvass/3rastermath.jpg" height="350" hspace="5"></a>
+    <a href="/canvass/4rastermath.jpg"><img src="/canvass/4rastermath.jpg" height="350" hspace="5"></a>
     <figcaption>(a) The Multiplier and (b) Multiplier Raster with Precinct Poly Overlay </figcaption>
 </figure>
 <p>Using the raster calculator, the three raster layers are multiplied together to produce a new raster, <code>The_Multiplier</code>. By multiplying the raster layers together, equal weight is given to the turnout, target voters and population densities of a specific area. Precinct boundaries and census block group boundaries are completely disregarded in this step.</p>
@@ -439,14 +439,14 @@ that several precincts are not well defined. This next step will resolve that.</
 <p>The new table, <code>Multiplier_Table</code>, is joined to the <code>Precinct Boundary</code> shapefile. The data is symbolized by the mean value the raster cells within each precinct.</p>
 <p>By using the <code>Multiplier</code> raster and table as an intermediary, we’ve effectively converted our original census and precinct vector data into a dataset that fits neatly within the precinct boundaries.</p>
 <figure class="half">
-    <a href="/assets/images/canvass/6.jpg"><img src="/assets/images/canvass/6.jpg"></a>
-    <a href="/assets/images/canvass/7.jpg"><img src="/assets/images/canvass/7.jpg"></a>
+    <a href="/canvass/6.jpg"><img src="/canvass/6.jpg"></a>
+    <a href="/canvass/7.jpg"><img src="/canvass/7.jpg"></a>
     <figcaption>Precincts now prioritized based on voter turnout, registration demographic, and population density </figcaption>
 </figure>
 <h3 id="finishing-touches" class="relative group">Finishing Touches <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#finishing-touches" aria-label="Anchor">#</a></span></h3>
 <figure class="half">
-    <a href="/assets/images/canvass/8.jpg"><img src="/assets/images/canvass/8.jpg" height="340" hspace="5"></a>
-    <a href="/assets/images/canvass/9.jpg"><img src="/assets/images/canvass/9.jpg" height="340" hspace="5"></a>
+    <a href="/canvass/8.jpg"><img src="/canvass/8.jpg" height="340" hspace="5"></a>
+    <a href="/canvass/9.jpg"><img src="/canvass/9.jpg" height="340" hspace="5"></a>
     <figcaption>Congressional District 13 (a) without and (b) with Highways, Hydrology and Cities </figcaption>
 </figure>
 <p>To improve the map’s readability, recognizable features like highways, lakes and major city labels have been added to the map.</p>
@@ -459,8 +459,8 @@ that several precincts are not well defined. This next step will resolve that.</
 <p>There is a modest learning curve that comes with the readability of Census data. With some research, there are resources available to decode file names, field names and field descriptions. Census data is also laden with concatenations and acronyms. Fortunately, the Census has made documentation widely available online.</p>
 <h3 id="variance-in-population" class="relative group">Variance in Population <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#variance-in-population" aria-label="Anchor">#</a></span></h3>
 <figure class="half">
-    <a href="/assets/images/canvass/10.jpg"><img src="/assets/images/canvass/10.jpg"  hspace="5"></a>
-    <a href="/assets/images/canvass/11.jpg"><img src="/assets/images/canvass/11.jpg"  hspace="5"></a>
+    <a href="/canvass/10.jpg"><img src="/canvass/10.jpg"  hspace="5"></a>
+    <a href="/canvass/11.jpg"><img src="/canvass/11.jpg"  hspace="5"></a>
     <figcaption>Congressional District 1, Lowest Density CD Still Has A
 Well Represented City – Chico, CA</figcaption>
 </figure>
@@ -468,7 +468,7 @@ Well Represented City – Chico, CA</figcaption>
 <p>With six delegates assigned to each Congressional District, then 105 delegates at‐large distributed after the primary election, it was increasingly apparent that the population heavy Los Angeles precincts should be included in dataset. The decision was made to prevent any major skewing of the prioritization process. It also had the added benefit of providing the same spatial analysis to what potentially
 could be the most delegate rich section of the state.</p>
 <figure>
-<a href="/assets/images/canvass/12.jpg"><img src="/assets/images/canvass/12.jpg"></a>
+<a href="/canvass/12.jpg"><img src="/canvass/12.jpg"></a>
 <figcaption>Congressional District 12 – San Francisco
 Largely Overrepresented</figcaption></figure>
 <p>Creating a scale that allowed for at least one high priority precinct in each Congressional District was essential. The statistical over-representation of more populated areas was considered acceptable, as they will ultimately have the largest influence on at‐large delegates.</p>
@@ -499,6 +499,18 @@ was the opportunity to dive right into the spatial analysis tools like the raste
     <footer class="pt-8 max-w-prose print:hidden">
       
   <div class="flex">
+    
+      
+      
+        
+        <img
+          class="w-24 h-24 !mt-0 !mb-0 ltr:mr-4 rtl:ml-4 rounded-full"
+          width="96"
+          height="96"
+          alt="Jes LaCourse"
+          src="/images/bio-photo_hu48cb0bfab1d130b60b08d8771d05ca5a_370940_192x192_fill_q75_box_smart1.jpg"
+        />
+      
     
     <div class="place-self-center">
       
