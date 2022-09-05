@@ -3,7 +3,7 @@
 # https://jpanther.github.io/congo/docs/getting-started/
 
 baseURL = "https://jeslacourse.github.io/"
-publishDir = "./public"
+publishDir = "./docs" #To match GH pages
 defaultContentLanguage = "en"
 theme = "congo"
 
