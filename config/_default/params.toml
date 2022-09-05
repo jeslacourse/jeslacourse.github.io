@@ -21,7 +21,7 @@ enableCodeCopy = false
 [footer]
   showCopyright = true
   showThemeAttribution = true
-  showAppearanceSwitcher = false
+  showAppearanceSwitcher = true
   showScrollToTop = true
 
 [homepage]
@@ -49,7 +49,7 @@ enableCodeCopy = false
 
 [list]
   showBreadcrumbs = false
-  showSummary = false
+  showSummary = true
   showTableOfContents = false
   groupByYear = true
 
