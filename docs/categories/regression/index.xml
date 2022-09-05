@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>regression on jeslacourse</title>
+    <link>https://jeslacourse.github.io/categories/regression/</link>
+    <description>Recent content in regression on jeslacourse</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 05 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jeslacourse.github.io/categories/regression/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple Linear Regression</title>
+      <link>https://jeslacourse.github.io/post/regression/</link>
+      <pubDate>Mon, 05 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeslacourse.github.io/post/regression/</guid>
+      <description>One predictor, one outcome</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -17,6 +17,8 @@ options(
   blogdown.knit.on_save = TRUE,
   # build .Rmd to .html (via Pandoc); to build to Markdown, set this option to 'markdown'
   blogdown.generator = 'hugo',
+  blogdown.ext = ".Rmd", 
+  blogdown.author = "Jes LaCourse"
   #blogdown.generator = 'jekyll', 
   #blogdown.method = 'custom',
   #blogdown.subdir = '_posts'

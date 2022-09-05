@@ -15,14 +15,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Experience &middot; jeslacourse</title>
-    <meta name="title" content="Experience &middot; jeslacourse" />
+  <title>Simple Linear Regression &middot; jeslacourse</title>
+    <meta name="title" content="Simple Linear Regression &middot; jeslacourse" />
   
   
   
   
   
-  <link rel="canonical" href="https://jeslacourse.github.io/experience/" />
+  <link rel="canonical" href="https://jeslacourse.github.io/post/regression/" />
   
   
   
@@ -59,44 +59,44 @@
   
   
   
-  <meta property="og:title" content="Experience" />
-<meta property="og:description" content="Seeking work with a community-oriented and socially conscious organization to promote social awareness through meaningful data interpretation and visualization" />
+  <meta property="og:title" content="Simple Linear Regression" />
+<meta property="og:description" content="One predictor, one outcome" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jeslacourse.github.io/experience/" /><meta property="article:section" content="" />
-
-<meta property="og:site_name" content="jeslacourse" />
+<meta property="og:url" content="https://jeslacourse.github.io/post/regression/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-09-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-09-05T00:00:00+00:00" /><meta property="og:site_name" content="jeslacourse" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Experience"/>
-<meta name="twitter:description" content="Seeking work with a community-oriented and socially conscious organization to promote social awareness through meaningful data interpretation and visualization"/>
+<meta name="twitter:title" content="Simple Linear Regression"/>
+<meta name="twitter:description" content="One predictor, one outcome"/>
 
   
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
-    "articleSection": "jeslacourse",
-    "name": "Experience",
-    "headline": "Experience",
+    "articleSection": "Posts",
+    "name": "Simple Linear Regression",
+    "headline": "Simple Linear Regression",
     
-    "abstract": "Seeking work with a community-oriented and socially conscious organization to promote social awareness through meaningful data interpretation and visualization",
+    "abstract": "One predictor, one outcome",
     "inLanguage": "en",
-    "url" : "https:\/\/jeslacourse.github.io\/experience\/",
+    "url" : "https:\/\/jeslacourse.github.io\/post\/regression\/",
     "author" : {
       "@type": "Person",
       "name": "Jes LaCourse"
     },
+    "copyrightYear": "2022",
+    "dateCreated": "2022-09-05T00:00:00\u002b00:00",
+    "datePublished": "2022-09-05T00:00:00\u002b00:00",
+    
+    "dateModified": "2022-09-05T00:00:00\u002b00:00",
     
     
-    
-    
-    
-    
-    "keywords": ["about","volunteer work","work experience"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "630"
+    "wordCount": "567"
   }]
   </script>
 
@@ -213,7 +213,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Experience
+        Simple Linear Regression
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -231,6 +231,8 @@
 
   
   
+    
+  
 
   
 
@@ -246,7 +248,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <span title="Reading time">3 mins</span>
+      <time datetime="2022-09-05 00:00:00 &#43;0000 UTC">September 5, 2022</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
     
 
     
@@ -262,118 +264,121 @@
     <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
       
       <div class="min-w-0 min-h-0 max-w-prose">
-        <p>Seeking work with a community-oriented and socially conscious organization to promote social awareness through meaningful data interpretation and visualization</p>
-<p><strong>Data Management and Statistical Highlights</strong></p>
+        
+
+
+<blockquote>
+<p>One predictor, one outcome</p>
+</blockquote>
+<p><strong>Linear Regression:</strong> The measure of lineal relationship between two variables.</p>
+<p>Simple regression will have one continuous response variable (y) and one continuous explanatory variable (x). Response variables are also known as the <em>dependent</em> or <em>outcome</em> variable. Explanatory variables, aka <em>independent</em>, <em>predictor</em>, or <em>covariate</em> variables, can include categorical values.</p>
+<p><span class="math display">\[y=\beta_0 + \beta_1x\]</span>
+Where <span class="math inline">\(\beta_0\)</span> is the y-intercept and <span class="math inline">\(\beta_1\)</span> is the slope of the function.</p>
+<div id="modeling" class="section level2">
+<h2>Modeling</h2>
+<p><code>X</code> is treated as a fixed variable whose values have been chosen by the researcher. Though it should be noted that regression is often used where variable is not wholly chosen. For example, sampling a population will return a distribution of ages that may not match the true distribution of the population. So <code>X</code> is also, technically, random.</p>
+<p><code>Y</code> is a random variable</p>
+<p>Our regression model dependency of <code>Y</code> on <code>X</code>
+esti
+<span class="math display">\[Y=\beta_0 + \beta_1X + \epsilon\]</span>
+<span class="math inline">\(\beta\)</span>’s and <code>X</code> are considered fixed values, with random variable <span class="math inline">\(\epsilon\)</span>.</p>
+<p>Where <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are parameters; usually unknown values related to the population and not the sample.</p>
 <ul>
-<li>
-<p><a href="https://jeslacourse.github.io/ccmproject/">Creation and implementation of voter outreach GIS database for California&rsquo;s 20,000 precincts</a></p>
+<li>parameter: values for the population</li>
+<li>statistic: values for the sample</li>
+</ul>
+<blockquote>
+<p>We are using statistics to estimate our parameters</p>
+</blockquote>
+<p>After collecting data from the population, we can create a sample on which to run our statistics for which we can estimate our parameters.</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>parameter</th>
+<th>statistic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mean</td>
+<td></td>
+<td>{y}</td>
+</tr>
+<tr class="even">
+<td>variance</td>
+<td>^2</td>
+<td>s^2</td>
+</tr>
+<tr class="odd">
+<td>slope</td>
+<td>_1</td>
+<td>b_1</td>
+</tr>
+<tr class="even">
+<td>intercept</td>
+<td>_0</td>
+<td>b_0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="utility" class="section level2">
+<h2>Utility</h2>
+<p>Regression is used for:</p>
+<ol style="list-style-type: decimal">
+<li>Observational studies</li>
+</ol>
 <ul>
-<li>Adopted in part by major 2016 Presidential candidate campaign</li>
+<li>just observe, no manipulation</li>
+<li>treatment is not randomized</li>
 </ul>
-</li>
-<li>
-<p>Primary role in data management/conversion project of approximately 500,000 entries</p>
-</li>
-<li>
-<p>Earned commendations and national recognition from top management within firm</p>
-</li>
-<li>
-<p>Custom built an intuitive, dynamic Excel vehicle maintenance workbook for 12 vehicle fleet with accompanying Fleet Procedures Manual</p>
-</li>
-</ul>
-<p><strong>Community Service and Leadership Highlights</strong></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Experimental studies</li>
+</ol>
 <ul>
-<li>
-<p>Extensive and diverse 12+ years community service track record with emphasis on youth advocacy and voter advocacy within Placer County</p>
-</li>
-<li>
-<p>Served as interim administrative supervisor and team lead through peak tax season during merger with nation&rsquo;s 8th largest financial firm</p>
-</li>
-<li>
-<p>Developed plan of action, provided direct communication with office and regional management on immediate hiring needs</p>
-</li>
-<li>
-<p>Direct involvement in hiring and training to build a highly adept administrative team</p>
-</li>
-<li>
-<p>Team commendation from Managing Principal for multiple seamless work seasons, citing promotion of open, positive intraoffice communication and unparalleled efficiency</p>
-</li>
+<li>manipulate the explanatory variables</li>
+<li>treatment must be randomized</li>
 </ul>
-<h3 id="education" class="relative group">EDUCATION <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#education" aria-label="Anchor">#</a></span></h3>
-<h4 id="university-of-california-davis-ca" class="relative group">University of California, Davis, CA <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#university-of-california-davis-ca" aria-label="Anchor">#</a></span></h4>
-<p>B.S. Statistics - Data Science Track</p>
-<ul>
-<li>
-<p>Computer Science Minor, Out in STEM Club Member</p>
-</li>
-<li>
-<p><a href="/about/coursework/">Relevant Coursework</a></p>
-</li>
-</ul>
-<h4 id="sierra-college-rocklin-ca" class="relative group">Sierra College, Rocklin, CA <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#sierra-college-rocklin-ca" aria-label="Anchor">#</a></span></h4>
-<p>A.S. Business Administration</p>
-<p>A.S Accountancy</p>
-<p>Geographic Information Systems Certificate</p>
-<h3 id="professional-experience" class="relative group">PROFESSIONAL EXPERIENCE <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#professional-experience" aria-label="Anchor">#</a></span></h3>
-<h4 id="research-analyst-jul-2020---" class="relative group">Research Analyst (Jul 2020 - ) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#research-analyst-jul-2020---" aria-label="Anchor">#</a></span></h4>
-<p>R-based Institutional Research</p>
-<h4 id="code-coach-instructor-dec-2019---" class="relative group">Code Coach (Instructor) (Dec 2019 - ) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#code-coach-instructor-dec-2019---" aria-label="Anchor">#</a></span></h4>
-<p>Develop personalized, project-based curriculum for individuals and small groups of students aged 7-16</p>
-<ul>
-<li>Primary Languages: Python, C++, C#</li>
-</ul>
-<p>Adapted coursework to be taught remotely in private and/or small group sessions</p>
-<h4 id="senior-administrator-jan-2015--sept-2018" class="relative group">Senior Administrator (Jan 2015 – Sept 2018) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#senior-administrator-jan-2015--sept-2018" aria-label="Anchor">#</a></span></h4>
-<p>Financial report formatting and finalization for individual, corporate, and government entities</p>
-<p>Direct communication of administrative needs and status to supervisor</p>
-<p>Training and support for 8-person administrative team, directly serving 140-person staff</p>
-<h4 id="accounts-payable-clerk-ii-sep-2012--jan-2014" class="relative group">Accounts Payable Clerk II (Sep 2012 – Jan 2014) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#accounts-payable-clerk-ii-sep-2012--jan-2014" aria-label="Anchor">#</a></span></h4>
-<h4 id="census-follow-up-enumeratorinterviewer-april--july-2010" class="relative group">Census Follow-Up Enumerator/Interviewer (April – July 2010) <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#census-follow-up-enumeratorinterviewer-april--july-2010" aria-label="Anchor">#</a></span></h4>
-<p>Surveyed low response communities, including Spanish speaking neighborhoods</p>
-<p>Referred by supervisor to continue Census Operations after Enumerator duties were completed</p>
-<h3 id="volunteer-work" class="relative group">VOLUNTEER WORK <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#volunteer-work" aria-label="Anchor">#</a></span></h3>
-<h4 id="voter-advocate-2015---2016-2019" class="relative group">Voter Advocate 2015 - 2016, 2019 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#voter-advocate-2015---2016-2019" aria-label="Anchor">#</a></span></h4>
-<p>Northern California GIS mapping support for Presidential primary candidate</p>
-<p>District 4 (Sacramento through Central Sierras) and District 13 (Oakland) support</p>
-<p>Organization of teams for door-to-door community interaction to promote voter registration and candidate awareness</p>
-<p>Emphasis on voter rights information, particularly no party preference voting rights during CA semi-open primaries</p>
-<p>Washoe County, NV Caucus observer and voting advocate</p>
-<h4 id="community-advocate-loomis-ca-2014---2018" class="relative group">Community Advocate, Loomis, CA 2014 - 2018 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#community-advocate-loomis-ca-2014---2018" aria-label="Anchor">#</a></span></h4>
-<p>Direct outreach to approximately 500 community members through local organization and public comments during Town Hall meetings</p>
-<p>Emphasis: Oil train disaster preparedness and housing development impacts on existing infrastructure</p>
-<p>Loomis General Plan annotation and distribution, working to promote awareness of local issues and current events to promote Town Council attendance and interaction with community leaders</p>
-<h4 id="youth-advocate-garden-valley-ca-dec-2007---2009" class="relative group">Youth Advocate, Garden Valley, CA Dec 2007 - 2009 <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#youth-advocate-garden-valley-ca-dec-2007---2009" aria-label="Anchor">#</a></span></h4>
-<p>Head of interview and surveying committee, film editing and organization</p>
-<p>Attended meetings with members and partners of the non-profit film organization Tower of Youth</p>
-<h3 id="programming--software-experience" class="relative group">PROGRAMMING &amp; SOFTWARE EXPERIENCE <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#programming--software-experience" aria-label="Anchor">#</a></span></h3>
-<h4 id="programming-comprehension" class="relative group">Programming Comprehension <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#programming-comprehension" aria-label="Anchor">#</a></span></h4>
-<p>Git with Bash</p>
-<p>OOP programming comprehension (2014-)</p>
-<ul>
-<li>Python (2016-)</li>
-<li>C++, Java, Javascript (1 year)</li>
-</ul>
-<p>R with RMarkdown (2018-)</p>
-<p>SQL, including PostgeSQL and SQL Server (2015-)</p>
-<p>Jekyll in Ruby for Web Development (1 year)</p>
-<h4 id="specialized-software-and-skills" class="relative group">Specialized Software and Skills <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#specialized-software-and-skills" aria-label="Anchor">#</a></span></h4>
-<p>Type Speed: 55 AWP and 10 key by touch</p>
-<p>Formatting: Markdown, HTML/CSS</p>
-<p>ArcGIS Desktop 10.1+ and Online: Mapping, spatial analytics, and data visualization resource</p>
-<p>Jupyter Notebooks (Anaconda Suite)</p>
-<p>Microsoft Office Suite: 10+ years professional experience working with Excel, Word, Outlook, PowerPoint and Access</p>
-<ul>
-<li>
-<p>Access: Proficient; join &amp; relationship competency, table building, queries, data integrity</p>
-</li>
-<li>
-<p>Excel: High proficiency; building and customizing workbooks, vlookup &amp; filter tables</p>
-</li>
-<li>
-<p>Word: High proficiency; business report writing, template customization, automation</p>
-</li>
-</ul>
-<p>RStudio for Analysis</p>
+<p>(!) Correlations is not equal to causation in non-random studies</p>
+</div>
+<div id="expected-values" class="section level2">
+<h2>Expected Values</h2>
+<p>For a <strong>discrete</strong> random variable <code>Y</code> with possible values <span class="math inline">\(y_1... y_k\)</span> we can say:
+<span class="math display">\[ E(Y) = \Sigma_{i=1}^k y_1 P(Y = y_i)\]</span>
+where <span class="math inline">\(E(Y)\)</span> is a weighted average of the possible values <span class="math inline">\(y_1... y_k\)</span> and the weights <span class="math inline">\(P(Y = y_1)...P(Y = y_k)\)</span> are the expected probabilities. This will give us a weighted average.</p>
+<p>Weighted Average:
+<span class="math display">\[\Sigma_{i=1}^k w_ia_i\]</span>
+If <span class="math inline">\(\Sigma w_i = 1\)</span> and <span class="math inline">\(0 \leq w_1 \leq 1\)</span>.</p>
+<p>A <strong>continuous</strong> random variable <code>Y</code> would be represented by a density function:</p>
+<p><span class="math display">\[E(Y) = \int_{-\infty}^{\infty} yf(y)dy\]</span>
+For example, the normal distribution <code>Y ~ N(0,1)</code> with mean <code>0</code> and variance <code>1</code>, would be represented using the density function:</p>
+<p><span class="math display">\[E(Y) = \int_{-\infty}^{\infty}y\frac{1}{\sqrt{2\pi}}
+  \exp\left( -\frac{y^2}{2}\right) dy = 0 \]</span></p>
+<p>The <strong>population mean</strong> is the expected value. If <span class="math inline">\(Z_1..Z_N\)</span> for all values in the population, then we would use the parameter:</p>
+<p><span class="math display">\[ E(Z) = \frac{1}{N}\Sigma_{i=1}^N Z_i\]</span></p>
+<p><strong>Sample means</strong> are averages. Given the sample data <span class="math inline">\(X_1... X_n\)</span>, would return the <em>statistic</em>:</p>
+<p><span class="math display">\[ \bar{x}  = \frac{1}{n} \Sigma_{i = 1}^nX_i\]</span></p>
+</div>
+<div id="variance" class="section level2">
+<h2>Variance</h2>
+<p>We can use the <strong>population variance</strong> formula to show that <span class="math inline">\(E(Y)\)</span> is equivalent to the parameter <span class="math inline">\(\mu\)</span>. Given the population variance <span class="math inline">\(var(Y)\)</span>:</p>
+<p><span class="math display">\[ var(Y) = E[Y-E(Y)]^2\\=E[Y-\mu]^2\\\therefore \mu = E(Y)\]</span></p>
+<p>The squaring of <span class="math inline">\([Y-E(Y)]\)</span> “removes the sign”, reverting all distances to positive distances from the mean.</p>
+<p>Given our known substitutions, we can say:</p>
+<p><span class="math display">\[ var(Y) = E[Y-E(Y)]^2\\=\Sigma_{i=1}^k (y_i-\mu)^2P(Y-y_i)\]</span></p>
+<p>If <span class="math inline">\(Z_1... Z_n\)</span> account for all values in a population, we would have parameter:</p>
+<p><span class="math display">\[var(Z) = \frac{1}{N}\Sigma_{i=1}^{N}(Z_i-\bar{Z})^2\]</span></p>
+<p>where <span class="math inline">\(\bar{Z} = E(Z)\)</span>.</p>
+<p>Sample data <span class="math inline">\(x_i...x_n\)</span> would give us the <strong>unbiased sample variance</strong>:</p>
+<p><span class="math display">\[s^2 = \frac{\Sigma(x_i - \bar{x})^2}{n-1}\]</span></p>
+<p>Focusing on the denominator, sample sizes <span class="math inline">\(n\)</span> will shift the statistic significantly compared to if the sample was larger.</p>
+</div>
+<div id="bias" class="section level2">
+<h2>Bias</h2>
+<p>Because of random variability, <span class="math inline">\(s^2\)</span> will vary with each experiment. An unbiased sample variance is an average value of those experiments.</p>
+<p><span class="math display">\[ E(s^2) = E\frac{\Sigma(Y_i-\bar{Y})^2}{n-1}= var(Y)\]</span></p>
+</div>
 
       </div>
     </section>
@@ -481,7 +486,7 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group" href="/404/">
+            <a class="flex group" href="/post/2020-12-01-r-rmarkdown/">
               <span
                 class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -493,9 +498,11 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Page Not Found</span
+                  >Hello R Markdown</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2020-12-01 21:13:14 -0500 -0500">December 1, 2020</time>
                   
                 </span>
               </span>
@@ -503,26 +510,6 @@
           
         </span>
         <span>
-          
-            <a class="flex text-right group" href="/datasets/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Datasets</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                </span>
-              </span>
-              <span
-                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-            </a>
           
         </span>
       </div>
