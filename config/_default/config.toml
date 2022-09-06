@@ -6,7 +6,7 @@ baseURL = "https://jeslacourse.github.io/"
 publishDir = "./docs" #To match GH pages
 defaultContentLanguage = "en"
 theme = "congo"
-
+math = "true"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 
 enableRobotsTXT = true
