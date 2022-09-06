@@ -55,3 +55,107 @@ $$var(a+bX-cY) \\= var(a) + var(bX-cY) + 2cov(X,Y)\\= 0 + var(bX)+ var(-cY) \\=b
 7. $cov(aX, bY) = ab cov(X,Y)$
 8. $cov(X, Y+Z) = cov(X,Y)+cov(X,Z)$
 9. $cov(X,X) = var(X)$
+
+## The Simple Linear Regression Model 
+
+$$Y_i= \beta_0 +\beta_1X_i + \epsilon_i$$
+
+where:
+
+- $Y_i$: random variable for experimental unit
+- $X_i$: predictor for experimental unit, a fixed value
+- $\beta_0, \beta_1$: parameters, usually known. The goal is to estimate them. 
+
+The model is considered **simple** because we are using one predictor. The model is linear in parameters and linear in the predictor variable, $X$. 
+
+Properties for $\epsilon_i$: 
+1. $E(\epsilon_i) = 0$, $\forall i$
+2. $var(\epsilon_i)$ is constant
+3. $\epsilon_i...\epsilon_n$ are uncorrelated
+
+On average, the error *is* the regression line, 0. Put another way, 
+ 
+ > The expected value of $\epsilon$ is on the regression line. 
+ 
+ 1. 
+ 
+ $$ E(\epsilon_i) = 0\\
+ \epsilon_i = Y_i -(\beta_0 +\beta_1X_i) \\
+ E[\epsilon_i] = E[Y_i -(\beta_0 +\beta_1X_i)] \\
+ 0 = E[Y_i] - E[\beta_0 +\beta_1X_i] \\
+ 0 = E[Y_i] - E[\beta_0] +E[\beta_1X_i] \\
+ 0  = E[Y_i] - \beta_0 + \beta_1X_i \\
+   \Rightarrow E[Y_i] = \beta_0 + \beta_1X_i \\
+ $$
+
+showing that on average, $Y_i$ falls along the regression line. We can say the regression lineis the average of $Y_i$, conditional on $X_i$. 
+
+$$ E(Y_i|X_i)= \beta_0 +\beta_1X_i $$
+ 2. $\epsilon_i...\epsilon_n$ have the same variance 
+ 
+ Define $\sigma^2(\epsilon_i) \equiv \sigma^2 $,  then $\sigma^2(Y_i) = var(Y_i) $. $var(\epsilon_i)$ increases as $X$ increases. 
+ 
+ 3. $\epsilon_i...\epsilon_n$ are uncorrelated 
+ 
+ $$
+  corr(\epsilon_i,\epsilon_j) = 0, i\neq j \\ 
+  corr(\epsilon_i,\epsilon_j) = var(\epsilon_i) \neq 0 \\
+  cov(\epsilon_i,\epsilon_j) = 0, i\neq j 
+ $$
+ 
+Similarly, but with different notation, $corr(\epsilon_i,\epsilon_j) = \sigma(\epsilon_i,\epsilon_j)$. 
+ 
+### Features of Models
+
+1. $Y_i$ is a sum of a constant term plus a random variable. The constant in this case is $\beta_0 +\beta_1X_i$. The random variable is $\epsilon_i$. 
+
+2. $E(Y_i|X_i)= \beta_0 +\beta_1X_i$, see $\epsilon$ property 2. 
+
+3. $\epsilon_i = Y_i -(\beta_0 +\beta_1X_i)$ is a random deviation of $Y_i$ around the regression line.
+
+It's worth taking a moment to make the distinction between the regression model, which uses subscripts $i$:  
+$$Y_i= \beta_0 +\beta_1X_i + \epsilon_i$$
+and the regression function: 
+
+$$Y= \beta_0 +\beta_1X + \epsilon$$
+An example: 
+
+We want to estimate the systolic blood pressure for a 20 year old. We know the following variables: 
+
+- $x$: age
+- $y$: systolic blood pressure
+- $\beta_0$: the intercept, $90$
+- $\beta_1$: the slope, $0.9$
+
+Note that $\beta$'s are usually unknown. We can say, we expect systolic blood pressure to be $90$ at age $0$ (or at birth), increasing $0.9$ units every year.  
+
+$$
+E(Y|X = 20) \\= 90 + 0.9(20)\\=108
+$$
+
+Factoring in an error margin, given $X = 20$ we would expect $Y = 108 +\epsilon$. 
+
+
+## Least Squares Estimation
+
+### Estimating $\beta$'s
+
+Find "good" estimates of $\beta_0$ and $\beta_1$ using the **least squares method**.  
+
+When you have $n$ pairs of data, $(x_1, y_1)...(x_n, y_n)$: 
+
+Use the **deviation** formula
+
+$$e_i = y_i - (\beta_0 +\beta_1x_i)$$ 
+
+to compose the **squared deviation** formula: 
+
+$$e_i^2 = [y_i - (\beta_0 +\beta_1x_i)]^2$$ 
+
+This will allow us to define $Q$, the **sum of squared deviations**: 
+
+$$
+Q \equiv \Sigma_{i = 1}^n e_i^2\\=\Sigma_{i = 1}^n [y_i - (\beta_0 +\beta_1x_i)]^2
+$$
+
+The least squares estimates are values of $\beta_0$ and $\beta_1$ that minimize $Q$. 
