@@ -8,7 +8,6 @@
   data-default-appearance="dark"
   data-auto-appearance="true"
 ><head>
-	<meta name="generator" content="Hugo 0.102.3" />
   <meta charset="utf-8" />
   
     <meta http-equiv="content-language" content="en" />
@@ -16,16 +15,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>jeslacourse</title>
-    <meta name="title" content="jeslacourse" />
+  <title>Simple Linear Regression - Correlation and Covariance &middot; jeslacourse</title>
+    <meta name="title" content="Simple Linear Regression - Correlation and Covariance &middot; jeslacourse" />
   
   
   
   
   
-  <link rel="canonical" href="https://jeslacourse.github.io/" />
-  <link rel="alternate" type="application/rss+xml" href="/index.xml" title="jeslacourse" />
-  <link rel="alternate" type="application/json" href="/index.json" title="jeslacourse" />
+  <link rel="canonical" href="https://jeslacourse.github.io/post/covariance/" />
   
   
   
@@ -62,32 +59,45 @@
   
   
   
-  <meta property="og:title" content="jeslacourse" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://jeslacourse.github.io/" /><meta property="og:site_name" content="jeslacourse" />
+  <meta property="og:title" content="Simple Linear Regression - Correlation and Covariance" />
+<meta property="og:description" content="CovarianceGiven the random variables \((X,Y)\) covariance is defined as:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jeslacourse.github.io/post/covariance/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-09-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-09-06T00:00:00+00:00" /><meta property="og:site_name" content="jeslacourse" />
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="jeslacourse"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Simple Linear Regression - Correlation and Covariance"/>
+<meta name="twitter:description" content="CovarianceGiven the random variables \((X,Y)\) covariance is defined as:"/>
 
   
   <script type="application/ld+json">
-  {
+  [{
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https:\/\/jeslacourse.github.io\/",
-    "name": "jeslacourse",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Simple Linear Regression - Correlation and Covariance",
+    "headline": "Simple Linear Regression - Correlation and Covariance",
     
+    "abstract": "Covariance\rGiven the random variables \\((X,Y)\\) covariance is defined as:",
     "inLanguage": "en",
-    "url": "https:\/\/jeslacourse.github.io\/",
-    
-    "publisher" : {
+    "url" : "https:\/\/jeslacourse.github.io\/post\/covariance\/",
+    "author" : {
       "@type": "Person",
       "name": "Jes LaCourse"
-    }
-  }
+    },
+    "copyrightYear": "2022",
+    "dateCreated": "2022-09-06T00:00:00\u002b00:00",
+    "datePublished": "2022-09-06T00:00:00\u002b00:00",
+    
+    "dateModified": "2022-09-06T00:00:00\u002b00:00",
+    
+    "keywords": ["correlation","covariance"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "175"
+  }]
   </script>
 
 
@@ -199,35 +209,143 @@
     <div class="relative flex flex-col grow">
       <main id="main-content" class="grow">
         
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Simple Linear Regression - Correlation and Covariance
+      </h1>
+      <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
   
   
-    <article
-  class="flex flex-col items-center justify-center text-center "
->
-  <header class="flex flex-col items-center mb-3">
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2022-09-06 00:00:00 &#43;0000 UTC">September 6, 2022</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+      </div>
+    </header>
+    <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
+      
+      <div class="min-w-0 min-h-0 max-w-prose">
+        
+
+
+<div id="covariance" class="section level2">
+<h2>Covariance</h2>
+<p>Given the random variables <span class="math inline">\((X,Y)\)</span> <strong>covariance</strong> is defined as:</p>
+<p><span class="math display">\[cov(X,Y) = E[(X -\mu_x)(Y-\mu_y)]\]</span></p>
+<p>with <strong>sample covariance</strong></p>
+<p><span class="math display">\[\hat{cov}(X,Y) = \frac{\Sigma(X_i - \bar{X})(Y_i-\bar{Y})^2}{n-1} \]</span></p>
+</div>
+<div id="correlation" class="section level2">
+<h2>Correlation</h2>
+<p><strong>Correlation</strong> is defined on the scale <span class="math inline">\(-1 \leq corr(X,Y) \leq 1\)</span> where:</p>
+<p><span class="math display">\[corr(X,Y) = \frac{cov(X,Y)}{\sqrt{var(X)var(Y)}}\]</span></p>
+<div id="rules-for-expectation-roll-into-prior-post" class="section level3">
+<h3>Rules for Expectation [Roll into prior post]</h3>
+<p>Given random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> and constants <span class="math inline">\(a,b,\)</span> &amp; <span class="math inline">\(c\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(E(c) = c\)</span></li>
+<li><span class="math inline">\(E(cX) = cE(X)\)</span></li>
+<li><span class="math inline">\(E(X+Y) = E(X) + E(Y)\)</span></li>
+</ol>
+<p>An example:
+<span class="math display">\[E(a+bX+cY) \\ = a + bE(X) + cE(Y)\]</span></p>
+</div>
+<div id="rules-for-variance" class="section level3">
+<h3>Rules for Variance</h3>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(var(a) = 0\)</span></li>
+<li><span class="math inline">\(var(aX) = a^2 var(X)\)</span></li>
+<li><span class="math inline">\(var(X+Y) = var(X) + var(Y) + 2cov(X,Y)\)</span></li>
+</ol>
+<p>An example:</p>
+<p><span class="math display">\[var(a+bX-cY) \\= var(a) + var(bX-cY) + 2cov(X,Y)\\= 0 + var(bX)+ var(-cY) \\=b^2var(X) + c^2var(Y)+2[(-bc)cov(X,Y)]\]</span></p>
+</div>
+<div id="rules-for-covariance" class="section level3">
+<h3>Rules for Covariance</h3>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(cov(X,Y) = cov(Y,X)\)</span></li>
+<li>if <span class="math inline">\(X ⫫ Y \Rightarrow cov(X,Y) = 0\)</span>, if the random variables are independent of one another, then we cannot predict their variability</li>
+<li>if <span class="math inline">\(cov(X,Y)= 0 \Rightarrow\)</span> may or may not <span class="math inline">\(X ⫫ Y\)</span></li>
+<li><span class="math inline">\(cov(a,b) = 0\)</span></li>
+<li><span class="math inline">\(cov(a, X) = 0\)</span></li>
+<li><span class="math inline">\(cov(aX, Y) = a cov(X,Y)\)</span></li>
+<li><span class="math inline">\(cov(aX, bY) = ab cov(X,Y)\)</span></li>
+<li><span class="math inline">\(cov(X, Y+Z) = cov(X,Y)+cov(X,Z)\)</span></li>
+<li><span class="math inline">\(cov(X,X) = var(X)\)</span></li>
+</ol>
+</div>
+</div>
+
+      </div>
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  <div class="flex">
     
       
       
         
         <img
-          class="mb-2 rounded-full w-36 h-36"
-          width="144"
-          height="144"
+          class="w-24 h-24 !mt-0 !mb-0 ltr:mr-4 rtl:ml-4 rounded-full"
+          width="96"
+          height="96"
           alt="Jes LaCourse"
-          src="/images/bio-photo_hu48cb0bfab1d130b60b08d8771d05ca5a_370940_288x288_fill_q75_box_smart1.jpg"
+          src="/images/bio-photo_hu48cb0bfab1d130b60b08d8771d05ca5a_370940_192x192_fill_q75_box_smart1.jpg"
         />
       
     
-    <h1 class="text-4xl font-extrabold">
-      Jes LaCourse
-    </h1>
-    
-      <h2 class="text-xl text-neutral-500 dark:text-neutral-400">
-        Statistics and Data Visualization - Site Under Construction
-      </h2>
-    
-    <div class="mt-1 text-2xl">
+    <div class="place-self-center">
       
+        <div class="text-[0.6rem] leading-3 text-neutral-500 dark:text-neutral-400 uppercase">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          Jes LaCourse
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">Sr. Research Analyst, Sierra College</div>
+      
+      <div class="text-2xl sm:text-lg">
   <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
     
       
@@ -286,330 +404,57 @@
     
   </div>
 
-
+</div>
     </div>
-  </header>
-  <section class="prose dark:prose-invert"></section>
-</article>
-<section>
-  
-  <h2 class="mt-8 text-2xl font-extrabold">Recent</h2>
-  
-    <article>
-  <h3 class="flex items-center mt-6 text-xl font-semibold">
-    
-      <a
-        class="decoration-primary-500 hover:underline hover:underline-offset-2 text-neutral-800 dark:text-neutral"
-        href="/post/covariance/"
-        >Simple Linear Regression - Correlation and Covariance</a
-      >
-    
-    
-    
-  </h3>
-  <div class="text-sm text-neutral-500 dark:text-neutral-400">
-    
-
-
-
-
-
-
-
-  
-
-  
-  
-    
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2022-09-06 00:00:00 &#43;0000 UTC">September 6, 2022</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
-    
-
-    
-    
   </div>
 
-  
-  
 
+      
 
-  </div>
+      
   
-    <div class="py-1 prose dark:prose-invert">
-      CovarianceGiven the random variables \((X,Y)\) covariance is defined as:
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group" href="/post/regression/">
+              <span
+                class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Simple Linear Regression</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-09-05 00:00:00 &#43;0000 UTC">September 5, 2022</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
     </div>
   
-</article>
 
-  
-    <article>
-  <h3 class="flex items-center mt-6 text-xl font-semibold">
-    
-      <a
-        class="decoration-primary-500 hover:underline hover:underline-offset-2 text-neutral-800 dark:text-neutral"
-        href="/post/regression/"
-        >Simple Linear Regression</a
-      >
-    
-    
-    
-  </h3>
-  <div class="text-sm text-neutral-500 dark:text-neutral-400">
-    
 
-
-
-
-
-
-
-  
-
-  
-  
-    
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2022-09-05 00:00:00 &#43;0000 UTC">September 5, 2022</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
-    
-
-    
-    
-  </div>
-
-  
-  
-
-
-  </div>
-  
-    <div class="py-1 prose dark:prose-invert">
-      One predictor, one outcome
-    </div>
-  
-</article>
-
-  
-    <article>
-  <h3 class="flex items-center mt-6 text-xl font-semibold">
-    
-      <a
-        class="decoration-primary-500 hover:underline hover:underline-offset-2 text-neutral-800 dark:text-neutral"
-        href="/post/2020-05-12-facet-figures/2020-05-12-facet-figures/"
-        >Highlights and Facets for Visualizing Categorical Data</a
-      >
-    
-    
-    
-  </h3>
-  <div class="text-sm text-neutral-500 dark:text-neutral-400">
-    
-
-
-
-
-
-
-
-  
-
-  
-  
-    
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2020-05-12 00:00:00 &#43;0000 UTC">May 12, 2020</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
-    
-
-    
-    
-  </div>
-
-  
-  
-
-
-  </div>
-  
-    <div class="py-1 prose dark:prose-invert">
-      Side-by-Side Comparison of (a) Generic Plot and (b) Faceted Plots with Highlight
-    </div>
-  
-</article>
-
-  
-    <article>
-  <h3 class="flex items-center mt-6 text-xl font-semibold">
-    
-      <a
-        class="decoration-primary-500 hover:underline hover:underline-offset-2 text-neutral-800 dark:text-neutral"
-        href="/post/2020-04-18-california-canvass-map/2020-04-18-california-canvass-map/"
-        >California Canvass Map</a
-      >
-    
-    
-    
-  </h3>
-  <div class="text-sm text-neutral-500 dark:text-neutral-400">
-    
-
-
-
-
-
-
-
-  
-
-  
-  
-    
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2020-04-18 00:00:00 &#43;0000 UTC">April 18, 2020</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">12 mins</span>
-    
-
-    
-    
-  </div>
-
-  
-  
-
-
-  </div>
-  
-    <div class="py-1 prose dark:prose-invert">
-      I&rsquo;ll likely be revisiting this project in the future to see how my analysis has changed.
-    </div>
-  
-</article>
-
-  
-    <article>
-  <h3 class="flex items-center mt-6 text-xl font-semibold">
-    
-      <a
-        class="decoration-primary-500 hover:underline hover:underline-offset-2 text-neutral-800 dark:text-neutral"
-        href="/post/2020-04-16-git-commands/2020-04-16-git-commands/"
-        >Git Commands</a
-      >
-    
-    
-    
-  </h3>
-  <div class="text-sm text-neutral-500 dark:text-neutral-400">
-    
-
-
-
-
-
-
-
-  
-
-  
-  
-    
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2020-04-16 00:00:00 &#43;0000 UTC">April 16, 2020</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
-    
-
-    
-    
-  </div>
-
-  
-  
-
-
-  </div>
-  
-    <div class="py-1 prose dark:prose-invert">
-      The original post is a response to a class forum.
-    </div>
-  
-</article>
-
-  
-
-
-</section>
-
-  
+      
+    </footer>
+  </article>
 
         
       </main><footer class="py-10 print:hidden">

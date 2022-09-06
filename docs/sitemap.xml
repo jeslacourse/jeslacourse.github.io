@@ -1,110 +1,149 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://jeslacourse.github.io/categories/</loc>
-    <lastmod>2022-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/tags/correlation/</loc>
-    <lastmod>2022-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/tags/covariance/</loc>
-    <lastmod>2022-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/</loc>
-    <lastmod>2022-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/post/</loc>
-    <lastmod>2022-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/categories/regression/</loc>
-    <lastmod>2022-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/post/covariance/</loc>
-    <lastmod>2022-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/tags/</loc>
-    <lastmod>2022-09-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/post/regression/</loc>
-    <lastmod>2022-09-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/tags/dataviz/</loc>
-    <lastmod>2020-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/tags/gghighlight/</loc>
-    <lastmod>2020-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/tags/ggplot/</loc>
-    <lastmod>2020-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/post/2020-05-12-facet-figures/2020-05-12-facet-figures/</loc>
-    <lastmod>2020-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/tags/rstats/</loc>
-    <lastmod>2020-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/categories/rstats/</loc>
-    <lastmod>2020-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/categories/statistics/</loc>
-    <lastmod>2020-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/categories/visualizations/</loc>
-    <lastmod>2020-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/post/2020-04-18-california-canvass-map/2020-04-18-california-canvass-map/</loc>
-    <lastmod>2020-04-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/tags/gis/</loc>
-    <lastmod>2020-04-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/categories/gis/</loc>
-    <lastmod>2020-04-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/tags/spatial-analysis/</loc>
-    <lastmod>2020-04-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/tags/statistics/</loc>
-    <lastmod>2020-04-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/tags/volunteer-work/</loc>
-    <lastmod>2020-04-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/post/2020-04-16-git-commands/2020-04-16-git-commands/</loc>
-    <lastmod>2020-04-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/post/2020-04-01-motivation-and-organization/2020-04-01-motivation-and-organization/</loc>
-    <lastmod>2020-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://jeslacourse.github.io/tags/about/</loc>
-  </url><url>
-    <loc>https://jeslacourse.github.io/categories/about/</loc>
-  </url><url>
-    <loc>https://jeslacourse.github.io/about/</loc>
-  </url><url>
-    <loc>https://jeslacourse.github.io/tags/classification/</loc>
-  </url><url>
-    <loc>https://jeslacourse.github.io/categories/classification/</loc>
-  </url><url>
-    <loc>https://jeslacourse.github.io/tags/coursework/</loc>
-  </url><url>
-    <loc>https://jeslacourse.github.io/tags/datasets/</loc>
-  </url><url>
-    <loc>https://jeslacourse.github.io/categories/datasets/</loc>
-  </url><url>
-    <loc>https://jeslacourse.github.io/datasets/</loc>
-  </url><url>
-    <loc>https://jeslacourse.github.io/experience/</loc>
-  </url><url>
-    <loc>https://jeslacourse.github.io/post/2020-05-17-feature-choice-in-classification/2020-05-17-feature-choice-in-classification/</loc>
-  </url><url>
-    <loc>https://jeslacourse.github.io/404/</loc>
-  </url><url>
-    <loc>https://jeslacourse.github.io/tags/projects/</loc>
-  </url><url>
-    <loc>https://jeslacourse.github.io/projects/</loc>
-  </url><url>
-    <loc>https://jeslacourse.github.io/tags/work-experience/</loc>
-  </url>
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://jeslacourse.github.io/</loc>
+            <lastmod>2022-09-06T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://jeslacourse.github.io/post/</loc>
+            <lastmod>2022-09-06T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://jeslacourse.github.io/post/covariance/</loc>
+            <lastmod>2022-09-06T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://jeslacourse.github.io/post/regression/</loc>
+            <lastmod>2022-09-05T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://jeslacourse.github.io/post/2020-05-12-facet-figures/2020-05-12-facet-figures/</loc>
+            <lastmod>2020-05-12T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://jeslacourse.github.io/post/2020-04-18-california-canvass-map/2020-04-18-california-canvass-map/</loc>
+            <lastmod>2020-04-18T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://jeslacourse.github.io/post/2020-04-16-git-commands/2020-04-16-git-commands/</loc>
+            <lastmod>2020-04-16T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://jeslacourse.github.io/post/2020-04-01-motivation-and-organization/2020-04-01-motivation-and-organization/</loc>
+            <lastmod>2020-04-01T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://jeslacourse.github.io/about/</loc>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://jeslacourse.github.io/datasets/</loc>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://jeslacourse.github.io/experience/</loc>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://jeslacourse.github.io/post/2020-05-17-feature-choice-in-classification/2020-05-17-feature-choice-in-classification/</loc>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://jeslacourse.github.io/404/</loc>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://jeslacourse.github.io/projects/</loc>
+          </url>
+    
+  
+    
+  
 </urlset>
