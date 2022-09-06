@@ -1,0 +1,57 @@
+---
+title: Simple Linear Regression - Correlation and Covariance
+date: '2022-09-06'
+slug: /covariance/
+categories: regression
+tags: ['correlation', 'covariance' ]
+---
+
+
+
+<div id="covariance" class="section level2">
+<h2>Covariance</h2>
+<p>Given the random variables <span class="math inline">\((X,Y)\)</span> <strong>covariance</strong> is defined as:</p>
+<p><span class="math display">\[cov(X,Y) = E[(X -\mu_x)(Y-\mu_y)]\]</span></p>
+<p>with <strong>sample covariance</strong></p>
+<p><span class="math display">\[\hat{cov}(X,Y) = \frac{\Sigma(X_i - \bar{X})(Y_i-\bar{Y})^2}{n-1} \]</span></p>
+</div>
+<div id="correlation" class="section level2">
+<h2>Correlation</h2>
+<p><strong>Correlation</strong> is defined on the scale <span class="math inline">\(-1 \leq corr(X,Y) \leq 1\)</span> where:</p>
+<p><span class="math display">\[corr(X,Y) = \frac{cov(X,Y)}{\sqrt{var(X)var(Y)}}\]</span></p>
+<div id="rules-for-expectation-roll-into-prior-post" class="section level3">
+<h3>Rules for Expectation [Roll into prior post]</h3>
+<p>Given random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> and constants <span class="math inline">\(a,b,\)</span> &amp; <span class="math inline">\(c\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(E(c) = c\)</span></li>
+<li><span class="math inline">\(E(cX) = cE(X)\)</span></li>
+<li><span class="math inline">\(E(X+Y) = E(X) + E(Y)\)</span></li>
+</ol>
+<p>An example:
+<span class="math display">\[E(a+bX+cY) \\ = a + bE(X) + cE(Y)\]</span></p>
+</div>
+<div id="rules-for-variance" class="section level3">
+<h3>Rules for Variance</h3>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(var(a) = 0\)</span></li>
+<li><span class="math inline">\(var(aX) = a^2 var(X)\)</span></li>
+<li><span class="math inline">\(var(X+Y) = var(X) + var(Y) + 2cov(X,Y)\)</span></li>
+</ol>
+<p>An example:</p>
+<p><span class="math display">\[var(a+bX-cY) \\= var(a) + var(bX-cY) + 2cov(X,Y)\\= 0 + var(bX)+ var(-cY) \\=b^2var(X) + c^2var(Y)+2[(-bc)cov(X,Y)]\]</span></p>
+</div>
+<div id="rules-for-covariance" class="section level3">
+<h3>Rules for Covariance</h3>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(cov(X,Y) = cov(Y,X)\)</span></li>
+<li>if <span class="math inline">\(X ⫫ Y \Rightarrow cov(X,Y) = 0\)</span>, if the random variables are independent of one another, then we cannot predict their variability</li>
+<li>if <span class="math inline">\(cov(X,Y)= 0 \Rightarrow\)</span> may or may not <span class="math inline">\(X ⫫ Y\)</span></li>
+<li><span class="math inline">\(cov(a,b) = 0\)</span></li>
+<li><span class="math inline">\(cov(a, X) = 0\)</span></li>
+<li><span class="math inline">\(cov(aX, Y) = a cov(X,Y)\)</span></li>
+<li><span class="math inline">\(cov(aX, bY) = ab cov(X,Y)\)</span></li>
+<li><span class="math inline">\(cov(X, Y+Z) = cov(X,Y)+cov(X,Z)\)</span></li>
+<li><span class="math inline">\(cov(X,X) = var(X)\)</span></li>
+</ol>
+</div>
+</div>
