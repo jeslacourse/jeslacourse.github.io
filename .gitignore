@@ -30,8 +30,6 @@ _site
 .Rproj.user
 *.Rproj
 
-# Project files
-*.Rmd
 
 # Hugo
 Thumbs.db 
