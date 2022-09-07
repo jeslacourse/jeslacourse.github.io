@@ -159,3 +159,27 @@ Q \equiv \Sigma_{i = 1}^n e_i^2\\=\Sigma_{i = 1}^n [y_i - (\beta_0 +\beta_1x_i)]
 $$
 
 The least squares estimates are values of $\beta_0$ and $\beta_1$ that minimize $Q$. 
+
+We use $b_1$ to estimate the slope $\beta_1$:
+
+$$
+ b_1 = \frac{\Sigma(x_i-\bar{x})(y_i-\bar{y})}{\Sigma(x_i-\bar{x})^2}\\ 
+ =\frac{\hat{cov}(X,Y)}{\hat{var}(X,Y)} 
+ 
+$$
+
+Once we have $b_1$, the estimate for the intercept $\beta_0$ is straightforward:
+
+
+
+$$
+b_0 = \bar{y}- b_1\bar{x}\\
+ \bar{y} = b_0 + b_1\bar{x}
+$$
+
+where the point $(\bar{x}, \bar{y})$ falls along the regression line. 
+
+**Properties** 
+
+The estimators $b_0$ and $b_1$ are unbiased estimators. They only require that for any $\epsilon_i$, that $E(\epsilon_i) = 0$.
+

@@ -96,7 +96,7 @@
     "keywords": ["correlation","covariance"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "175"
+    "wordCount": "721"
   }]
   </script>
 
@@ -248,7 +248,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2022-09-06 00:00:00 &#43;0000 UTC">September 6, 2022</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="2022-09-06 00:00:00 &#43;0000 UTC">September 6, 2022</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
     
 
     
@@ -312,6 +312,104 @@
 <li><span class="math inline">\(cov(X, Y+Z) = cov(X,Y)+cov(X,Z)\)</span></li>
 <li><span class="math inline">\(cov(X,X) = var(X)\)</span></li>
 </ol>
+</div>
+</div>
+<div id="the-simple-linear-regression-model" class="section level2">
+<h2>The Simple Linear Regression Model</h2>
+<p><span class="math display">\[Y_i= \beta_0 +\beta_1X_i + \epsilon_i\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(Y_i\)</span>: random variable for experimental unit</li>
+<li><span class="math inline">\(X_i\)</span>: predictor for experimental unit, a fixed value</li>
+<li><span class="math inline">\(\beta_0, \beta_1\)</span>: parameters, usually known. The goal is to estimate them.</li>
+</ul>
+<p>The model is considered <strong>simple</strong> because we are using one predictor. The model is linear in parameters and linear in the predictor variable, <span class="math inline">\(X\)</span>.</p>
+<p>Properties for <span class="math inline">\(\epsilon_i\)</span>:
+1. <span class="math inline">\(E(\epsilon_i) = 0\)</span>, <span class="math inline">\(\forall i\)</span>
+2. <span class="math inline">\(var(\epsilon_i)\)</span> is constant
+3. <span class="math inline">\(\epsilon_i...\epsilon_n\)</span> are uncorrelated</p>
+<p>On average, the error <em>is</em> the regression line, 0. Put another way,</p>
+<blockquote>
+<p>The expected value of <span class="math inline">\(\epsilon\)</span> is on the regression line.</p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li></li>
+</ol>
+<p><span class="math display">\[ E(\epsilon_i) = 0\\
+\epsilon_i = Y_i -(\beta_0 +\beta_1X_i) \\
+E[\epsilon_i] = E[Y_i -(\beta_0 +\beta_1X_i)] \\
+0 = E[Y_i] - E[\beta_0 +\beta_1X_i] \\
+0 = E[Y_i] - E[\beta_0] +E[\beta_1X_i] \\
+0  = E[Y_i] - \beta_0 + \beta_1X_i \\
+   \Rightarrow E[Y_i] = \beta_0 + \beta_1X_i \\
+\]</span></p>
+<p>showing that on average, <span class="math inline">\(Y_i\)</span> falls along the regression line. We can say the regression lineis the average of <span class="math inline">\(Y_i\)</span>, conditional on <span class="math inline">\(X_i\)</span>.</p>
+<p><span class="math display">\[ E(Y_i|X_i)= \beta_0 +\beta_1X_i \]</span>
+2. <span class="math inline">\(\epsilon_i...\epsilon_n\)</span> have the same variance</p>
+<p>Define $^2(_i) ^2 $, then $^2(Y_i) = var(Y_i) $. <span class="math inline">\(var(\epsilon_i)\)</span> increases as <span class="math inline">\(X\)</span> increases.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><span class="math inline">\(\epsilon_i...\epsilon_n\)</span> are uncorrelated</li>
+</ol>
+<p><span class="math display">\[
+  corr(\epsilon_i,\epsilon_j) = 0, i\neq j \\
+  corr(\epsilon_i,\epsilon_j) = var(\epsilon_i) \neq 0 \\
+  cov(\epsilon_i,\epsilon_j) = 0, i\neq j
+\]</span></p>
+<p>Similarly, but with different notation, <span class="math inline">\(corr(\epsilon_i,\epsilon_j) = \sigma(\epsilon_i,\epsilon_j)\)</span>.</p>
+<div id="features-of-models" class="section level3">
+<h3>Features of Models</h3>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(Y_i\)</span> is a sum of a constant term plus a random variable. The constant in this case is <span class="math inline">\(\beta_0 +\beta_1X_i\)</span>. The random variable is <span class="math inline">\(\epsilon_i\)</span>.</p></li>
+<li><p><span class="math inline">\(E(Y_i|X_i)= \beta_0 +\beta_1X_i\)</span>, see <span class="math inline">\(\epsilon\)</span> property 2.</p></li>
+<li><p><span class="math inline">\(\epsilon_i = Y_i -(\beta_0 +\beta_1X_i)\)</span> is a random deviation of <span class="math inline">\(Y_i\)</span> around the regression line.</p></li>
+</ol>
+<p>It’s worth taking a moment to make the distinction between the regression model, which uses subscripts <span class="math inline">\(i\)</span>:<br />
+<span class="math display">\[Y_i= \beta_0 +\beta_1X_i + \epsilon_i\]</span>
+and the regression function:</p>
+<p><span class="math display">\[Y= \beta_0 +\beta_1X + \epsilon\]</span>
+An example:</p>
+<p>We want to estimate the systolic blood pressure for a 20 year old. We know the following variables:</p>
+<ul>
+<li><span class="math inline">\(x\)</span>: age</li>
+<li><span class="math inline">\(y\)</span>: systolic blood pressure</li>
+<li><span class="math inline">\(\beta_0\)</span>: the intercept, <span class="math inline">\(90\)</span></li>
+<li><span class="math inline">\(\beta_1\)</span>: the slope, <span class="math inline">\(0.9\)</span></li>
+</ul>
+<p>Note that <span class="math inline">\(\beta\)</span>’s are usually unknown. We can say, we expect systolic blood pressure to be <span class="math inline">\(90\)</span> at age <span class="math inline">\(0\)</span> (or at birth), increasing <span class="math inline">\(0.9\)</span> units every year.</p>
+<p><span class="math display">\[
+E(Y|X = 20) \\= 90 + 0.9(20)\\=108
+\]</span></p>
+<p>Factoring in an error margin, given <span class="math inline">\(X = 20\)</span> we would expect <span class="math inline">\(Y = 108 +\epsilon\)</span>.</p>
+</div>
+</div>
+<div id="least-squares-estimation" class="section level2">
+<h2>Least Squares Estimation</h2>
+<div id="estimating-betas" class="section level3">
+<h3>Estimating <span class="math inline">\(\beta\)</span>’s</h3>
+<p>Find “good” estimates of <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> using the <strong>least squares method</strong>.</p>
+<p>When you have <span class="math inline">\(n\)</span> pairs of data, <span class="math inline">\((x_1, y_1)...(x_n, y_n)\)</span>:</p>
+<p>Use the <strong>deviation</strong> formula</p>
+<p><span class="math display">\[e_i = y_i - (\beta_0 +\beta_1x_i)\]</span></p>
+<p>to compose the <strong>squared deviation</strong> formula:</p>
+<p><span class="math display">\[e_i^2 = [y_i - (\beta_0 +\beta_1x_i)]^2\]</span></p>
+<p>This will allow us to define <span class="math inline">\(Q\)</span>, the <strong>sum of squared deviations</strong>:</p>
+<p><span class="math display">\[
+Q \equiv \Sigma_{i = 1}^n e_i^2\\=\Sigma_{i = 1}^n [y_i - (\beta_0 +\beta_1x_i)]^2
+\]</span></p>
+<p>The least squares estimates are values of <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> that minimize <span class="math inline">\(Q\)</span>.</p>
+<p>We use <span class="math inline">\(b_1\)</span> to estimate the slope <span class="math inline">\(\beta_1\)</span>:</p>
+<p>$$
+b_1 = \
+=</p>
+<p>$$</p>
+<p>Once we have <span class="math inline">\(b_1\)</span>, the estimate for the intercept <span class="math inline">\(\beta_0\)</span> is straightforward:</p>
+<p><span class="math display">\[
+b_0 = \bar{y}- b_1\bar{x}\\
+\bar{y} = b_0 + b_1\bar{x}
+\]</span></p>
+<p>where the point <span class="math inline">\((\bar{x}, \bar{y})\)</span> falls along the regression line.</p>
+<p><strong>Properties</strong></p>
+<p>The estimators <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> are unbiased estimators. They only require that for any <span class="math inline">\(\epsilon_i\)</span>, that <span class="math inline">\(E(\epsilon_i) = 0\)</span>.</p>
 </div>
 </div>
 
@@ -456,6 +554,19 @@
     </footer>
   </article>
 
+        
+          <div
+            class="absolute top-[100vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-0"
+          >
+            <a
+              href="#the-top"
+              class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5.5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
         
       </main><footer class="py-10 print:hidden">
   
