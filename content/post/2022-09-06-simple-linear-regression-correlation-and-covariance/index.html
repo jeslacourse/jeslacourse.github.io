@@ -138,5 +138,18 @@ E(Y|X = 20) \\= 90 + 0.9(20)\\=108
 Q \equiv \Sigma_{i = 1}^n e_i^2\\=\Sigma_{i = 1}^n [y_i - (\beta_0 +\beta_1x_i)]^2
 \]</span></p>
 <p>The least squares estimates are values of <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> that minimize <span class="math inline">\(Q\)</span>.</p>
+<p>We use <span class="math inline">\(b_1\)</span> to estimate the slope <span class="math inline">\(\beta_1\)</span>:</p>
+<p>$$
+b_1 = \
+=</p>
+<p>$$</p>
+<p>Once we have <span class="math inline">\(b_1\)</span>, the estimate for the intercept <span class="math inline">\(\beta_0\)</span> is straightforward:</p>
+<p><span class="math display">\[
+b_0 = \bar{y}- b_1\bar{x}\\
+\bar{y} = b_0 + b_1\bar{x}
+\]</span></p>
+<p>where the point <span class="math inline">\((\bar{x}, \bar{y})\)</span> falls along the regression line.</p>
+<p><strong>Properties</strong></p>
+<p>The estimators <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> are unbiased estimators. They only require that for any <span class="math inline">\(\epsilon_i\)</span>, that <span class="math inline">\(E(\epsilon_i) = 0\)</span>.</p>
 </div>
 </div>
