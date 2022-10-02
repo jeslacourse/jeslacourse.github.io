@@ -1,0 +1,118 @@
+---
+title: Simple Regression with R
+author: Jes LaCourse
+date: '2022-10-02'
+slug: [SimpleRegression]
+categories: ['Regression']
+tags: ['Regression', 'plotly']
+description: ''
+---
+
+
+# Fitting a Line to Data
+
+Simple linear regression a method of estimating an outcome based on a related variable. In this case, we'll walkthrough estimating systolic blood pressure (our outcome) based on age (a variable) using R.  
+
+Linear regression is presented in point-slope form, with parameters $\beta_0$ and $\beta_1$ making up our slope and intercept, respectively. 
+
+$$y = \beta_0 + \beta_1x$$
+
+We'll want to estimate the systolic blood pressure, $y$, for 20 subjects based on their age, $x$. $\beta$’s are usually unknown, but in this case we know we want to be reasonably close to $\beta_0=90$ and $\beta_1=0.9$. In other words, after many repeated experiments we've determined that the true intercept of our regression line is $90$ mmHg and our true slope is about $0.9$ mmHg/yr.  
+
+
+$$y = 90 + 0.9x$$
+
+
+
+Here are our 20 subjects: 
+
+
+```{r setup, include = F}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+library(tidyverse)
+library(plotly)
+library(kableExtra)
+
+theme_set(theme_bw())
+```
+
+```{r createSample, echo= F}
+# Fix our sample 
+set.seed(1002)
+
+# x : I want 20 subjects between 18 and 60
+# y : Use our known slope and intercept to set BPs.
+x = sample(18:60, 20, replace = T)
+y = round(rnorm(20, mean = x*0.9, sd = 15) + 90, 0)  
+
+data <- data.frame(subject = as.character(1:20), age = x, bp = y)
+data %>% t %>% kable(table.attr = "style = \"color:white;\"", 
+                     caption = "Blood Pressure Sample" ) %>% 
+               kable_paper()
+
+
+```
+
+
+## First the Basics
+
+It's good to get a feel for the characteristics of our sample. Our subject information is stored in a dataframe called `data`.
+
+We'll want to collect some fundamental information about our sample. 
+
+Call `summary(data)`: 
+
+```{r echo = F}
+summary(data) #%>% kable(table.attr = "style = \"color:white;\"", 
+              #      ) %>% 
+              # kable_paper()
+```
+
+The summary tells us we have 20 subjects with a mean age of $35.5$ years. Looking at the quartiles, then our minimum and maximum values, the ages appear to be evenly distributed from 20 to 58 years. A quick check of our blood pressure data shows values that are evenly distributed as well. We'll look at formal diagnostics later, but right now linear regression is looking like a good tool for estimation. 
+
+
+## Visualizing Data
+
+The function `ggplotly()` from the `plotly` library is a fantastic way to convert `ggplot()` items into interactive figures. Note that you can simply use the `ggplot()` code in the brackets for a static plot.  
+
+```{r, plotPoints}
+
+    {
+      ggplot(data, aes(name = subject, x = age, y = bp )) + 
+      geom_point() + 
+      labs(title = "Blood Pressure by Age, n = 20", 
+           y = "Blood Pressure (mmHg)", 
+           x = "Age (Years)")
+    } %>% 
+    ggplotly()
+```
+
+We certainly have a linear trend. There also appear to be slightly more younger subjects than older subjects. One of our subjects, `subject 3`, appears to have a blood pressure substantially lower than expected at (56,116). 
+
+
+## Modeling
+
+```{r modeling}
+
+lm(data, formula = bp ~age) -> m
+m
+summary(m)
+mean(m$residuals^2)
+
+data %>% 
+  {
+    ggplot(.,aes(age,bp)) +
+    geom_point() + 
+    geom_line(aes(y = m$coefficients[1] + m$coefficients[2]*x)) +
+    geom_line( aes(y = 90+x*0.9), color = "red") +
+    theme_bw()
+  } %>% 
+  ggplotly(., tooltip = list("x", "y"))
+
+
+```
+
