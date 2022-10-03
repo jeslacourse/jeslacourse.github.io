@@ -1,0 +1,146 @@
+---
+title: Simple Regression with R
+author: Jes LaCourse
+date: '2022-10-02'
+slug: [SimpleRegression]
+categories: ['regression']
+tags: ['regression', 'plotly', 'ggplot', 'dataviz', 'rstats']
+description: 'An introduction to linear regression in R'
+---
+
+
+# Fitting a Line to Data
+
+Simple linear regression a method of estimating an outcome based on a single related variable. We'll want to estimate the systolic blood pressure (our outcome) for 20 subjects based on their age (an independent variable) using R. 
+
+
+Here are our 20 subjects: 
+
+
+```{r setup, include = F}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+library(tidyverse)
+library(plotly)
+library(kableExtra)
+
+theme_set(theme_bw())
+```
+
+```{r createSample, echo= F}
+# Fix our sample 
+set.seed(1002)
+
+# x : I want 20 subjects between 18 and 60
+# y : Use our known slope and intercept to set BPs.
+x = sample(18:60, 20, replace = T)
+y = round(rnorm(20, mean = x*0.9, sd = 15) + 90, 0)  
+
+data <- data.frame(Person = as.character(1:20), Age = x, BP = y)
+data %>%  t %>% kable(table.attr = "style = \"color:white;\"", 
+                     caption = "Blood Pressure Sample" ) %>% 
+               kable_paper()
+
+
+```
+
+
+## First the Basics
+
+It's good to get a feel for the characteristics of our sample. Our subject information is stored in a dataframe called `data`.
+
+We'll want to collect some fundamental information about our sample. 
+
+Call `summary(data)`: 
+
+```{r echo = F}
+summary(data) #%>% kable(table.attr = "style = \"color:white;\"", 
+              #      ) %>% 
+              # kable_paper()
+```
+
+The summary tells us we have 20 subjects with a mean age of $35.5$ years. Looking at the quartiles, then our minimum and maximum values, the ages appear to be evenly distributed from 20 to 58 years. A quick check of our blood pressure data shows values that are evenly distributed as well. We'll look at formal diagnostics later, but right now linear regression is looking like a good tool for estimation. 
+
+
+
+## Visualizing Data
+
+The function `ggplotly()` from the `plotly` library is a fantastic way to convert `ggplot()` items into interactive figures. Note that you can simply use the `ggplot()` code in the brackets for a static plot.  
+
+```{r, plotPoints, fig.cap = "Blood Pressure by Age, n= 20"}
+
+    {
+      ggplot(data, aes(name = Person, x = Age, y = BP )) + 
+      geom_point() + 
+      labs(title = "Blood Pressure by Age, n = 20", 
+           y = "Blood Pressure (mmHg)", 
+           x = "Age (Years)")
+    } %>% 
+    ggplotly()
+
+```
+
+We certainly have a linear trend. There are slightly more younger subjects than older subjects. Generally speaking, there doesn't appear to be too much spread (variability) in our data. That said, one of our subjects, `Person 3`, appears to have a systolic blood pressure substantially lower than expected at for their age; 116 mmHg at the age of 56. 
+
+
+## Modeling
+
+We appear to be in good shape for modeling with linear regression. Simple linear regression is presented in point-slope form, with parameters $\beta_0$ and $\beta_1$ making up our slope and intercept, respectively. 
+
+$$y = \beta_0 + \beta_1x$$
+
+In `R`, we'll call `lm()` for linear modeling. In this case, we want to model blood pressure `BP` by age. 
+
+```{r modeling}
+lm(formula = BP~Age, data) -> m
+```
+
+```{r modelingBTS, echo = F}
+lm(formula = BP~Age, data)
+```
+
+The function returns two coefficients, y-intercept `(Intercept)` and a 'slope' for variable, `Age`. Starting at `r round(m$coefficients[1],3)` at `Age = 0`, we can expect a `r round(m$coefficients[2],3)` mmHg increase in systolic blood pressure with each added year. 
+
+Following the regression formula, we'll set `(Intercept)` to $b_0$ and `Age` to $b_1$. 
+
+
+
+```{r setBetas}
+# Set coefficients to betas
+b0 <- m$coefficients[1] # 76.633
+b1 <- m$coefficients[2] #  1.315
+```
+
+$$BP_{est} = b_0 + b_1*Age\\
+BP_{est} = 76.663 + 1.315*Age$$
+
+We can now add the regression line to the plot. 
+
+```{r plotRegLine, fig.cap="Regression Line: Blood Pressure by Age"}
+
+  {
+    ggplot(data, aes(x = Age, y = BP)) +
+    geom_point() + 
+    geom_line(aes(y = b0 + b1*Age)) + 
+    labs(title = "Estimated Regression Line: Blood Pressure by Age")
+  } %>% 
+  ggplotly()
+
+```
+
+Hovering along the line, we can find the estimated blood pressure for any age in the range. 
+
+## Fit and Validity
+
+**Note:**  In this case, `(20,103)` and `(58,153)` appear to begin and end the regression line. While it occurs for these data, it's not common for a regression line to start and end with "true" subject values. 
+
+Notice how the regression line appears to sit in the middle of the points for younger subjects, but after `x=40` the line tends to fall under the points. While the regression line appears to be a good fit for the younger subjects, our model frequently underestimates the blood pressure of older subjects.
+
+So how good of an estimate is our line? The next post will talk more about residual errors, goodness-of-fit, and diagnostics. 
+
+
+
+
