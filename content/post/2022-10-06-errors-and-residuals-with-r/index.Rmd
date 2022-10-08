@@ -1,0 +1,69 @@
+---
+title: Errors and Residuals with R
+author: Jes LaCourse
+date: '2022-10-06'
+slug: [ErrorsResiduals]
+categories: []
+tags: ['regression', 'plotly', 'ggplot', 'dataviz', 'rstats']
+description: ''
+---
+
+
+
+```{r setup, include = F}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+library(tidyverse)
+#library(plotly)
+#library(kableExtra)
+
+theme_set(theme_bw())
+```
+
+```{r createSample, echo= F}
+# Fix our sample 
+set.seed(1002)
+
+# x : I want 20 subjects between 18 and 60
+# y : Use our known slope and intercept to set BPs.
+x = sample(18:60, 20, replace = T)
+y = round(rnorm(20, mean = x*0.9, sd = 15) + 90, 0)  
+
+data <- data.frame(Person = as.character(1:20), Age = x, BP = y)
+data %>%  t #%>% kable(table.attr = "style = \"color:white;\"", 
+            #         caption = "Blood Pressure Sample" ) %>% 
+#               kable_paper()
+
+
+```
+```{r model}
+m <- lm(BP ~ Age, data = data)
+summary(m)
+```
+
+```{r}
+par(mfrow = c(2,2))
+plot(m)
+
+data$Predicted <- predict(m)
+data$Residuals <- m$residuals
+
+data %>%
+  
+  ggplot(aes(x = Age, y = BP)) + 
+  geom_smooth(method = "lm") +
+  geom_point(aes(y = Predicted), 
+             shape = 1, size = 3.5) +
+  geom_segment(aes(xend = Age, yend = Predicted), alpha = 0.5) +
+  geom_point(size = 2, color = "black") + 
+  geom_text(aes(label = Person), hjust  = 1.5, size = 3)
+
+
+data %>% 
+  ggplot() + 
+  geom_histogram(aes(x = Residuals), bins = 10, color = "black") 
+
+```
