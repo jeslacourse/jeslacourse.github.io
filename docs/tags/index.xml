@@ -6,31 +6,49 @@
     <description>Recent content in Tags on jeslacourse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 02 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jeslacourse.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jeslacourse.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dataviz</title>
+      <link>https://jeslacourse.github.io/tags/dataviz/</link>
+      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeslacourse.github.io/tags/dataviz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ggplot</title>
+      <link>https://jeslacourse.github.io/tags/ggplot/</link>
+      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeslacourse.github.io/tags/ggplot/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>plotly</title>
       <link>https://jeslacourse.github.io/tags/plotly/</link>
-      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://jeslacourse.github.io/tags/plotly/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Regression</title>
+      <title>regression</title>
       <link>https://jeslacourse.github.io/tags/regression/</link>
-      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://jeslacourse.github.io/tags/regression/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>dataviz</title>
-      <link>https://jeslacourse.github.io/tags/dataviz/</link>
-      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      <title>rstats</title>
+      <link>https://jeslacourse.github.io/tags/rstats/</link>
+      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://jeslacourse.github.io/tags/dataviz/</guid>
+      <guid>https://jeslacourse.github.io/tags/rstats/</guid>
       <description></description>
     </item>
     
@@ -40,24 +58,6 @@
       <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://jeslacourse.github.io/tags/gghighlight/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ggplot</title>
-      <link>https://jeslacourse.github.io/tags/ggplot/</link>
-      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://jeslacourse.github.io/tags/ggplot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rstats</title>
-      <link>https://jeslacourse.github.io/tags/rstats/</link>
-      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://jeslacourse.github.io/tags/rstats/</guid>
       <description></description>
     </item>
     

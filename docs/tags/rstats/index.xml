@@ -6,7 +6,25 @@
     <description>Recent content in rstats on jeslacourse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 12 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://jeslacourse.github.io/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jeslacourse.github.io/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Errors and Residuals with R</title>
+      <link>https://jeslacourse.github.io/post/2022-10-06-errors-and-residuals-with-r/</link>
+      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeslacourse.github.io/post/2022-10-06-errors-and-residuals-with-r/</guid>
+      <description>Table 1: Blood Pressure SamplePerson1234567891011121314151617181920Age5846563723302025315034272252204220582435BP16713611611610112110310110515811711811314810514289153122135m &amp;lt;- lm(BP ~ Age, data = data)summary(m)## ## Call:## lm(formula = BP ~ Age, data = data)## ## Residuals:## Min 1Q Median 3Q Max ## -34.</description>
+    </item>
+    
+    <item>
+      <title>Simple Regression with R</title>
+      <link>https://jeslacourse.github.io/post/2022-10-02-simple-regression/</link>
+      <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeslacourse.github.io/post/2022-10-02-simple-regression/</guid>
+      <description>Fitting a Line to DataSimple linear regression a method of estimating an outcome based on a single related variable.</description>
+    </item>
+    
     <item>
       <title>Highlights and Facets for Visualizing Categorical Data</title>
       <link>https://jeslacourse.github.io/post/2020-05-12-facet-figures/2020-05-12-facet-figures/</link>

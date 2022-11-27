@@ -1,0 +1,43 @@
+---
+title: Diagnostic Plots in R
+author: Jes LaCourse
+date: '2022-11-26'
+slug: []
+categories: []
+tags: []
+description: ''
+draft: true
+---
+
+# Diagnostics
+
+Built in diagnostic plots
+
+```{r plotResidShowCode, eval=FALSE}
+data %>%
+  {
+  ggplot(.,aes(x = Age, y = BP)) + 
+  geom_smooth(method = "lm", color = "gray", fill = "light gray") + # Linear estimate
+  geom_point(aes(y = Predicted),                                    # Predicted values
+             shape = 1, size = 3.5) +
+  geom_segment(aes(xend = Age, yend = Predicted), alpha = 0.5) +    
+  geom_point(size = 2, color = "black") +                           # Actual values
+  geom_text(aes(label = Person), hjust  = 1.6, size = 3)
+  }
+
+```
+
+
+
+
+
+
+```{r}
+par(mfrow = c(2,2))
+plot(m)
+
+data %>% 
+  ggplot() + 
+  geom_histogram(aes(x = Residuals), bins = 10, color = "black") 
+
+```

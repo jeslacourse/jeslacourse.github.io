@@ -1,7 +1,7 @@
 ---
 title: Errors and Residuals with R
 author: Jes LaCourse
-date: '2022-10-06'
+date: '2022-11-13'
 slug: [ErrorsResiduals]
 categories: []
 tags: ['regression', 'plotly', 'ggplot', 'dataviz', 'rstats']
@@ -17,11 +17,14 @@ knitr::opts_chunk$set(
 	warning = FALSE
 )
 library(tidyverse)
-#library(plotly)
-#library(kableExtra)
+library(plotly)
+library(kableExtra)
 
 theme_set(theme_bw())
 ```
+
+
+# A Quick Recap 
 
 ```{r createSample, echo= F}
 # Fix our sample 
@@ -33,37 +36,118 @@ x = sample(18:60, 20, replace = T)
 y = round(rnorm(20, mean = x*0.9, sd = 15) + 90, 0)  
 
 data <- data.frame(Person = as.character(1:20), Age = x, BP = y)
-data %>%  t #%>% kable(table.attr = "style = \"color:white;\"", 
-            #         caption = "Blood Pressure Sample" ) %>% 
-#               kable_paper()
+data %>%  t %>% kable(table.attr = "style = \"color:white;\"", 
+                     caption = "Blood Pressure Sample" ) %>% 
+               kable_paper()
 
 
 ```
-```{r model}
+
+We're looking at the relationship between blood pressure samples and age. For this study, we have 20 people ranging in age between 20 and 58. Our median age is 32.5; mean age is a little higher at 35.5. We also determined that the blood pressure samples are evenly distributed.  
+
+We found evidence that our linear model was underestimating blood pressure rates for older participants. There was also an individual, `Person 3 (56,113)`, whose blood pressure was substantially lower than expected. 
+
+# Model Fit
+
+This article is all about the summary read out. Let's take another look at the summary data for our model:
+
+```{r model, include=FALSE}
+
 m <- lm(BP ~ Age, data = data)
-summary(m)
+
 ```
 
-```{r}
-par(mfrow = c(2,2))
-plot(m)
+```{r modelSummary}
+
+summary(m)
+
+```
+
+R modeling stores a handful of features with the saved variable, these can be accessed by calling `names(m)`. We used the coefficients in the last article, now we'll take a look at attributes that give us a better look at how well our model fits the data. 
+
+```{r summaryM}
+names(m)
+
+```
+
+
+## Residuals 
+
+Our residuals, or differences between the estimated and actual blood pressure measurements, range from an overestimate of 34.2 mmHg, to an underestimate of 15.6 mmHg. The median residual is 1.1mmHg, a slight underestimate. We can determine which residuals belong to a sample by calling `resid(m)`, the equivalent of `m$residuals`. Our min and max residuals belong to `Person 3` and `Person 10`, respectively. 
+
+```{r modelResid, echo=FALSE}
+resid(m) %>% round(2) %>%  t %>% kable(table.attr = "style = \"color:white;\"", 
+                     caption = "Blood Pressure Sample" ) %>% 
+               kable_paper()
+
+```
+
+These values may be difficult to read on their own, so I'll add them back to our dataframe and visualize. 
+
+```{r prepResids}
 
 data$Predicted <- predict(m)
-data$Residuals <- m$residuals
+data$Residuals <- resid(m)
+```
 
+We can now match up the residuals in the table above with the estimates in the figure below. For the figure below, black dots are the actual values, while the black rings along the regression line are the estimated values given the subject's age. `Person 3` and `Person 10` are not well estimated, while `Person 2`, `7`, `14`, and `18` have a much smaller residual error. 
+
+```{r plotResid, fig.cap= "Residuals: Over- and Underestimates of Blood Pressure", echo = F}
 data %>%
-  
-  ggplot(aes(x = Age, y = BP)) + 
-  geom_smooth(method = "lm") +
-  geom_point(aes(y = Predicted), 
+  {
+  ggplot(.,aes(x = Age, y = BP)) + 
+  geom_smooth(method = "lm", color = "gray", fill = "light gray") + # Linear estimate
+  geom_point(aes(y = Predicted),                                    # Predicted values
              shape = 1, size = 3.5) +
-  geom_segment(aes(xend = Age, yend = Predicted), alpha = 0.5) +
-  geom_point(size = 2, color = "black") + 
-  geom_text(aes(label = Person), hjust  = 1.5, size = 3)
-
-
-data %>% 
-  ggplot() + 
-  geom_histogram(aes(x = Residuals), bins = 10, color = "black") 
+  geom_segment(aes(xend = Age, yend = Predicted), alpha = 0.5) +    
+  geom_point(size = 2, color = "black") +                           # Actual values
+  geom_text(aes(label = Person), hjust  = 1.6, size = 3)
+  }
 
 ```
+
+## Residual Standard Error (RSE)
+
+The RSE is a standard deviation estimate for linear regression. Smaller values tend to mean a better fit, while an RSE of zero (our estimates perfectly predict our values) would certainly mean our model has been *overfit*.  
+
+$$RSE = \sqrt{SSE/df_R}$$
+The residual standard error is the square root value of the sum of squared errors (SSE) divided by the residual degrees of freedom (df). Squaring residuals eliminates the sign ($\pm$, for an over- or underfit). Taking the mean of residuals otherwise would simply give us a value at or near zero as over- and underestimates cancel each other out. Given 20 samples and 1 parameter (`Age`), we'll calculate the degrees of freedom using $df_R = n - p - 1$ or $df_R = 20 - 1 - 1 = 18$. 
+
+```{r RSE}
+SSE <- sum(resid(m)^2)                             # 2751.189
+df <- length(m$residuals) - length(m$coefficients) # 18
+
+RSE <- sqrt(SSE/df)   #12.363
+
+```
+
+## Multiple R-squared 
+
+Multiple R-Squared and the Adjusted R-squared focus on correlation in our model. Correlation can range from -1 to 1, with values closer to -1 or 1 resulting in high correlation. For our data, we have a correlation value of 0.829 (`cor(Age,BP)`) which gives us a multiple R-squared value of 0.687. Adjusted R-squared values are calculated to account for increased variance with multiple parameters and tend to be more conservative. As such, Adjusted R-squared values are particularly useful for models with several parameters.  
+
+```{r multR, eval= F}
+cor(data$Age, data$BP)^2  # 0.687
+```
+
+## F-statistics
+
+Linear modeling in R uses t-testing and F-statistics to determine if any coefficients significantly influence our dependent variable. In our case, we are testing out whether `Age` influences `BP`. In short, a p-value `< 0.05` would tell us that `Age` is a significant coefficient at $\alpha = 0.05$. In our case, we can see that the p-value for `Age` is `< 0.001`; there is a relationship between age and blood pressure.  
+
+```{r pvals}
+
+pvals <- summary(m)$coefficients[,4]  # 6.28e-06 
+
+```
+
+
+## In Summary
+
+The `summary()` feature provides critical feedback about the relationship between our dependent variable, `BP` and our coefficient or independent variable, `Age`. While not perfect, we have a relatively good model for predicting blood pressure. 
+
+The next post will look at how to improve our model fit. We'll use R's built in diagostics to determine the impact of outliers, sample size, and variance within the data.
+
+
+
+
+
+
