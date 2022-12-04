@@ -41,6 +41,7 @@ data %>%  t %>% kable(table.attr = "style = \"color:white;\"",
                      caption = "Blood Pressure Sample" ) %>% 
                kable_paper()
 
+lm(formula = BP~Age, data) -> m
 
 ```
 
@@ -61,8 +62,6 @@ data %>%
   }
 
 ```
-
-
 
 
 
