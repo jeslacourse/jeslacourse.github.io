@@ -11,8 +11,9 @@ tags:
   - work experience
 ---
 
-Seeking work with a community-oriented and socially conscious organization to promote social awareness through meaningful data interpretation and visualization
+> Working with community-oriented and socially conscious organizations to promote social awareness through meaningful data interpretation and visualization
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -24,12 +25,16 @@ Seeking work with a community-oriented and socially conscious organization to pr
 =======
 
 >>>>>>> parent of 2444ea7 (Revert "update exp")
+=======
+
+:::{.home-section}
+>>>>>>> 8f65572 (update preview text for past blogs)
 **Data Management and Statistical Highlights**
 
 -   [Creation and implementation of voter outreach GIS database for California's 20,000 precincts](https://jeslacourse.github.io/ccmproject/)
     
 
-	-   Adopted in part by major 2016 Presidential candidate campaign
+-   Adopted in part by major 2016 Presidential candidate campaign
     
 -   Primary role in data management/conversion project of approximately 500,000 entries
     
@@ -38,12 +43,16 @@ Seeking work with a community-oriented and socially conscious organization to pr
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 -   Custom built an intuitive, dynamic Excel vehicle maintenance workbook for 12 vehicle fleet with accompanying Fleet Procedures Manual
 =======
 =======
 >>>>>>> parent of 2444ea7 (Revert "update exp")
 -   Custom built an intuitive, dynamic vehicle maintenance workbook for 12 vehicle fleet with accompanying Fleet Procedures Manual
 >>>>>>> parent of 2444ea7 (Revert "update exp")
+=======
+-   Custom built an intuitive, dynamic vehicle maintenance workbook for 12 vehicle fleet with accompanying Fleet Procedures Manual
+>>>>>>> 8f65572 (update preview text for past blogs)
     
 
 **Community Service and Leadership Highlights**
@@ -74,9 +83,7 @@ B.S. Statistics - Data Science Track
 
 #### Sierra College, Rocklin, CA
 
-A.S. Business Administration
-    
-A.S Accountancy
+| A.S. Business Administration | A.S Accounting | A.S. Natural Sciences |
  
 Geographic Information Systems Certificate 
 
@@ -179,6 +186,10 @@ RStudio for Analysis
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+:::
+>>>>>>> 8f65572 (update preview text for past blogs)
     
 
 =======

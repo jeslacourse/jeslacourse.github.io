@@ -5,7 +5,7 @@ date: '2022-10-02'
 slug: [SimpleRegression]
 categories: ['regression']
 tags: ['regression', 'plotly', 'ggplot', 'dataviz', 'rstats']
-description: 'An introduction to linear regression in R'
+summary: 'An introduction to linear regression with `lm()` in R'
 ---
 
 

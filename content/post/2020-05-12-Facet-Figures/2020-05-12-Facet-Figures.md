@@ -17,6 +17,7 @@ header:
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
   caption: "Tallac at Sunset, [**@jeslacourse**](https://twitter.com/jeslacourse)"
 excerpt: "What's the most effective way to visualize comparisons between variable factors? How do you share a lot of information without muddying up your visualizations? There definitely isn't one answer, but here's one solution: faceted plots with gghighlight."
+summary: Using `gghighlight()` to effectively visualize comparisons between factors
 ---
 
 ![](/facet/plot-4.png)
