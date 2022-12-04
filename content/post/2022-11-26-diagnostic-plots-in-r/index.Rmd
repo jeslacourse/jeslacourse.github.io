@@ -9,6 +9,41 @@ description: ''
 draft: true
 ---
 
+# Recap
+
+Here are our 20 subjects: 
+
+
+```{r setup, include = F}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+library(tidyverse)
+library(plotly)
+library(kableExtra)
+
+theme_set(theme_bw())
+```
+
+```{r createSample, echo= F}
+# Fix our sample 
+set.seed(1002)
+
+# x : I want 20 subjects between 18 and 60
+# y : Use our known slope and intercept to set BPs.
+x = sample(18:60, 20, replace = T)
+y = round(rnorm(20, mean = x*0.9, sd = 15) + 90, 0)  
+
+data <- data.frame(Person = as.character(1:20), Age = x, BP = y)
+data %>%  t %>% kable(table.attr = "style = \"color:white;\"", 
+                     caption = "Blood Pressure Sample" ) %>% 
+               kable_paper()
+
+
+```
+
 # Diagnostics
 
 Built in diagnostic plots

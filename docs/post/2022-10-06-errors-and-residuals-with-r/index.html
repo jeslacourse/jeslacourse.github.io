@@ -60,16 +60,16 @@
   
   
   <meta property="og:title" content="Errors and Residuals with R" />
-<meta property="og:description" content="Table 1: Blood Pressure SamplePerson1234567891011121314151617181920Age5846563723302025315034272252204220582435BP16713611611610112110310110515811711811314810514289153122135m &lt;- lm(BP ~ Age, data = data)summary(m)## ## Call:## lm(formula = BP ~ Age, data = data)## ## Residuals:## Min 1Q Median 3Q Max ## -34." />
+<meta property="og:description" content="A Quick RecapTable 1: Blood Pressure SamplePerson1234567891011121314151617181920Age5846563723302025315034272252204220582435BP16713611611610112110310110515811711811314810514289153122135We’re looking at the relationship between blood pressure samples and age." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jeslacourse.github.io/post/2022-10-06-errors-and-residuals-with-r/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2022-10-06T00:00:00+00:00" />
-<meta property="article:modified_time" content="2022-10-06T00:00:00+00:00" /><meta property="og:site_name" content="jeslacourse" />
+<meta property="article:published_time" content="2022-11-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-11-13T00:00:00+00:00" /><meta property="og:site_name" content="jeslacourse" />
 
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Errors and Residuals with R"/>
-<meta name="twitter:description" content="Table 1: Blood Pressure SamplePerson1234567891011121314151617181920Age5846563723302025315034272252204220582435BP16713611611610112110310110515811711811314810514289153122135m &lt;- lm(BP ~ Age, data = data)summary(m)## ## Call:## lm(formula = BP ~ Age, data = data)## ## Residuals:## Min 1Q Median 3Q Max ## -34."/>
+<meta name="twitter:description" content="A Quick RecapTable 1: Blood Pressure SamplePerson1234567891011121314151617181920Age5846563723302025315034272252204220582435BP16713611611610112110310110515811711811314810514289153122135We’re looking at the relationship between blood pressure samples and age."/>
 
   
   <script type="application/ld+json">
@@ -80,7 +80,7 @@
     "name": "Errors and Residuals with R",
     "headline": "Errors and Residuals with R",
     
-    "abstract": "Table 1: Blood Pressure Sample\rPerson\r1\r2\r3\r4\r5\r6\r7\r8\r9\r10\r11\r12\r13\r14\r15\r16\r17\r18\r19\r20\rAge\r58\r46\r56\r37\r23\r30\r20\r25\r31\r50\r34\r27\r22\r52\r20\r42\r20\r58\r24\r35\rBP\r167\r136\r116\r116\r101\r121\r103\r101\r105\r158\r117\r118\r113\r148\r105\r142\r89\r153\r122\r135\rm \u0026lt;- lm(BP ~ Age, data = data)\rsummary(m)\r## ## Call:\r## lm(formula = BP ~ Age, data = data)\r## ## Residuals:\r## Min 1Q Median 3Q Max ## -34.",
+    "abstract": "A Quick Recap\rTable 1: Blood Pressure Sample\rPerson\r1\r2\r3\r4\r5\r6\r7\r8\r9\r10\r11\r12\r13\r14\r15\r16\r17\r18\r19\r20\rAge\r58\r46\r56\r37\r23\r30\r20\r25\r31\r50\r34\r27\r22\r52\r20\r42\r20\r58\r24\r35\rBP\r167\r136\r116\r116\r101\r121\r103\r101\r105\r158\r117\r118\r113\r148\r105\r142\r89\r153\r122\r135\rWe’re looking at the relationship between blood pressure samples and age.",
     "inLanguage": "en",
     "url" : "https:\/\/jeslacourse.github.io\/post\/2022-10-06-errors-and-residuals-with-r\/",
     "author" : {
@@ -88,15 +88,15 @@
       "name": "Jes LaCourse"
     },
     "copyrightYear": "2022",
-    "dateCreated": "2022-10-06T00:00:00\u002b00:00",
-    "datePublished": "2022-10-06T00:00:00\u002b00:00",
+    "dateCreated": "2022-11-13T00:00:00\u002b00:00",
+    "datePublished": "2022-11-13T00:00:00\u002b00:00",
     
-    "dateModified": "2022-10-06T00:00:00\u002b00:00",
+    "dateModified": "2022-11-13T00:00:00\u002b00:00",
     
     "keywords": ["regression","plotly","ggplot","dataviz","rstats"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "254"
+    "wordCount": "927"
   }]
   </script>
 
@@ -248,7 +248,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2022-10-06 00:00:00 &#43;0000 UTC">October 6, 2022</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+      <time datetime="2022-11-13 00:00:00 &#43;0000 UTC">November 13, 2022</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
     
 
     
@@ -269,6 +269,8 @@
 <link href="https://jeslacourse.github.io/post/2022-10-06-errors-and-residuals-with-r/index_files/lightable/lightable.css" rel="stylesheet" />
 
 
+<div id="a-quick-recap" class="section level1">
+<h1>A Quick Recap</h1>
 <table style="color:white; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;" class=" lightable-paper">
 <caption>
 <span id="tab:createSample">Table 1: </span>Blood Pressure Sample
@@ -471,8 +473,13 @@ BP
 </tr>
 </tbody>
 </table>
-<pre class="r"><code>m &lt;- lm(BP ~ Age, data = data)
-summary(m)</code></pre>
+<p>We’re looking at the relationship between blood pressure samples and age. For this study, we have 20 people ranging in age between 20 and 58. Our median age is 32.5; mean age is a little higher at 35.5. We also determined that the blood pressure samples are evenly distributed.</p>
+<p>We found evidence that our linear model was underestimating blood pressure rates for older participants. There was also an individual, <code>Person 3 (56,113)</code>, whose blood pressure was substantially lower than expected.</p>
+</div>
+<div id="model-fit" class="section level1">
+<h1>Model Fit</h1>
+<p>This article is all about the summary read out. Let’s take another look at the summary data for our model:</p>
+<pre class="r"><code>summary(m)</code></pre>
 <pre><code>## 
 ## Call:
 ## lm(formula = BP ~ Age, data = data)
@@ -491,27 +498,184 @@ summary(m)</code></pre>
 ## Residual standard error: 12.36 on 18 degrees of freedom
 ## Multiple R-squared:  0.6872, Adjusted R-squared:  0.6698 
 ## F-statistic: 39.54 on 1 and 18 DF,  p-value: 6.284e-06</code></pre>
-<pre class="r"><code>par(mfrow = c(2,2))
-plot(m)</code></pre>
-<p><img src="https://jeslacourse.github.io/post/2022-10-06-errors-and-residuals-with-r/index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>R modeling stores a handful of features with the saved variable, these can be accessed by calling <code>names(m)</code>. We used the coefficients in the last article, now we’ll take a look at attributes that give us a better look at how well our model fits the data.</p>
+<pre class="r"><code>names(m)</code></pre>
+<pre><code>##  [1] &quot;coefficients&quot;  &quot;residuals&quot;     &quot;effects&quot;       &quot;rank&quot;         
+##  [5] &quot;fitted.values&quot; &quot;assign&quot;        &quot;qr&quot;            &quot;df.residual&quot;  
+##  [9] &quot;xlevels&quot;       &quot;call&quot;          &quot;terms&quot;         &quot;model&quot;</code></pre>
+<div id="residuals" class="section level2">
+<h2>Residuals</h2>
+<p>Our residuals, or differences between the estimated and actual blood pressure measurements, range from an overestimate of 34.2 mmHg, to an underestimate of 15.6 mmHg. The median residual is 1.1mmHg, a slight underestimate. We can determine which residuals belong to a sample by calling <code>resid(m)</code>, the equivalent of <code>m$residuals</code>. Our min and max residuals belong to <code>Person 3</code> and <code>Person 10</code>, respectively.</p>
+<table style="color:white; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;" class=" lightable-paper">
+<caption>
+<span id="tab:modelResid">Table 2: </span>Blood Pressure Sample
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+1
+</th>
+<th style="text-align:right;">
+2
+</th>
+<th style="text-align:right;">
+3
+</th>
+<th style="text-align:right;">
+4
+</th>
+<th style="text-align:right;">
+5
+</th>
+<th style="text-align:right;">
+6
+</th>
+<th style="text-align:right;">
+7
+</th>
+<th style="text-align:right;">
+8
+</th>
+<th style="text-align:right;">
+9
+</th>
+<th style="text-align:right;">
+10
+</th>
+<th style="text-align:right;">
+11
+</th>
+<th style="text-align:right;">
+12
+</th>
+<th style="text-align:right;">
+13
+</th>
+<th style="text-align:right;">
+14
+</th>
+<th style="text-align:right;">
+15
+</th>
+<th style="text-align:right;">
+16
+</th>
+<th style="text-align:right;">
+17
+</th>
+<th style="text-align:right;">
+18
+</th>
+<th style="text-align:right;">
+19
+</th>
+<th style="text-align:right;">
+20
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+14.12
+</td>
+<td style="text-align:right;">
+-1.1
+</td>
+<td style="text-align:right;">
+-34.25
+</td>
+<td style="text-align:right;">
+-9.27
+</td>
+<td style="text-align:right;">
+-5.87
+</td>
+<td style="text-align:right;">
+4.93
+</td>
+<td style="text-align:right;">
+0.08
+</td>
+<td style="text-align:right;">
+-8.5
+</td>
+<td style="text-align:right;">
+-12.38
+</td>
+<td style="text-align:right;">
+15.64
+</td>
+<td style="text-align:right;">
+-4.33
+</td>
+<td style="text-align:right;">
+5.87
+</td>
+<td style="text-align:right;">
+7.45
+</td>
+<td style="text-align:right;">
+3.01
+</td>
+<td style="text-align:right;">
+2.08
+</td>
+<td style="text-align:right;">
+10.16
+</td>
+<td style="text-align:right;">
+-13.92
+</td>
+<td style="text-align:right;">
+0.12
+</td>
+<td style="text-align:right;">
+13.82
+</td>
+<td style="text-align:right;">
+12.36
+</td>
+</tr>
+</tbody>
+</table>
+<p>These values may be difficult to read on their own, so I’ll add them back to our dataframe and visualize.</p>
 <pre class="r"><code>data$Predicted &lt;- predict(m)
-data$Residuals &lt;- m$residuals
+data$Residuals &lt;- resid(m)</code></pre>
+<p>We can now match up the residuals in the table above with the estimates in the figure below. For the figure below, black dots are the actual values, while the black rings along the regression line are the estimated values given the subject’s age. <code>Person 3</code> and <code>Person 10</code> are not well estimated, while <code>Person 2</code>, <code>7</code>, <code>14</code>, and <code>18</code> have a much smaller residual error.</p>
+<div class="figure"><span style="display:block;" id="fig:plotResid"></span>
+<img src="https://jeslacourse.github.io/post/2022-10-06-errors-and-residuals-with-r/index_files/figure-html/plotResid-1.png" alt="Residuals: Over- and Underestimates of Blood Pressure" width="672" />
+<p class="caption">
+Figure 1: Residuals: Over- and Underestimates of Blood Pressure
+</p>
+</div>
+</div>
+<div id="residual-standard-error-rse" class="section level2">
+<h2>Residual Standard Error (RSE)</h2>
+<p>The RSE is a standard deviation estimate for linear regression. Smaller values tend to mean a better fit, while an RSE of zero (our estimates perfectly predict our values) would certainly mean our model has been <em>overfit</em>.</p>
+<p><span class="math display">\[RSE = \sqrt{SSE/df_R}\]</span>
+The residual standard error is the square root value of the sum of squared errors (SSE) divided by the residual degrees of freedom (df). Squaring residuals eliminates the sign (<span class="math inline">\(\pm\)</span>, for an over- or underfit). Taking the mean of residuals otherwise would simply give us a value at or near zero as over- and underestimates cancel each other out. Given 20 samples and 1 parameter (<code>Age</code>), we’ll calculate the degrees of freedom using <span class="math inline">\(df_R = n - p - 1\)</span> or <span class="math inline">\(df_R = 20 - 1 - 1 = 18\)</span>.</p>
+<pre class="r"><code>SSE &lt;- sum(resid(m)^2)                             # 2751.189
+df &lt;- length(m$residuals) - length(m$coefficients) # 18
 
-data %&gt;%
-  {
-  ggplot(.,aes(x = Age, y = BP)) + 
-  geom_smooth(method = &quot;lm&quot;, color = &quot;gray&quot;, fill = &quot;light gray&quot;) +
-  geom_point(aes(y = Predicted), 
-             shape = 1, size = 3.5) +
-  geom_segment(aes(xend = Age, yend = Predicted), alpha = 0.5) +
-  geom_point(size = 2, color = &quot;black&quot;) + 
-  geom_text(aes(label = Person), hjust  = 1.6, size = 3)
-  }</code></pre>
-<p><img src="https://jeslacourse.github.io/post/2022-10-06-errors-and-residuals-with-r/index_files/figure-html/unnamed-chunk-1-2.png" width="672" /></p>
-<pre class="r"><code>data %&gt;% 
-  ggplot() + 
-  geom_histogram(aes(x = Residuals), bins = 10, color = &quot;black&quot;) </code></pre>
-<p><img src="https://jeslacourse.github.io/post/2022-10-06-errors-and-residuals-with-r/index_files/figure-html/unnamed-chunk-1-3.png" width="672" /></p>
+RSE &lt;- sqrt(SSE/df)   #12.363</code></pre>
+</div>
+<div id="multiple-r-squared" class="section level2">
+<h2>Multiple R-squared</h2>
+<p>Multiple R-Squared and the Adjusted R-squared focus on correlation in our model. Correlation can range from -1 to 1, with values closer to -1 or 1 resulting in high correlation. For our data, we have a correlation value of 0.829 (<code>cor(Age,BP)</code>) which gives us a multiple R-squared value of 0.687. Adjusted R-squared values are calculated to account for increased variance with multiple parameters and tend to be more conservative. As such, Adjusted R-squared values are particularly useful for models with several parameters.</p>
+<pre class="r"><code>cor(data$Age, data$BP)^2  # 0.687</code></pre>
+</div>
+<div id="f-statistics" class="section level2">
+<h2>F-statistics</h2>
+<p>Linear modeling in R uses t-testing and F-statistics to determine if any coefficients significantly influence our dependent variable. In our case, we are testing out whether <code>Age</code> influences <code>BP</code>. In short, a p-value <code>&lt; 0.05</code> would tell us that <code>Age</code> is a significant coefficient at <span class="math inline">\(\alpha = 0.05\)</span>. In our case, we can see that the p-value for <code>Age</code> is <code>&lt; 0.001</code>; there is a relationship between age and blood pressure.</p>
+<pre class="r"><code>pvals &lt;- summary(m)$coefficients[,4]  # 6.28e-06 </code></pre>
+</div>
+<div id="in-summary" class="section level2">
+<h2>In Summary</h2>
+<p>The <code>summary()</code> feature provides critical feedback about the relationship between our dependent variable, <code>BP</code> and our coefficient or independent variable, <code>Age</code>. While not perfect, we have a relatively good model for predicting blood pressure.</p>
+<p>The next post will look at how to improve our model fit. We’ll use R’s built in diagostics to determine the impact of outliers, sample size, and variance within the data.</p>
+</div>
+</div>
 
       </div>
     </section>
@@ -643,6 +807,28 @@ data %&gt;%
           
         </span>
         <span>
+          
+            <a class="flex text-right group" href="/post/2022-11-26-diagnostic-plots-in-r/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Diagnostic Plots in R</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-11-26 00:00:00 &#43;0000 UTC">November 26, 2022</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
           
         </span>
       </div>
