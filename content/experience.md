@@ -14,7 +14,9 @@ tags:
 > Working with community-oriented and socially conscious organizations to promote social awareness through meaningful data interpretation and visualization
 
 
-:::{.home-section}
+
+
+
 **Data Management and Statistical Highlights**
 
 -   [Creation and implementation of voter outreach GIS database for California's 20,000 precincts](https://jeslacourse.github.io/ccmproject/)
@@ -22,13 +24,10 @@ tags:
 
 -   Adopted in part by major 2016 Presidential candidate campaign
     
-
 -   Primary role in data management/conversion project of approximately 500,000 entries
     
-
 -   Earned commendations and national recognition from top management within firm
     
-
 -   Custom built an intuitive, dynamic vehicle maintenance workbook for 12 vehicle fleet with accompanying Fleet Procedures Manual
     
 
@@ -160,9 +159,6 @@ Microsoft Office Suite: 10+ years professional experience working with Excel, Wo
 -   Word: High proficiency; business report writing, template customization, automation
     
 RStudio for Analysis
-
-:::
-    
 
 
 
