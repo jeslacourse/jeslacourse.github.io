@@ -12,25 +12,6 @@ tags:
   - volunteer work
 header:
   teaser: /canvass/folsom1.jpg
-gallery:
-  - url: /canvass/GSA.png
-    image_path: /canvass/GSA.png
-    alt: "Greater Sacramento Area"
-  - url: /canvass/CD6.png
-    image_path: /canvass/CD6.png
-    alt: "CD 6: Sacramento Area"
-  - url: /canvass/CD13.png
-    image_path: /canvass/CD13.png
-    alt: "CD 13: East Bay"
-  - url: /canvass/Pacifica.png
-    image_path: /canvass/Pacifica.png
-    alt: "City of Pacifica"
-  - url: /canvass/Newark.png
-    image_path: /canvass/Newark.png
-    alt: "City of Newark"
-  - url: /canvass/CD28.png
-    image_path: /canvass/CD28.png
-    alt: "CD 28: Eastern Los Angeles"
 
 ---
 
