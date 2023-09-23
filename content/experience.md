@@ -13,22 +13,6 @@ tags:
 
 > Working with community-oriented and socially conscious organizations to promote social awareness through meaningful data interpretation and visualization
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
-
-<<<<<<< HEAD
->>>>>>> parent of 2444ea7 (Revert "update exp")
-=======
-
->>>>>>> parent of 2444ea7 (Revert "update exp")
-=======
-
-:::{.home-section}
->>>>>>> 8f65572 (update preview text for past blogs)
 **Data Management and Statistical Highlights**
 
 -   [Creation and implementation of voter outreach GIS database for California's 20,000 precincts](https://jeslacourse.github.io/ccmproject/)
@@ -40,32 +24,17 @@ tags:
     
 -   Earned commendations and national recognition from top management within firm
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
--   Custom built an intuitive, dynamic Excel vehicle maintenance workbook for 12 vehicle fleet with accompanying Fleet Procedures Manual
-=======
-=======
->>>>>>> parent of 2444ea7 (Revert "update exp")
 -   Custom built an intuitive, dynamic vehicle maintenance workbook for 12 vehicle fleet with accompanying Fleet Procedures Manual
->>>>>>> parent of 2444ea7 (Revert "update exp")
-=======
--   Custom built an intuitive, dynamic vehicle maintenance workbook for 12 vehicle fleet with accompanying Fleet Procedures Manual
->>>>>>> 8f65572 (update preview text for past blogs)
-    
 
 **Community Service and Leadership Highlights**
 
 -   Extensive and diverse 12+ years community service track record with emphasis on youth advocacy and voter advocacy within Placer County
     
 -   Served as interim administrative supervisor and team lead through peak tax season during merger with nation's 8th largest financial firm
-    
 
 -   Developed plan of action, provided direct communication with office and regional management on immediate hiring needs
     
 -   Direct involvement in hiring and training to build a highly adept administrative team
-    
 
 -   Team commendation from Managing Principal for multiple seamless work seasons, citing promotion of open, positive intraoffice communication and unparalleled efficiency
     
@@ -183,18 +152,3 @@ Microsoft Office Suite: 10+ years professional experience working with Excel, Wo
 -   Word: High proficiency; business report writing, template customization, automation
     
 RStudio for Analysis
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-:::
->>>>>>> 8f65572 (update preview text for past blogs)
-    
-
-=======
->>>>>>> parent of 2444ea7 (Revert "update exp")
-=======
->>>>>>> parent of 2444ea7 (Revert "update exp")
-
-
