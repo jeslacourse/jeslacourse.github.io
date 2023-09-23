@@ -12,6 +12,7 @@ tags:
   - volunteer work
 header:
   teaser: /canvass/folsom1.jpg
+<<<<<<< HEAD
 gallery:
   - url: /canvass/GSA.png
     image_path: /canvass/GSA.png
@@ -31,6 +32,9 @@ gallery:
   - url: /canvass/CD28.png
     image_path: /canvass/CD28.png
     alt: "CD 28: Eastern Los Angeles"
+=======
+
+>>>>>>> parent of 2444ea7 (Revert "update exp")
 ---
 
 > I'll likely be revisiting this project in the future to see how my analysis has changed. With that said, I'm presenting this project as I did in 2016. So much has changed in the last four years. I'm excited to rework this project and pull in some fresh data. It should make for a very interesting before-and-after. 

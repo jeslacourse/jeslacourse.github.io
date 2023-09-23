@@ -13,6 +13,13 @@ tags:
 
 Seeking work with a community-oriented and socially conscious organization to promote social awareness through meaningful data interpretation and visualization
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> parent of 2444ea7 (Revert "update exp")
 **Data Management and Statistical Highlights**
 
 -   [Creation and implementation of voter outreach GIS database for California's 20,000 precincts](https://jeslacourse.github.io/ccmproject/)
@@ -20,14 +27,16 @@ Seeking work with a community-oriented and socially conscious organization to pr
 
 	-   Adopted in part by major 2016 Presidential candidate campaign
     
-
 -   Primary role in data management/conversion project of approximately 500,000 entries
     
-
 -   Earned commendations and national recognition from top management within firm
     
+<<<<<<< HEAD
 
 -   Custom built an intuitive, dynamic Excel vehicle maintenance workbook for 12 vehicle fleet with accompanying Fleet Procedures Manual
+=======
+-   Custom built an intuitive, dynamic vehicle maintenance workbook for 12 vehicle fleet with accompanying Fleet Procedures Manual
+>>>>>>> parent of 2444ea7 (Revert "update exp")
     
 
 **Community Service and Leadership Highlights**
@@ -161,7 +170,10 @@ Microsoft Office Suite: 10+ years professional experience working with Excel, Wo
     
 RStudio for Analysis
 
+<<<<<<< HEAD
     
 
+=======
+>>>>>>> parent of 2444ea7 (Revert "update exp")
 
 
