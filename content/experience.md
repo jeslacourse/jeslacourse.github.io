@@ -19,6 +19,10 @@ Seeking work with a community-oriented and socially conscious organization to pr
 
 
 
+<<<<<<< HEAD
+>>>>>>> parent of 2444ea7 (Revert "update exp")
+=======
+
 >>>>>>> parent of 2444ea7 (Revert "update exp")
 **Data Management and Statistical Highlights**
 
@@ -32,9 +36,12 @@ Seeking work with a community-oriented and socially conscious organization to pr
 -   Earned commendations and national recognition from top management within firm
     
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 -   Custom built an intuitive, dynamic Excel vehicle maintenance workbook for 12 vehicle fleet with accompanying Fleet Procedures Manual
 =======
+=======
+>>>>>>> parent of 2444ea7 (Revert "update exp")
 -   Custom built an intuitive, dynamic vehicle maintenance workbook for 12 vehicle fleet with accompanying Fleet Procedures Manual
 >>>>>>> parent of 2444ea7 (Revert "update exp")
     
@@ -171,8 +178,11 @@ Microsoft Office Suite: 10+ years professional experience working with Excel, Wo
 RStudio for Analysis
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 
+=======
+>>>>>>> parent of 2444ea7 (Revert "update exp")
 =======
 >>>>>>> parent of 2444ea7 (Revert "update exp")
 

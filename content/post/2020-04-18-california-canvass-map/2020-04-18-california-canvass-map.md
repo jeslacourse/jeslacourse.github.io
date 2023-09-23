@@ -13,6 +13,7 @@ tags:
 header:
   teaser: /canvass/folsom1.jpg
 <<<<<<< HEAD
+<<<<<<< HEAD
 gallery:
   - url: /canvass/GSA.png
     image_path: /canvass/GSA.png
@@ -33,6 +34,8 @@ gallery:
     image_path: /canvass/CD28.png
     alt: "CD 28: Eastern Los Angeles"
 =======
+=======
+>>>>>>> parent of 2444ea7 (Revert "update exp")
 
 >>>>>>> parent of 2444ea7 (Revert "update exp")
 ---
