@@ -7,9 +7,6 @@
 *.sublime-workspace
 
 # Ruby Gem
-*.gem
-.bundle
-vendor/bundle
 
 # Node.js and NPM
 node_modules
