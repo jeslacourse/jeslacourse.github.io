@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://jeslacourse.github.io/sitemap.xml
