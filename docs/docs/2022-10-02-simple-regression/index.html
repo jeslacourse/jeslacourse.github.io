@@ -1,0 +1,845 @@
+
+
+<!DOCTYPE html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head>
+  <meta charset="utf-8" />
+  
+    <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>Simple Regression with R &middot; jeslacourse</title>
+    <meta name="title" content="Simple Regression with R &middot; jeslacourse" />
+  
+  
+  
+  
+  
+  <link rel="canonical" href="https://jeslacourse.github.io/docs/2022-10-02-simple-regression/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c870c95278b33468201b03c5325c089e6e83dffd339bed22210af6f65f6703432d65aad1662c39b8a1b01746178960e1ae5272556c44e3de5c825ea26b6d68a5.css"
+    integrity="sha512-yHDJUnizNGggGwPFMlwInm6D3/0zm&#43;0iIQr29l9nA0MtZarRZiw5uKGwF0YXiWDhrlJyVWxE495cgl6ia21opQ=="
+  />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.badab316c9287a5a42a843e4eb45da65bb3d194a5a0f5fa4a3e516160e67df0b8c65f4f19a8e146436e29d583699e6cb41d6bbe99e05e1dbaa877763bad9f8e2.js" integrity="sha512-utqzFskoelpCqEPk60XaZbs9GUpaD1&#43;ko&#43;UWFg5n3wuMZfTxmo4UZDbinVg2mebLQda76Z4F4duqh3djutn44g=="></script>
+  
+  
+  
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Simple Regression with R" />
+<meta property="og:description" content="An introduction to linear regression with lm() in R" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jeslacourse.github.io/docs/2022-10-02-simple-regression/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2022-10-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-10-02T00:00:00+00:00" /><meta property="og:site_name" content="jeslacourse" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Simple Regression with R"/>
+<meta name="twitter:description" content="An introduction to linear regression with lm() in R"/>
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Docs",
+    "name": "Simple Regression with R",
+    "headline": "Simple Regression with R",
+    
+    "abstract": "An introduction to linear regression with \u003ccode\u003elm()\u003c\/code\u003e in R",
+    "inLanguage": "en",
+    "url" : "https:\/\/jeslacourse.github.io\/docs\/2022-10-02-simple-regression\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Jes LaCourse"
+    },
+    "copyrightYear": "2022",
+    "dateCreated": "2022-10-02T00:00:00\u002b00:00",
+    "datePublished": "2022-10-02T00:00:00\u002b00:00",
+    
+    "dateModified": "2022-10-02T00:00:00\u002b00:00",
+    
+    "keywords": ["regression","plotly","ggplot","dataviz","rstats"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "737"
+  }]
+  </script>
+
+
+  
+  <meta name="author" content="Jes LaCourse" />
+  
+    
+      <link href="https://github.com/jeslacourse" rel="me" />
+    
+      <link href="https://linkedin.com/in/jeslacourse" rel="me" />
+    
+      <link href="https://twitter.com/jeslacourse" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 dark:bg-neutral-600 focus:translate-y-0"
+        href="#main-content"
+        ><span class="font-bold ltr:pr-2 rtl:pl-2 text-primary-600 dark:text-primary-400"
+          >&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold sm:py-10 text-neutral-900 dark:text-neutral print:hidden">
+  <nav class="flex justify-between">
+    
+    <div>
+      
+        <a
+          class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+          rel="me"
+          href="/"
+          >jeslacourse</a
+        >
+      
+
+    </div>
+    
+    
+      <ul class="flex flex-col list-none ltr:text-right rtl:text-left sm:flex-row">
+        
+          
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="/"
+                title="jeslacourse"
+                >Blog</a
+              >
+            </li>
+          
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="/about/"
+                title="About the Author"
+                >About</a
+              >
+            </li>
+          
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="/experience/"
+                title="Experience"
+                >Experience</a
+              >
+            </li>
+          
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="/projects/"
+                title="Projects"
+                >Projects</a
+              >
+            </li>
+          
+        
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Simple Regression with R
+      </h1>
+      <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2022-10-02 00:00:00 &#43;0000 UTC">October 2, 2022</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+      </div>
+    </header>
+    <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
+      
+      <div class="min-w-0 min-h-0 max-w-prose">
+        
+<script src="https://jeslacourse.github.io/docs/2022-10-02-simple-regression/index_files/kePrint/kePrint.js"></script>
+<link href="https://jeslacourse.github.io/docs/2022-10-02-simple-regression/index_files/lightable/lightable.css" rel="stylesheet" />
+<script src="https://jeslacourse.github.io/docs/2022-10-02-simple-regression/index_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="https://jeslacourse.github.io/docs/2022-10-02-simple-regression/index_files/plotly-binding/plotly.js"></script>
+<script src="https://jeslacourse.github.io/docs/2022-10-02-simple-regression/index_files/typedarray/typedarray.min.js"></script>
+<script src="https://jeslacourse.github.io/docs/2022-10-02-simple-regression/index_files/jquery/jquery.min.js"></script>
+<link href="https://jeslacourse.github.io/docs/2022-10-02-simple-regression/index_files/crosstalk/css/crosstalk.min.css" rel="stylesheet" />
+<script src="https://jeslacourse.github.io/docs/2022-10-02-simple-regression/index_files/crosstalk/js/crosstalk.min.js"></script>
+<link href="https://jeslacourse.github.io/docs/2022-10-02-simple-regression/index_files/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="https://jeslacourse.github.io/docs/2022-10-02-simple-regression/index_files/plotly-main/plotly-latest.min.js"></script>
+
+
+<div id="fitting-a-line-to-data" class="section level1">
+<h1>Fitting a Line to Data</h1>
+<p>Simple linear regression a method of estimating an outcome based on a single related variable. We’ll want to estimate the systolic blood pressure (our outcome) for 20 subjects based on their age (an independent variable) using R.</p>
+<p>Here are our 20 subjects:</p>
+<table style="color:white; font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;" class=" lightable-paper">
+<caption>
+<span id="tab:createSample">Table 1: </span>Blood Pressure Sample
+</caption>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Person
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:left;">
+12
+</td>
+<td style="text-align:left;">
+13
+</td>
+<td style="text-align:left;">
+14
+</td>
+<td style="text-align:left;">
+15
+</td>
+<td style="text-align:left;">
+16
+</td>
+<td style="text-align:left;">
+17
+</td>
+<td style="text-align:left;">
+18
+</td>
+<td style="text-align:left;">
+19
+</td>
+<td style="text-align:left;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Age
+</td>
+<td style="text-align:left;">
+58
+</td>
+<td style="text-align:left;">
+46
+</td>
+<td style="text-align:left;">
+56
+</td>
+<td style="text-align:left;">
+37
+</td>
+<td style="text-align:left;">
+23
+</td>
+<td style="text-align:left;">
+30
+</td>
+<td style="text-align:left;">
+20
+</td>
+<td style="text-align:left;">
+25
+</td>
+<td style="text-align:left;">
+31
+</td>
+<td style="text-align:left;">
+50
+</td>
+<td style="text-align:left;">
+34
+</td>
+<td style="text-align:left;">
+27
+</td>
+<td style="text-align:left;">
+22
+</td>
+<td style="text-align:left;">
+52
+</td>
+<td style="text-align:left;">
+20
+</td>
+<td style="text-align:left;">
+42
+</td>
+<td style="text-align:left;">
+20
+</td>
+<td style="text-align:left;">
+58
+</td>
+<td style="text-align:left;">
+24
+</td>
+<td style="text-align:left;">
+35
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BP
+</td>
+<td style="text-align:left;">
+167
+</td>
+<td style="text-align:left;">
+136
+</td>
+<td style="text-align:left;">
+116
+</td>
+<td style="text-align:left;">
+116
+</td>
+<td style="text-align:left;">
+101
+</td>
+<td style="text-align:left;">
+121
+</td>
+<td style="text-align:left;">
+103
+</td>
+<td style="text-align:left;">
+101
+</td>
+<td style="text-align:left;">
+105
+</td>
+<td style="text-align:left;">
+158
+</td>
+<td style="text-align:left;">
+117
+</td>
+<td style="text-align:left;">
+118
+</td>
+<td style="text-align:left;">
+113
+</td>
+<td style="text-align:left;">
+148
+</td>
+<td style="text-align:left;">
+105
+</td>
+<td style="text-align:left;">
+142
+</td>
+<td style="text-align:left;">
+89
+</td>
+<td style="text-align:left;">
+153
+</td>
+<td style="text-align:left;">
+122
+</td>
+<td style="text-align:left;">
+135
+</td>
+</tr>
+</tbody>
+</table>
+<div id="first-the-basics" class="section level2">
+<h2>First the Basics</h2>
+<p>It’s good to get a feel for the characteristics of our sample. Our subject information is stored in a dataframe called <code>data</code>.</p>
+<p>We’ll want to collect some fundamental information about our sample.</p>
+<p>Call <code>summary(data)</code>:</p>
+<pre><code>##     Person               Age              BP       
+##  Length:20          Min.   :20.00   Min.   : 89.0  
+##  Class :character   1st Qu.:23.75   1st Qu.:105.0  
+##  Mode  :character   Median :32.50   Median :117.5  
+##                     Mean   :35.50   Mean   :123.3  
+##                     3rd Qu.:47.00   3rd Qu.:137.5  
+##                     Max.   :58.00   Max.   :167.0</code></pre>
+<p>The summary tells us we have 20 subjects with a mean age of <span class="math inline">\(35.5\)</span> years. Looking at the quartiles, then our minimum and maximum values, the ages appear to be evenly distributed from 20 to 58 years. A quick check of our blood pressure data shows values that are evenly distributed as well. We’ll look at formal diagnostics later, but right now linear regression is looking like a good tool for estimation.</p>
+</div>
+<div id="visualizing-data" class="section level2">
+<h2>Visualizing Data</h2>
+<p>The function <code>ggplotly()</code> from the <code>plotly</code> library is a fantastic way to convert <code>ggplot()</code> items into interactive figures. Note that you can simply use the <code>ggplot()</code> code in the brackets for a static plot.</p>
+<pre class="r"><code>    {
+      ggplot(data, aes(name = Person, x = Age, y = BP )) + 
+      geom_point() + 
+      labs(title = &quot;Blood Pressure by Age, n = 20&quot;, 
+           y = &quot;Blood Pressure (mmHg)&quot;, 
+           x = &quot;Age (Years)&quot;)
+    } %&gt;% 
+    ggplotly()</code></pre>
+<div class="figure"><span style="display:block;" id="fig:plotPoints"></span>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"data":[{"x":[58,46,56,37,23,30,20,25,31,50,34,27,22,52,20,42,20,58,24,35],"y":[167,136,116,116,101,121,103,101,105,158,117,118,113,148,105,142,89,153,122,135],"text":["Age: 58<br />BP: 167<br />Person: 1","Age: 46<br />BP: 136<br />Person: 2","Age: 56<br />BP: 116<br />Person: 3","Age: 37<br />BP: 116<br />Person: 4","Age: 23<br />BP: 101<br />Person: 5","Age: 30<br />BP: 121<br />Person: 6","Age: 20<br />BP: 103<br />Person: 7","Age: 25<br />BP: 101<br />Person: 8","Age: 31<br />BP: 105<br />Person: 9","Age: 50<br />BP: 158<br />Person: 10","Age: 34<br />BP: 117<br />Person: 11","Age: 27<br />BP: 118<br />Person: 12","Age: 22<br />BP: 113<br />Person: 13","Age: 52<br />BP: 148<br />Person: 14","Age: 20<br />BP: 105<br />Person: 15","Age: 42<br />BP: 142<br />Person: 16","Age: 20<br />BP:  89<br />Person: 17","Age: 58<br />BP: 153<br />Person: 18","Age: 24<br />BP: 122<br />Person: 19","Age: 35<br />BP: 135<br />Person: 20"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":43.1050228310502},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Blood Pressure by Age, n = 20","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[18.1,59.9],"tickmode":"array","ticktext":["20","30","40","50"],"tickvals":[20,30,40,50],"categoryorder":"array","categoryarray":["20","30","40","50"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Age (Years)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[85.1,170.9],"tickmode":"array","ticktext":["100","125","150"],"tickvals":[100,125,150],"categoryorder":"array","categoryarray":["100","125","150"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"Blood Pressure (mmHg)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"1160648f5702":{"x":{},"y":{},"name":{},"type":"scatter"}},"cur_data":"1160648f5702","visdat":{"1160648f5702":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 1: Blood Pressure by Age, n= 20
+</p>
+</div>
+<p>We certainly have a linear trend. There are slightly more younger subjects than older subjects. Generally speaking, there doesn’t appear to be too much spread (variability) in our data. That said, one of our subjects, <code>Person 3</code>, appears to have a systolic blood pressure substantially lower than expected at for their age; 116 mmHg at the age of 56.</p>
+</div>
+<div id="modeling" class="section level2">
+<h2>Modeling</h2>
+<p>We appear to be in good shape for modeling with linear regression. Simple linear regression is presented in point-slope form, with parameters <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> making up our slope and intercept, respectively.</p>
+<p><span class="math display">\[y = \beta_0 + \beta_1x\]</span></p>
+<p>In <code>R</code>, we’ll call <code>lm()</code> for linear modeling. In this case, we want to model blood pressure <code>BP</code> by age.</p>
+<pre class="r"><code>lm(formula = BP~Age, data) -&gt; m</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = BP ~ Age, data = data)
+## 
+## Coefficients:
+## (Intercept)          Age  
+##      76.633        1.315</code></pre>
+<p>The function returns two coefficients, y-intercept <code>(Intercept)</code> and a ‘slope’ for variable, <code>Age</code>. Starting at 76.633 at <code>Age = 0</code>, we can expect a 1.315 mmHg increase in systolic blood pressure with each added year.</p>
+<p>Following the regression formula, we’ll set <code>(Intercept)</code> to <span class="math inline">\(b_0\)</span> and <code>Age</code> to <span class="math inline">\(b_1\)</span>.</p>
+<pre class="r"><code># Set coefficients to betas
+b0 &lt;- m$coefficients[1] # 76.633
+b1 &lt;- m$coefficients[2] #  1.315</code></pre>
+<p><span class="math display">\[BP_{est} = b_0 + b_1*Age\\
+BP_{est} = 76.663 + 1.315*Age\]</span></p>
+<p>We can now add the regression line to the plot.</p>
+<pre class="r"><code>  {
+    ggplot(data, aes(x = Age, y = BP)) +
+    geom_point() + 
+    geom_line(aes(y = b0 + b1*Age)) + 
+    labs(title = &quot;Estimated Regression Line: Blood Pressure by Age&quot;)
+  } %&gt;% 
+  ggplotly()</code></pre>
+<div class="figure"><span style="display:block;" id="fig:plotRegLine"></span>
+<div id="htmlwidget-2" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"data":[{"x":[58,46,56,37,23,30,20,25,31,50,34,27,22,52,20,42,20,58,24,35],"y":[167,136,116,116,101,121,103,101,105,158,117,118,113,148,105,142,89,153,122,135],"text":["Age: 58<br />BP: 167","Age: 46<br />BP: 136","Age: 56<br />BP: 116","Age: 37<br />BP: 116","Age: 23<br />BP: 101","Age: 30<br />BP: 121","Age: 20<br />BP: 103","Age: 25<br />BP: 101","Age: 31<br />BP: 105","Age: 50<br />BP: 158","Age: 34<br />BP: 117","Age: 27<br />BP: 118","Age: 22<br />BP: 113","Age: 52<br />BP: 148","Age: 20<br />BP: 105","Age: 42<br />BP: 142","Age: 20<br />BP:  89","Age: 58<br />BP: 153","Age: 24<br />BP: 122","Age: 35<br />BP: 135"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[20,20,20,22,23,24,25,27,30,31,34,35,37,42,46,50,52,56,58,58],"y":[102.924392336288,102.924392336288,102.924392336288,105.553503002574,106.868058335716,108.182613668859,109.497169002002,112.126279668287,116.069945667715,117.384501000858,121.328167000286,122.642722333429,125.271832999714,131.844609665428,137.102830997998,142.361052330569,144.990162996854,150.248384329425,152.877494995711,152.877494995711],"text":["Age: 20<br />b0 + b1 * Age: 102.9244","Age: 20<br />b0 + b1 * Age: 102.9244","Age: 20<br />b0 + b1 * Age: 102.9244","Age: 22<br />b0 + b1 * Age: 105.5535","Age: 23<br />b0 + b1 * Age: 106.8681","Age: 24<br />b0 + b1 * Age: 108.1826","Age: 25<br />b0 + b1 * Age: 109.4972","Age: 27<br />b0 + b1 * Age: 112.1263","Age: 30<br />b0 + b1 * Age: 116.0699","Age: 31<br />b0 + b1 * Age: 117.3845","Age: 34<br />b0 + b1 * Age: 121.3282","Age: 35<br />b0 + b1 * Age: 122.6427","Age: 37<br />b0 + b1 * Age: 125.2718","Age: 42<br />b0 + b1 * Age: 131.8446","Age: 46<br />b0 + b1 * Age: 137.1028","Age: 50<br />b0 + b1 * Age: 142.3611","Age: 52<br />b0 + b1 * Age: 144.9902","Age: 56<br />b0 + b1 * Age: 150.2484","Age: 58<br />b0 + b1 * Age: 152.8775","Age: 58<br />b0 + b1 * Age: 152.8775"],"type":"scatter","mode":"lines","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.7625570776256,"r":7.30593607305936,"b":40.1826484018265,"l":43.1050228310502},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187},"title":{"text":"Estimated Regression Line: Blood Pressure by Age","font":{"color":"rgba(0,0,0,1)","family":"","size":17.5342465753425},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[18.1,59.9],"tickmode":"array","ticktext":["20","30","40","50"],"tickvals":[20,30,40,50],"categoryorder":"array","categoryarray":["20","30","40","50"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"y","title":{"text":"Age","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[85.1,170.9],"tickmode":"array","ticktext":["100","125","150"],"tickvals":[100,125,150],"categoryorder":"array","categoryarray":["100","125","150"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.65296803652968,"tickwidth":0.66417600664176,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716895},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176,"zeroline":false,"anchor":"x","title":{"text":"BP","font":{"color":"rgba(0,0,0,1)","family":"","size":14.6118721461187}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.88976377952756,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716895}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"11604a0120ca":{"x":{},"y":{},"type":"scatter"},"1160749a3e09":{"x":{},"y":{}}},"cur_data":"11604a0120ca","visdat":{"11604a0120ca":["function (y) ","x"],"1160749a3e09":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<p class="caption">
+Figure 2: Regression Line: Blood Pressure by Age
+</p>
+</div>
+<p>Hovering along the line, we can find the estimated blood pressure for any age in the range.</p>
+</div>
+<div id="fit-and-validity" class="section level2">
+<h2>Fit and Validity</h2>
+<p><strong>Note:</strong> In this case, <code>(20,103)</code> and <code>(58,153)</code> appear to begin and end the regression line. While it occurs for these data, it’s not common for a regression line to start and end with “true” subject values.</p>
+<p>Notice how the regression line appears to sit in the middle of the points for younger subjects, but after <code>x=40</code> the line tends to fall under the points. While the regression line appears to be a good fit for the younger subjects, our model frequently underestimates the blood pressure of older subjects.</p>
+<p>So how good of an estimate is our line? The next post will talk more about residual errors, goodness-of-fit, and diagnostics.</p>
+</div>
+</div>
+
+      </div>
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  <div class="flex">
+    
+      
+      
+        
+        <img
+          class="w-24 h-24 !mt-0 !mb-0 ltr:mr-4 rtl:ml-4 rounded-full"
+          width="96"
+          height="96"
+          alt="Jes LaCourse"
+          src="/images/bio-photo_hu48cb0bfab1d130b60b08d8771d05ca5a_370940_192x192_fill_q75_box_smart1.jpg"
+        />
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] leading-3 text-neutral-500 dark:text-neutral-400 uppercase">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          Jes LaCourse
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">Sr. Research Analyst</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/jeslacourse"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://linkedin.com/in/jeslacourse"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://twitter.com/jeslacourse"
+          target="_blank"
+          aria-label="Twitter"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+
+  </span>
+
+</a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group" href="/docs/2020-05-12-facet-figures/2020-05-12-facet-figures/">
+              <span
+                class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Highlights and Facets for Visualizing Categorical Data</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2020-05-12 00:00:00 &#43;0000 UTC">May 12, 2020</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group" href="/docs/2022-10-06-errors-and-residuals-with-r/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Model Fit and Residuals with R</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2022-11-13 00:00:00 &#43;0000 UTC">November 13, 2022</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+          <div
+            class="absolute top-[100vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-0"
+          >
+            <a
+              href="#the-top"
+              class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5.5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
+        
+      </main><footer class="py-10 print:hidden">
+  
+  
+    <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex flex-col list-none sm:flex-row">
+        
+          <li
+            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+          >
+            <a
+              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+              href="/tags/"
+              title="Tags"
+              >Tags</a
+            >
+          </li>
+        
+      </ul>
+    </nav>
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2023
+            Jes LaCourse
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    
+    
+      <div
+        class="text-sm cursor-pointer text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-14 rtl:ml-14"
+      >
+        <button
+          id="appearance-switcher"
+          class="w-12 h-12 "
+          type="button"
+          title="Switch to dark appearance"
+        >
+          <span class="inline dark:hidden">
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+</span>
+          <span class="hidden dark:inline">
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+</span>
+        </button>
+      </div>
+    
+  </div>
+  
+  
+</footer>
+
+
+
+
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    
+
+    </div>
+  </body>
+</html>

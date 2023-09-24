@@ -1,0 +1,615 @@
+
+
+<!DOCTYPE html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head>
+  <meta charset="utf-8" />
+  
+    <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>Git Commands &middot; jeslacourse</title>
+    <meta name="title" content="Git Commands &middot; jeslacourse" />
+  
+  
+  
+  
+  
+  <link rel="canonical" href="https://jeslacourse.github.io/docs/2020-04-16-git-commands/2020-04-16-git-commands/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c870c95278b33468201b03c5325c089e6e83dffd339bed22210af6f65f6703432d65aad1662c39b8a1b01746178960e1ae5272556c44e3de5c825ea26b6d68a5.css"
+    integrity="sha512-yHDJUnizNGggGwPFMlwInm6D3/0zm&#43;0iIQr29l9nA0MtZarRZiw5uKGwF0YXiWDhrlJyVWxE495cgl6ia21opQ=="
+  />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.badab316c9287a5a42a843e4eb45da65bb3d194a5a0f5fa4a3e516160e67df0b8c65f4f19a8e146436e29d583699e6cb41d6bbe99e05e1dbaa877763bad9f8e2.js" integrity="sha512-utqzFskoelpCqEPk60XaZbs9GUpaD1&#43;ko&#43;UWFg5n3wuMZfTxmo4UZDbinVg2mebLQda76Z4F4duqh3djutn44g=="></script>
+  
+  
+  
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Git Commands" />
+<meta property="og:description" content="The original post is a response to a class forum." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jeslacourse.github.io/docs/2020-04-16-git-commands/2020-04-16-git-commands/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2020-04-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-04-16T00:00:00+00:00" /><meta property="og:site_name" content="jeslacourse" />
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Git Commands"/>
+<meta name="twitter:description" content="The original post is a response to a class forum."/>
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Docs",
+    "name": "Git Commands",
+    "headline": "Git Commands",
+    
+    "abstract": "The original post is a response to a class forum.",
+    "inLanguage": "en",
+    "url" : "https:\/\/jeslacourse.github.io\/docs\/2020-04-16-git-commands\/2020-04-16-git-commands\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Jes LaCourse"
+    },
+    "copyrightYear": "2020",
+    "dateCreated": "2020-04-16T00:00:00\u002b00:00",
+    "datePublished": "2020-04-16T00:00:00\u002b00:00",
+    
+    "dateModified": "2020-04-16T00:00:00\u002b00:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1117"
+  }]
+  </script>
+
+
+  
+  <meta name="author" content="Jes LaCourse" />
+  
+    
+      <link href="https://github.com/jeslacourse" rel="me" />
+    
+      <link href="https://linkedin.com/in/jeslacourse" rel="me" />
+    
+      <link href="https://twitter.com/jeslacourse" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 dark:bg-neutral-600 focus:translate-y-0"
+        href="#main-content"
+        ><span class="font-bold ltr:pr-2 rtl:pl-2 text-primary-600 dark:text-primary-400"
+          >&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold sm:py-10 text-neutral-900 dark:text-neutral print:hidden">
+  <nav class="flex justify-between">
+    
+    <div>
+      
+        <a
+          class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+          rel="me"
+          href="/"
+          >jeslacourse</a
+        >
+      
+
+    </div>
+    
+    
+      <ul class="flex flex-col list-none ltr:text-right rtl:text-left sm:flex-row">
+        
+          
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="/"
+                title="jeslacourse"
+                >Blog</a
+              >
+            </li>
+          
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="/about/"
+                title="About the Author"
+                >About</a
+              >
+            </li>
+          
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="/experience/"
+                title="Experience"
+                >Experience</a
+              >
+            </li>
+          
+            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="/projects/"
+                title="Projects"
+                >Projects</a
+              >
+            </li>
+          
+        
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Git Commands
+      </h1>
+      <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2020-04-16 00:00:00 &#43;0000 UTC">April 16, 2020</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+      </div>
+    </header>
+    <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
+      
+      <div class="min-w-0 min-h-0 max-w-prose">
+        <blockquote>
+<p>The original post is a response to a class forum. This post is just a handy way to determine how the site will handle markdown language while also providing some interesting content.</p>
+</blockquote>
+<p>This was originally part of a response to #151, but it should be good information for anyone trying to troubleshoot git version control. I&rsquo;ve pulled some of the specific troubleshooting out and added a bunch of detail on the common commands. My hope is that it gives you guys a kind of understanding of what git is doing in the background.</p>
+<p>Pleeease be careful about just blindly typing in git commands. As safe as git version control is, you run a real risk of overwriting your files by just trying to <code>pull</code> simply when git asks you to.</p>
+<h3 id="short-version" class="relative group">Short version: <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#short-version" aria-label="Anchor">#</a></span></h3>
+<p><code>git clone url</code>: Asking the remote (online) repository to make a local (PC) copy</p>
+<p><code>git pull</code>: Including or &ldquo;pulling down&rdquo; changes from the remote repository to your local</p>
+<p><code>git status</code>: Looking at the differences between the remote and local. Awesome tool for troubleshooting.</p>
+<p><code>git diff</code>: Shows changes between the remote file and the local</p>
+<p><code>git add</code>: Prep stage getting ready to add new files that are local but you want to be remote. This is also where git starts tracking files if you&rsquo;ve heard that term before.</p>
+<p><code>git commit</code>:  Takes the files to be updated to the remote repo, creates a &ldquo;timestamp of sorts&rdquo; and stages them to be included in the remote repo, i.e. you&rsquo;re committing the changes you&rsquo;ve made up to a certain point. For us, this is usually just one commit (when we complete the file).</p>
+<p><code>git push</code>: Updates the remote repository</p>
+<h3 id="a-bit-more-in-depth" class="relative group">A bit more in-depth <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#a-bit-more-in-depth" aria-label="Anchor">#</a></span></h3>
+<p><strong>Git Pull</strong>
+So let&rsquo;s talk real quick about what <code>git pull</code> does, especially considering if you&rsquo;re pushing your changes  you likely have a complete project that shouldn&rsquo;t be altered much. <code>git pull</code> is pulling remote (online) changes down to your local (PC) repository. Disclaimer, I use Git Bash console for my commands, so RStudio will be slightly different, but the commands are the same.  For this class, we don&rsquo;t really <code>pull</code> assignments as much since we&rsquo;re simply using <code>git clone url</code> to create a local copy. <del><code>git pull</code> is more effective in cases like #80 where there&rsquo;s been a revision.</del>[For revisions see : #153] Assuming you&rsquo;ve already cloned the file, <code>git pull</code> will &ldquo;pull down&rdquo; any changes made to the remote repository and include them in your local file.</p>
+<p><strong>Git Status and Diff</strong>
+But you&rsquo;ve been working on your files before the changes were made remotely, right? Now you have a high risk of merge conflicts. Try out <code>git status</code> to see what files have changed.</p>
+<p>Mine looks like this:</p>
+<pre tabindex="0"><code>$ git status
+On branch master
+Your branch is up-to-date with &#39;origin/master&#39;. # where your conflict is 
+Changes not staged for commit:
+  (use &#34;git add &lt;file&gt;...&#34; to update what will be committed)
+  (use &#34;git checkout -- &lt;file&gt;...&#34; to discard changes in working directory)
+
+        modified:   q1.Rmd
+        modified:   q2.Rmd
+        modified:   q3.Rmd
+
+Untracked files:
+  (use &#34;git add &lt;file&gt;...&#34; to include in what will be committed)
+
+        .RData
+        .Rhistory
+        q1.html
+        q2.html
+
+no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;)
+</code></pre><p>The first few lines are telling me that I&rsquo;m on the main branch (we won&rsquo;t talk about branches much here, so this won&rsquo;t change for the time being) and that my (local) branch, or copy of the repo, is up-to-date with the remote repository, called &lsquo;origin/master&rsquo;.</p>
+<p>After that we start to see file status changes. I&rsquo;m currently working on <code>q3.Rmd</code>, and haven&rsquo;t pushed any changes yet, so it&rsquo;s intuitive that my modified files would be the three <code>*.Rmd</code> files.</p>
+<p>If for some reason <code>status tells me that I'm </code>x commits behind master<code>I can look at the difference between my repo and the remote repo line-by-line with</code>git diff`.</p>
+<pre tabindex="0"><code>$ git diff 
+diff --git a/q1.Rmd b/q1.Rmd 
+index 5b76ee4..7dfe81a 100644  #commit references
+--- a/q1.Rmd                   # remote file
++++ b/q1.Rmd                   # local file
+@@ -1,5 +1,6 @@                # lines changes
+ ---
+ title: &#34;Question 1&#34;
++author: &#34;Jessica LaCourse&#34;
+ ---
+
+@@ -15,32 +16,75 @@ The `walk` function is very similar to the `map` function except that it doesn&#39;t
+</code></pre><p>Here, <code>a/q1.Rmd</code> <code>b/q1.Rmd</code> are my remote and local files being compared, respectively. Values between the <code>@</code> symbols are line references and the <code>+</code> is a line, an author tag at the start of assignment 1,  I added to the start of the file. Intuitively, you can also have <code>-</code> changes for lines deleted. <code>git diff</code> is especially handy when you are working in a team and the remote repo is changing while you&rsquo;re working locally.</p>
+<p><strong>Git Add, Commit and Push</strong> 
+The local repository doesn&rsquo;t have a copy of <code>q1.html</code> or <code>q2.html</code> so I&rsquo;ll tell bash &ldquo;Hey, when I push, I want to push these files, too&rdquo; with the command <code>git add q1.html q2.html</code> (and ultimately q3 as well).</p>
+<p>I&rsquo;ve added my files, now I want to commit them, <code>git commit -m &quot;Complete Assignments&quot;</code>, where <code>-m</code> is called a flag saying &ldquo;I want to include the message, &lsquo;Complete assignment&rsquo;&rdquo;.</p>
+<p>From there, I can push my changes, <code>git push origin master</code>.</p>
+<p>Once I push my changes, all five files (three <code>*.Rmd</code>s and two <code>*.htmls</code> will push to the local repository.</p>
+<p><strong>So why are <code>git add</code>, <code>git commit</code>, and <code>git push</code> three different commands?</strong> 
+It could be one right?</p>
+<p>The first, I hope it&rsquo;s a bit intuitive as to why <code>git add</code> is it&rsquo;s own command. You don&rsquo;t necessarily want to add ALL the files in a folder to the remote repo. There is a command, use it wisely, to add all new files <code>git add .</code> Similarly, to add all changes, added and deleted files, etc. There&rsquo;s <code>git add -A</code> where dot and <code>-A</code> respectively are flags for &ldquo;all new&rdquo; and &ldquo;all&rdquo; changes.</p>
+<p>I&rsquo;m not the only one whose committed a file, gotten the message that it was successful, then&hellip; it&rsquo;s not there. It&rsquo;s not where it&rsquo;s supposed to be! Why isn&rsquo;t my file online? 
+There&rsquo;s some nuance in the difference between <code>git commit</code> and <code>git push</code>. The way I think of it is that <code>git commit</code> is kind of like putting a bookmark in my book, while <code>git push</code> is talking about the latest changes (between this time and the last time I dropped a bookmark in my book) with a(n obviously Zoom) book club or something larger than myself. Does that make sense? <code>commit</code> logs changes locally, while <code>push</code> updates our remote repository with our changes.</p>
+<p>For this class, we only <code>commit</code> and <code>push</code> once, usually. But when you&rsquo;re working on a larger project you can absolutely <code>commit</code> and <code>push</code> to a repo dozens or hundreds of times.</p>
+<p>Edit: Formatting, added <code>git diff</code> information</p>
+
+      </div>
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  <div class="flex">
+    
+      
+      
+        
+        <img
+          class="w-24 h-24 !mt-0 !mb-0 ltr:mr-4 rtl:ml-4 rounded-full"
+          width="96"
+          height="96"
+          alt="Jes LaCourse"
+          src="/images/bio-photo_hu48cb0bfab1d130b60b08d8771d05ca5a_370940_192x192_fill_q75_box_smart1.jpg"
+        />
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] leading-3 text-neutral-500 dark:text-neutral-400 uppercase">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          Jes LaCourse
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">Sr. Research Analyst</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/jeslacourse"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://linkedin.com/in/jeslacourse"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+
+  </span>
+
+</a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://twitter.com/jeslacourse"
+          target="_blank"
+          aria-label="Twitter"
+          rel="me noopener noreferrer"
+          >
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+
+  </span>
+
+</a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group" href="/docs/2020-04-01-motivation-and-organization/2020-04-01-motivation-and-organization/">
+              <span
+                class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Motivation and Organization</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2020-04-01 00:00:00 &#43;0000 UTC">April 1, 2020</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group" href="/docs/2020-04-18-california-canvass-map/2020-04-18-california-canvass-map/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >California Canvass Map</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2020-04-18 00:00:00 &#43;0000 UTC">April 18, 2020</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+          <div
+            class="absolute top-[100vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-0"
+          >
+            <a
+              href="#the-top"
+              class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5.5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
+        
+      </main><footer class="py-10 print:hidden">
+  
+  
+    <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex flex-col list-none sm:flex-row">
+        
+          <li
+            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
+          >
+            <a
+              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+              href="/tags/"
+              title="Tags"
+              >Tags</a
+            >
+          </li>
+        
+      </ul>
+    </nav>
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2023
+            Jes LaCourse
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    
+    
+      <div
+        class="text-sm cursor-pointer text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-14 rtl:ml-14"
+      >
+        <button
+          id="appearance-switcher"
+          class="w-12 h-12 "
+          type="button"
+          title="Switch to dark appearance"
+        >
+          <span class="inline dark:hidden">
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+</span>
+          <span class="hidden dark:inline">
+
+  <span class="relative inline-block align-text-bottom icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+</span>
+        </button>
+      </div>
+    
+  </div>
+  
+  
+</footer>
+
+
+
+
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+    </script>
+    
+
+    </div>
+  </body>
+</html>
