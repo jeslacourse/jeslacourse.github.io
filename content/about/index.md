@@ -28,7 +28,7 @@ Similar to visualization, there's a lot of power in simplifying statistical lang
 
 ### Out of Office
 
-![Boston Basin, North Cascades. Summer 2019.](/assets/about/ncnp.jpg, "Boston Basin, North Cascades. Summer 2019") 
+![Boston Basin, North Cascades. Summer 2019.](about/ncnp.jpg "Boston Basin, North Cascades. Summer 2019") 
 
 
 We're certainly living with a new normal. I've been lucky enough in the past several years be able to dedicate my time out of the office to exploring many of our public lands. It's amazing how much you can see and do in two weeks, I promise you! My profile photo was taken on the rim of a cinder cone volcano in Lassen National Park. The photo above is of one of my favorite spots on the west coast. 
