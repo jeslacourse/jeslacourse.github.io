@@ -6,7 +6,7 @@ slug: /404/
 toc: false
 ---
 
-![404!](/images/404.png)
+![404!](404.png)
 <details><summary markdown = 'span'>Show code</summary>
   
 ```R
