@@ -264,7 +264,21 @@
     <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
       
       <div class="min-w-0 min-h-0 max-w-prose">
-        <div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+        <style>
+p {
+    line-height:1.5;
+}
+
+.prose :where(p):not(:where([class~="not-prose"] *)) {
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+}
+
+.max-w-prose {
+  max-width: 80ch;
+}
+</style>
+<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
   <span class="ltr:pr-3 rtl:pl-3 text-primary-400">
     
 

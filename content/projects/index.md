@@ -11,6 +11,22 @@ tags:
   - projects
 ---
 
+<style>
+p {
+    line-height:1.5;
+}
+
+.prose :where(p):not(:where([class~="not-prose"] *)) {
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+}
+
+.max-w-prose {
+  max-width: 80ch;
+}
+</style>
+
+
 
 {{< alert "circle-info" >}}
 It's Fall, my creative time. I'll be updating in the near future with some of my more recent IR work.
