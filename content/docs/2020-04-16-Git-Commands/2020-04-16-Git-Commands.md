@@ -3,6 +3,11 @@ title: Git Commands
 date: 2020-04-16
 header: 
   teaser: /assets/images/teaser-git.PNG
+categories: 
+  - git
+tags: 
+  - git 
+summary: "Good information for anyone trying to troubleshoot git version control"
 ---
 
 

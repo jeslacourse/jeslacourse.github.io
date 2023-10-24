@@ -6,7 +6,25 @@
     <description>Recent content in Rstats on jeslacourse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 12 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://jeslacourse.github.io/categories/rstats/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jeslacourse.github.io/categories/rstats/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Barriers in Biology</title>
+      <link>https://jeslacourse.github.io/docs/2021-11-18-barriers-in-biology/2021-11-18-barriers-in-biology/</link>
+      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeslacourse.github.io/docs/2021-11-18-barriers-in-biology/2021-11-18-barriers-in-biology/</guid>
+      <description>Project Scope #This study tracks the impact of course-taking and change-in-major habits on award-earning and transfers for the 224 Biology for Transfer majors in the 2017-18 cohort.</description>
+    </item>
+    
+    <item>
+      <title>Feature Choice in Classification of Kernels</title>
+      <link>https://jeslacourse.github.io/docs/2020-05-17-feature-choice-in-classification/2020-05-17-feature-choice-in-classification/</link>
+      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeslacourse.github.io/docs/2020-05-17-feature-choice-in-classification/2020-05-17-feature-choice-in-classification/</guid>
+      <description>Abstract</description>
+    </item>
+    
     <item>
       <title>Highlights and Facets for Visualizing Categorical Data</title>
       <link>https://jeslacourse.github.io/docs/2020-05-12-facet-figures/2020-05-12-facet-figures/</link>
@@ -14,15 +32,6 @@
       
       <guid>https://jeslacourse.github.io/docs/2020-05-12-facet-figures/2020-05-12-facet-figures/</guid>
       <description>Using &lt;code&gt;gghighlight()&lt;/code&gt; to effectively visualize comparisons between factors</description>
-    </item>
-    
-    <item>
-      <title>Feature Choice in Classification of Kernels</title>
-      <link>https://jeslacourse.github.io/docs/2020-05-17-feature-choice-in-classification/2020-05-17-feature-choice-in-classification/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jeslacourse.github.io/docs/2020-05-17-feature-choice-in-classification/2020-05-17-feature-choice-in-classification/</guid>
-      <description>Abstract</description>
     </item>
     
   </channel>

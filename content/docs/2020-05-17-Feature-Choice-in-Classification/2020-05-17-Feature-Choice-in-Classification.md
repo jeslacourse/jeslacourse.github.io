@@ -1,8 +1,9 @@
 ---
-title: "Feature Choice in Classification of Kernels"
+title: "Feature Choice in Classification of Wheat Kernels"
+date: 2020-05-17
 header:
-  teaser: assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-2.png
-  overlay_image: assets/images/2020-05-17/unsplash.jpg
+  teaser: kernel/unnamed-chunk-3-2.png
+  overlay_image: kernel/unsplash.jpg
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
   caption: "Photo credit: [**@glenncarstenpeters**](https://unsplash.com)"
 permalink: /feature-choice/
@@ -16,7 +17,7 @@ tags:
   - rstats
   - ggplot
   - classification
-excerpt: "Feature selection is just as important as hyperparameter choice, yet many classifiers cherry-pick features without much empirical basis. While hyperparameters are easier to tweak, we must account for the impact of boosting these hyperparameters and the risk and impact of overfit."
+summary: "Feature selection is just as important as hyperparameter choice, yet many classifiers cherry-pick features without much empirical basis. While hyperparameters are easier to tweak, we must account for the impact of boosting these hyperparameters and the risk and impact of overfit."
 ---
 
 <center><b> Abstract</b></center><br>
@@ -365,7 +366,7 @@ Kama
 
 Upon initial inspection, the data is complete and contains no missing values.
 
-![](/assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-1.png){: .align-center}
+![](/kernel/figure-markdown_github/unnamed-chunk-3-1.png){: .align-center}
 
 <center><i>Figure 1. Outlier and Quantile Analysis by Feature </i></center><br>
 
@@ -377,7 +378,7 @@ variate names and factor levels.
 The wheats create distinctive groups when classified by area and perimeter. Length and width also provide significant groupings, while compactness, asymmetry, and groove have substantial overlap between the wheat variants (Fig 2). 
 
 
-![](/assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-3-2.png)
+![](/kernel/figure-markdown_github/unnamed-chunk-3-2.png)
 
 <center><i>Figure 2: Histograms with Density Overlays by Feature</i></center><br>
 
@@ -390,7 +391,7 @@ The groove on Rosa wheat is significantly longer and has almost no overlap with 
 With no categorical data, we can create a table of comparative values between all of our variates (Fig 3). 
 
 
-![](/assets/images/2020-05-17/figure-markdown_github/unnamed-chunk-4-1.png)
+![](/kernel/figure-markdown_github/unnamed-chunk-4-1.png)
 
 <center><i>Figure 3: Correlation and Associativity </i></center>
 

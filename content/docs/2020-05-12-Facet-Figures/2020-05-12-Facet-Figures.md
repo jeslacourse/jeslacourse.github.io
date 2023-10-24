@@ -12,8 +12,8 @@ tags:
   - ggplot
   - gghighlight
 header:
-  teaser: assets/images/2020-04-30/plot-3.png
-  overlay_image: assets/images/2020-04-30/tallac.png
+  teaser: facet/plot-3.png
+  overlay_image: facet/2020-04-30/tallac.png
   overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
   caption: "Tallac at Sunset, [**@jeslacourse**](https://twitter.com/jeslacourse)"
 excerpt: "What's the most effective way to visualize comparisons between variable factors? How do you share a lot of information without muddying up your visualizations? There definitely isn't one answer, but here's one solution: faceted plots with gghighlight."

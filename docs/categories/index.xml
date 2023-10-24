@@ -17,9 +17,18 @@
     </item>
     
     <item>
+      <title>IR</title>
+      <link>https://jeslacourse.github.io/categories/ir/</link>
+      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeslacourse.github.io/categories/ir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Rstats</title>
       <link>https://jeslacourse.github.io/categories/rstats/</link>
-      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jeslacourse.github.io/categories/rstats/</guid>
       <description></description>
@@ -28,7 +37,7 @@
     <item>
       <title>Statistics</title>
       <link>https://jeslacourse.github.io/categories/statistics/</link>
-      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jeslacourse.github.io/categories/statistics/</guid>
       <description></description>
@@ -37,9 +46,18 @@
     <item>
       <title>Visualizations</title>
       <link>https://jeslacourse.github.io/categories/visualizations/</link>
-      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jeslacourse.github.io/categories/visualizations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Classification</title>
+      <link>https://jeslacourse.github.io/categories/classification/</link>
+      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jeslacourse.github.io/categories/classification/</guid>
       <description></description>
     </item>
     
@@ -58,15 +76,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jeslacourse.github.io/categories/about/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Classification</title>
-      <link>https://jeslacourse.github.io/categories/classification/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jeslacourse.github.io/categories/classification/</guid>
       <description></description>
     </item>
     

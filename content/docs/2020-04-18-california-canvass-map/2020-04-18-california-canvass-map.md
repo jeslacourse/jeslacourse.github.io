@@ -31,6 +31,7 @@ gallery:
   - url: /canvass/CD28.png
     image_path: /canvass/CD28.png
     alt: "CD 28: Eastern Los Angeles"
+summary: "The intent of this project is to determine the best voting precincts, within the state of California, in which to send political canvassers. The map will be best utilized by a small team or individual campaign coordinator who will then send teams out to the highest priority precincts."
 ---
 
 > I'll likely be revisiting this project in the future to see how my analysis has changed. With that said, I'm presenting this project as I did in 2016. So much has changed in the last four years. I'm excited to rework this project and pull in some fresh data. It should make for a very interesting before-and-after. 
@@ -49,7 +50,7 @@ __________________________
 
 <center>Grassroots Organization for Presidental Primary Campaigning • Spring 2016</center><br>
 
-![Washoe County Canvass, Feb 2016](\canvass\washoe.PNG)
+![Washoe County Canvass, Feb 2016](/canvass/washoe.PNG)
 
 *Washoe County Canvassing, Feb 2016*
 
@@ -129,7 +130,7 @@ will be most accurate at the block group level (block level unavailable).
 *USGS Water Resources – California Lakes*
 *Natural Earth Data – Oceans*
 
-[^1]:  https://www.census.gov/geo/maps‐data/data/tiger‐data.html
+[^1]:  https://www.census.gov/geo/maps-data/data/tiger-data.html
 [^2]:  http://statewidedatabase.org/d10/index.html
 
 ### Data Management and Joins
