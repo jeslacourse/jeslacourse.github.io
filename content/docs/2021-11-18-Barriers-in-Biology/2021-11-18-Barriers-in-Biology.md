@@ -318,9 +318,6 @@ Preparedness plays it part. These courses tend to have higher than average cours
 
 
 
-
-
-
 <table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
 <caption>First-Year Enrollments: Grade Distribution</caption>
  <thead>
