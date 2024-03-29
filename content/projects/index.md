@@ -28,9 +28,6 @@ p {
 
 
 
-{{< alert "circle-info" >}}
-It's Fall, my creative time. I'll be updating in the near future with some of my more recent IR work.
-{{< /alert >}}
 
 
 B.S. Statistics - Data Science Track
