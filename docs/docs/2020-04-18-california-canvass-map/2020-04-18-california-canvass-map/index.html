@@ -1,6 +1,11 @@
 
 
-<!DOCTYPE html>
+
+
+
+
+
+<!doctype html>
 <html
   lang="en"
   dir="ltr"
@@ -9,11 +14,8 @@
   data-auto-appearance="true"
 ><head>
   <meta charset="utf-8" />
-  
-    <meta http-equiv="content-language" content="en" />
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="rgb(255,255,255)" />
   
   <title>California Canvass Map &middot; jeslacourse</title>
     <meta name="title" content="California Canvass Map &middot; jeslacourse" />
@@ -22,9 +24,11 @@
   
   
   
-  <link rel="canonical" href="https://jeslacourse.github.io/docs/2020-04-18-california-canvass-map/2020-04-18-california-canvass-map/" />
-  
-  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.022d0ebc3b46a335eb1c7ef79b7f2de143d7cd5156d433638592ef1ce5f8554e.js"
+    integrity="sha256-Ai0OvDtGozXrHH73m38t4UPXzVFW1DNjhZLvHOX4VU4="
+  ></script>
   
   
   
@@ -38,16 +42,28 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.4563bedb831e485af38fafa0d2367c14f9551e16518225ccd424a1e32629d047147f07f603593fb6efca64082440aa441466fff8b89514e6685aae21736e7935.css"
-    integrity="sha512-RWO&#43;24MeSFrzj6&#43;g0jZ8FPlVHhZRgiXM1CSh4yYp0EcUfwf2A1k/tu/KZAgkQKpEFGb/&#43;LiVFOZoWq4hc255NQ=="
+    href="/css/main.bundle.min.5f4a77738b4a8d3b632ceb80da2c6732a05708c5e10b101becc6dea42c6b45d4.css"
+    integrity="sha256-X0p3c4tKjTtjLOuA2ixnMqBXCMXhCxAb7MbepCxrRdQ="
   />
   
   
-  <script type="text/javascript" src="/js/appearance.min.badab316c9287a5a42a843e4eb45da65bb3d194a5a0f5fa4a3e516160e67df0b8c65f4f19a8e146436e29d583699e6cb41d6bbe99e05e1dbaa877763bad9f8e2.js" integrity="sha512-utqzFskoelpCqEPk60XaZbs9GUpaD1&#43;ko&#43;UWFg5n3wuMZfTxmo4UZDbinVg2mebLQda76Z4F4duqh3djutn44g=="></script>
   
   
   
   
+  
+  <meta
+    name="description"
+    content="
+      
+        The intent of this project is to determine the best voting precincts, within the state of California, in which to send political canvassers. The map will be best utilized by a small team or individual campaign coordinator who will then send teams out to the highest priority precincts.
+      
+    "
+  />
+  
+  
+  
+  <link rel="canonical" href="https://jeslacourse.github.io/docs/2020-04-18-california-canvass-map/2020-04-18-california-canvass-map/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -61,21 +77,20 @@
   
   
   
+  
   <meta property="og:title" content="California Canvass Map" />
 <meta property="og:description" content="The intent of this project is to determine the best voting precincts, within the state of California, in which to send political canvassers. The map will be best utilized by a small team or individual campaign coordinator who will then send teams out to the highest priority precincts." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jeslacourse.github.io/docs/2020-04-18-california-canvass-map/2020-04-18-california-canvass-map/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2020-04-18T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-04-18T00:00:00+00:00" /><meta property="og:site_name" content="jeslacourse" />
+<meta property="article:modified_time" content="2020-04-18T00:00:00+00:00" />
 
-
-  <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="California Canvass Map"/>
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="California Canvass Map"/>
 <meta name="twitter:description" content="The intent of this project is to determine the best voting precincts, within the state of California, in which to send political canvassers. The map will be best utilized by a small team or individual campaign coordinator who will then send teams out to the highest priority precincts."/>
 
   
   <script type="application/ld+json">
-  [{
+  {
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Docs",
@@ -98,8 +113,8 @@
     "keywords": ["GIS","spatial analysis","statistics","volunteer work"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2466"
-  }]
+    "wordCount": "2453"
+  }
   </script>
 
 
@@ -111,8 +126,6 @@
     
       <link href="https://linkedin.com/in/jeslacourse" rel="me" />
     
-      <link href="https://twitter.com/jeslacourse" rel="me" />
-    
   
   
   
@@ -122,6 +135,7 @@
 
 
 
+  
   
   
   
@@ -132,75 +146,101 @@
   
 </head>
 <body
-    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 bg-neutral text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral max-w-7xl"
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 sm:px-14 md:px-24 lg:px-32 dark:bg-neutral-800 dark:text-neutral"
   >
     <div id="the-top" class="absolute flex self-center">
       <a
-        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 dark:bg-neutral-600 focus:translate-y-0"
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
         href="#main-content"
-        ><span class="font-bold ltr:pr-2 rtl:pl-2 text-primary-600 dark:text-primary-400"
-          >&darr;</span
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
         >Skip to main content</a
       >
     </div>
     
     
-      <header class="py-6 font-semibold sm:py-10 text-neutral-900 dark:text-neutral print:hidden">
-  <nav class="flex justify-between">
+      <header class="py-6 font-semibold text-neutral-900 print:hidden sm:py-10 dark:text-neutral">
+  <nav class="flex items-start justify-between sm:items-center">
     
-    <div>
+    <div class="flex flex-row items-center">
       
-        <a
-          class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-          rel="me"
-          href="/"
-          >jeslacourse</a
-        >
-      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >jeslacourse</a
+  >
 
     </div>
     
     
-      <ul class="flex flex-col list-none ltr:text-right rtl:text-left sm:flex-row">
+      <ul class="flex list-none flex-col text-end sm:flex-row">
         
           
-            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
-              <a
-                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                href="/"
-                title="jeslacourse"
-                >Blog</a
-              >
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Blog</span
+                    >
+                  </a
+                >
+              
             </li>
           
-            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
-              <a
-                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                href="/about/"
-                title="About the Author"
-                >About</a
-              >
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
             </li>
           
-            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
-              <a
-                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                href="/experience/"
-                title="Experience"
-                >Experience</a
-              >
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/experience/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Experience</span
+                    >
+                  </a
+                >
+              
             </li>
           
-            <li class="mb-1 sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
-              <a
-                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                href="/projects/"
-                title="Projects"
-                >Projects</a
-              >
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/projects/"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Projects</span
+                    >
+                  </a
+                >
+              
             </li>
           
-        
+          
         
       </ul>
     
@@ -208,7 +248,7 @@
 </header>
 
     
-    <div class="relative flex flex-col grow">
+    <div class="relative flex grow flex-col">
       <main id="main-content" class="grow">
         
   <article>
@@ -217,8 +257,9 @@
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         California Canvass Map
       </h1>
-      <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
-        
+      
+        <div class="mb-12 mt-8 text-base text-neutral-500 print:hidden dark:text-neutral-400">
+          
 
 
 
@@ -250,7 +291,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2020-04-18 00:00:00 &#43;0000 UTC">April 18, 2020</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">12 mins</span>
+      <time datetime="2020-04-18 00:00:00 &#43;0000 UTC">18 April 2020</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">12 mins</span>
     
 
     
@@ -261,11 +302,13 @@
   
 
 
-      </div>
-    </header>
-    <section class="flex flex-col max-w-full mt-0 prose lg:flex-row dark:prose-invert">
+        </div>
       
-      <div class="min-w-0 min-h-0 max-w-prose">
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
         <blockquote>
 <p>I&rsquo;ll likely be revisiting this project in the future to see how my analysis has changed. With that said, I&rsquo;m presenting this project as I did in 2016. So much has changed in the last four years. I&rsquo;m excited to rework this project and pull in some fresh data. It should make for a very interesting before-and-after.</p>
 </blockquote>
@@ -281,24 +324,19 @@
 
 
 
-  
-  
-  
-    <figure>
-      <img class="my-0 rounded-md" src="/canvass/washoe.PNG" alt="Washoe County Canvass, Feb 2016" />
-      
-    </figure>
-  
 
+
+
+  
+  
+<figure><img src="/canvass/washoe.PNG" alt="Washoe County Canvass, Feb 2016" class="mx-auto my-0 rounded-md" />
+</figure>
 </p>
 <p><em>Washoe County Canvassing, Feb 2016</em></p>
-<h2 id="project-idea-and-timeline" class="relative group">Project Idea and Timeline <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#project-idea-and-timeline" aria-label="Anchor">#</a></span></h2>
-<p>Create a canvass map to help direct campaign efforts, with a focus on targeting likely voters in Northern California. Ideally this will be a dynamic project, updated as precincts are contacted.</p>
-<h2 id="primary-data" class="relative group">Primary Data <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#primary-data" aria-label="Anchor">#</a></span></h2>
-<p>American Community Survey 5‐Year Estimates — TIGER/Line<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<h2 id="project-idea-and-timeline" class="relative group">Project Idea and Timeline <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#project-idea-and-timeline" aria-label="Anchor">#</a></span></h2><p>Create a canvass map to help direct campaign efforts, with a focus on targeting likely voters in Northern California. Ideally this will be a dynamic project, updated as precincts are contacted.</p>
+<h2 id="primary-data" class="relative group">Primary Data <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#primary-data" aria-label="Anchor">#</a></span></h2><p>American Community Survey 5‐Year Estimates — TIGER/Line<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <p>Statewide Database – Hosted by University of California, Berkeley <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
-<h2 id="timeline" class="relative group">Timeline <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#timeline" aria-label="Anchor">#</a></span></h2>
-<ul>
+<h2 id="timeline" class="relative group">Timeline <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#timeline" aria-label="Anchor">#</a></span></h2><ul>
 <li>Collect and sort 2008/2012 elections data and precinct information</li>
 <li>Find hotspots, Precincts with higher turnouts and moderate to high Democrat preference, to canvass first. Most valuable precincts will have a moderate to high population of registered voters and good election turnouts.</li>
 <li>Compile map, determine most effective map style</li>
@@ -309,11 +347,9 @@
 </ul>
 </li>
 </ul>
-<h2 id="project-summary" class="relative group">Project Summary <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#project-summary" aria-label="Anchor">#</a></span></h2>
-<p>The intent of this project is to determine the best voting precincts, within the state of California, in which to send political canvassers. Priority will be based on favorable 2012 General Election and Registration
+<h2 id="project-summary" class="relative group">Project Summary <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#project-summary" aria-label="Anchor">#</a></span></h2><p>The intent of this project is to determine the best voting precincts, within the state of California, in which to send political canvassers. Priority will be based on favorable 2012 General Election and Registration
 demographics, as well as 2014 Census demographics. The map will be best utilized by a small team or individual campaign coordinator who will then send teams out to the highest priority precincts.</p>
-<h2 id="purpose" class="relative group">Purpose <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#purpose" aria-label="Anchor">#</a></span></h2>
-<p>It’s a given fault that canvassing efforts generally cannot reach all of the neighborhoods that they want to. So how do you prioritize which neighborhoods to visit and which get the inevitable pass?</p>
+<h2 id="purpose" class="relative group">Purpose <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#purpose" aria-label="Anchor">#</a></span></h2><p>It’s a given fault that canvassing efforts generally cannot reach all of the neighborhoods that they want to. So how do you prioritize which neighborhoods to visit and which get the inevitable pass?</p>
 <p>I’ve established three criteria:</p>
 <p>High density areas are a big target. High density areas, in the context of this project, will be defined in two different ways.</p>
 <ol>
@@ -329,9 +365,7 @@ demographics, as well as 2014 Census demographics. The map will be best utilized
 <li>Turnout, the quantity of registered voters that actually voted in past elections, will weigh in on a precinct’s canvass priority.
 In a hypothetical situation, a high turnout in a lower population precinct may prove more valuable than a moderately low turnout in a higher population area. Giving each value an equal weight will allow us to quantitatively determine where to send our canvassers.</li>
 </ol>
-<h2 id="process" class="relative group">Process <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#process" aria-label="Anchor">#</a></span></h2>
-<h3 id="data-research" class="relative group">Data Research <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#data-research" aria-label="Anchor">#</a></span></h3>
-<p><strong>Voter Turnout and Registered Voter Data</strong></p>
+<h2 id="process" class="relative group">Process <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#process" aria-label="Anchor">#</a></span></h2><h3 id="data-research" class="relative group">Data Research <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#data-research" aria-label="Anchor">#</a></span></h3><p><strong>Voter Turnout and Registered Voter Data</strong></p>
 <p>Our state is broken up into over 21,000 voter precincts, which may also be referred to as election districts. Each precinct divides a city or census designated place to distribute the population among relatively equal
 populations.</p>
 <p>Election results and voter demographic information can be linked to precinct shapefiles.</p>
@@ -343,8 +377,7 @@ occurred with the higher turnout of 2008.</p>
 information. The detailed Census demographic and population information, linked to the land area of the
 state’s census shapefiles, can provide us with the population density. Creating a population density graphic
 will be most accurate at the block group level (block level unavailable).</p>
-<h3 id="data-sources" class="relative group">Data Sources <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#data-sources" aria-label="Anchor">#</a></span></h3>
-<p><em>Statewide Database – Hosted by University of California, Berkeley</em><sup id="fnref1:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<h3 id="data-sources" class="relative group">Data Sources <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#data-sources" aria-label="Anchor">#</a></span></h3><p><em>Statewide Database – Hosted by University of California, Berkeley</em><sup id="fnref1:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
 <ul>
 <li>2012 State Precincts Shapefile</li>
 <li>2012 Voter Turnout Demographics Table (.dbf)</li>
@@ -358,8 +391,7 @@ will be most accurate at the block group level (block level unavailable).</p>
 <p><em>TIGER/Line Shapefile – California Primary and Secondary Roads, State County Shapefiles</em>
 <em>USGS Water Resources – California Lakes</em>
 <em>Natural Earth Data – Oceans</em></p>
-<h3 id="data-management-and-joins" class="relative group">Data Management and Joins <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#data-management-and-joins" aria-label="Anchor">#</a></span></h3>
-<p>Before joining the data, some adjustments had to be made to make the information more palatable for
+<h3 id="data-management-and-joins" class="relative group">Data Management and Joins <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#data-management-and-joins" aria-label="Anchor">#</a></span></h3><p>Before joining the data, some adjustments had to be made to make the information more palatable for
 mapping. Joins were made between the Precinct shapefile and both the voter turnout table and registration
 table. The Census block groups and demographic table were joined based on the block group ID number. The newly joined tables and shapefiles were then exported as three shapefiles into the master geodatabase.</p>
 <p><strong>Null Values</strong></p>
@@ -403,49 +435,42 @@ Block Group Density = Voting Age Adults/Block Group Land Area (sq. meters)</cent
 <p>All vector maps were symbolized using the Jenks method with four breaks (five sections).</p>
 <p>In order to adequately show the difference between areas with no and low respective rates, the Jenks scale was modified to show six sections instead of five. The sixth section is simply zero values.</p>
 <p>A section of the target voters map is above, (a). The white stripes over what is effectively Folsom Lake are areas with no registered voters. This contrasts the low Democrat and Decline to State (NPP) rates in the Lake’s surrounding neighborhoods, shown in red. The blue symbology in the northeast corner is an area of substantially higher Democrat/NPP rates.</p>
-<h3 id="polygon-to-raster-conversion" class="relative group">Polygon to Raster Conversion <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#polygon-to-raster-conversion" aria-label="Anchor">#</a></span></h3>
-<p>Using the three newly created fields outlined in the <em>Custom Fields and Field Calculations</em> section, each of the three main shapefiles were converted to raster using the <em>Polygon to Raster</em> tool. Below is the conversion for the Turnout_Rate shapefile to raster. This process creates three new rasters:</p>
+<h3 id="polygon-to-raster-conversion" class="relative group">Polygon to Raster Conversion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#polygon-to-raster-conversion" aria-label="Anchor">#</a></span></h3><p>Using the three newly created fields outlined in the <em>Custom Fields and Field Calculations</em> section, each of the three main shapefiles were converted to raster using the <em>Polygon to Raster</em> tool. Below is the conversion for the Turnout_Rate shapefile to raster. This process creates three new rasters:</p>
 <p><code>Turnout_Rate_Raster</code>, <code>Target_Voter_Raster</code>, and <code>Census_Density_Raster</code>. The new rasters were added to the master geodatabase upon completion. A snippet of the turnout rate near Folsom Lake is shown above, (b). Areas of dark green have the highest turnouts. The scale moves through the light
 greens to yellows, oranges, then to bright red denoting zero turnout.</p>
 <p>
 
 
 
-  
-  
-  
-    <figure>
-      <img class="my-0 rounded-md" src="%5Ccanvass%5C2rastermath.jpg" alt="Polygon to Raster" />
-      
-    </figure>
-  
 
+
+
+  
+  
+<figure><img src="%5ccanvass%5c2rastermath.jpg" alt="Polygon to Raster" class="mx-auto my-0 rounded-md" />
+</figure>
 </p>
-<h3 id="raster-math" class="relative group">Raster Math <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#raster-math" aria-label="Anchor">#</a></span></h3>
-<figure class="half">
+<h3 id="raster-math" class="relative group">Raster Math <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#raster-math" aria-label="Anchor">#</a></span></h3><figure class="half">
     <a href="/canvass/3rastermath.jpg"><img src="/canvass/3rastermath.jpg" height="350" hspace="5"></a>
     <a href="/canvass/4rastermath.jpg"><img src="/canvass/4rastermath.jpg" height="350" hspace="5"></a>
     <figcaption>(a) The Multiplier and (b) Multiplier Raster with Precinct Poly Overlay </figcaption>
 </figure>
 <p>Using the raster calculator, the three raster layers are multiplied together to produce a new raster, <code>The_Multiplier</code>. By multiplying the raster layers together, equal weight is given to the turnout, target voters and population densities of a specific area. Precinct boundaries and census block group boundaries are completely disregarded in this step.</p>
 <p>Above, (a), is Folsom Lake and it’s surrounding areas, primarily to the south and west. As we’ve seen with the vector and raster maps previously, the Lake holds a very low priority value with regard to canvassing. To the south, however, is the northern section of the City of Folsom. City of Folsom shows off it’s highest priority areas, in dark green, to it’s lowest, deep red. Gray areas hold no significant population, near zero election turnouts, or near zero Democrat/NPP numbers and are considered the lowest priority.</p>
-<h3 id="zonal-statistics" class="relative group">Zonal Statistics <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#zonal-statistics" aria-label="Anchor">#</a></span></h3>
-<p>With the now blended <code>Multiplier</code> raster created, the information needs to be related back to the precinct shape files. The image, (b), shows the “blended” raster layer with the precinct overlaid. It’s clear
+<h3 id="zonal-statistics" class="relative group">Zonal Statistics <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#zonal-statistics" aria-label="Anchor">#</a></span></h3><p>With the now blended <code>Multiplier</code> raster created, the information needs to be related back to the precinct shape files. The image, (b), shows the “blended” raster layer with the precinct overlaid. It’s clear
 that several precincts are not well defined. This next step will resolve that.</p>
 <p>The <em>Zonal Statistics as Table tool</em>, below, takes the mean of each of the <code>Multiplier</code> raster layer within each precinct boundary. The mean information is then added to a newly created table (.dbf)</p>
 <p>
 
 
 
-  
-  
-  
-    <figure>
-      <img class="my-0 rounded-md" src="%5Ccanvass%5C5.jpg" alt="Zonal Statistics" />
-      
-    </figure>
-  
 
+
+
+  
+  
+<figure><img src="%5ccanvass%5c5.jpg" alt="Zonal Statistics" class="mx-auto my-0 rounded-md" />
+</figure>
 </p>
 <p>The new table, <code>Multiplier_Table</code>, is joined to the <code>Precinct Boundary</code> shapefile. The data is symbolized by the mean value the raster cells within each precinct.</p>
 <p>By using the <code>Multiplier</code> raster and table as an intermediary, we’ve effectively converted our original census and precinct vector data into a dataset that fits neatly within the precinct boundaries.</p>
@@ -454,22 +479,18 @@ that several precincts are not well defined. This next step will resolve that.</
     <a href="/canvass/7.jpg"><img src="/canvass/7.jpg"></a>
     <figcaption>Precincts now prioritized based on voter turnout, registration demographic, and population density </figcaption>
 </figure>
-<h3 id="finishing-touches" class="relative group">Finishing Touches <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#finishing-touches" aria-label="Anchor">#</a></span></h3>
-<figure class="half">
+<h3 id="finishing-touches" class="relative group">Finishing Touches <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#finishing-touches" aria-label="Anchor">#</a></span></h3><figure class="half">
     <a href="/canvass/8.jpg"><img src="/canvass/8.jpg" height="340" hspace="5"></a>
     <a href="/canvass/9.jpg"><img src="/canvass/9.jpg" height="340" hspace="5"></a>
     <figcaption>Congressional District 13 (a) without and (b) with Highways, Hydrology and Cities </figcaption>
 </figure>
 <p>To improve the map’s readability, recognizable features like highways, lakes and major city labels have been added to the map.</p>
 <p>This map is heavily based on voting precinct boundaries and Congressional District boundaries. These are two features that may not be inherently recognizable to the reader. More familiar boundaries (e.g. county lines, hydrologic features) have been added to improve readability.</p>
-<h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2>
-<h3 id="data-sources-1" class="relative group">Data Sources <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#data-sources-1" aria-label="Anchor">#</a></span></h3>
-<p><em>Precinct Information</em></p>
+<h2 id="problems" class="relative group">Problems <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#problems" aria-label="Anchor">#</a></span></h2><h3 id="data-sources-1" class="relative group">Data Sources <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#data-sources-1" aria-label="Anchor">#</a></span></h3><p><em>Precinct Information</em></p>
 <p>California, more specifically the Secretary of State, does not have an aggregated list of general election votes and voter registrations by precinct available to the public. As a result, the 2012 demographic and voter information is sourced through a third party. The <em>Berkeley School of Law</em> information has aggregated datasets from the Statements of Vote (SOV) and Statements of Registration from California’s 58 counties, as collected by each county’s respective County Registrar of Voters or County Clerks.</p>
 <p><em>Census Information</em></p>
 <p>There is a modest learning curve that comes with the readability of Census data. With some research, there are resources available to decode file names, field names and field descriptions. Census data is also laden with concatenations and acronyms. Fortunately, the Census has made documentation widely available online.</p>
-<h3 id="variance-in-population" class="relative group">Variance in Population <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#variance-in-population" aria-label="Anchor">#</a></span></h3>
-<figure class="half">
+<h3 id="variance-in-population" class="relative group">Variance in Population <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#variance-in-population" aria-label="Anchor">#</a></span></h3><figure class="half">
     <a href="/canvass/10.jpg"><img src="/canvass/10.jpg"  hspace="5"></a>
     <a href="/canvass/11.jpg"><img src="/canvass/11.jpg"  hspace="5"></a>
     <figcaption>Congressional District 1, Lowest Density CD Still Has A
@@ -483,8 +504,7 @@ could be the most delegate rich section of the state.</p>
 <figcaption>Congressional District 12 – San Francisco
 Largely Overrepresented</figcaption></figure>
 <p>Creating a scale that allowed for at least one high priority precinct in each Congressional District was essential. The statistical over-representation of more populated areas was considered acceptable, as they will ultimately have the largest influence on at‐large delegates.</p>
-<h2 id="production" class="relative group">Production <span class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#production" aria-label="Anchor">#</a></span></h2>
-<p>Web Map, Limited Congressional Districts ‐ <del><a href="http://arcg.is/1TnmgNs">http://arcg.is/1TnmgNs</a></del> Link out of date</p>
+<h2 id="production" class="relative group">Production <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#production" aria-label="Anchor">#</a></span></h2><p>Web Map, Limited Congressional Districts ‐ <del><a href="http://arcg.is/1TnmgNs" target="_blank" rel="noreferrer">http://arcg.is/1TnmgNs</a></del> Link out of date</p>
 <p>I developed this project to challenge myself. Many aspects of this project were brand new to me and it was an absolute thrill to be able to troubleshoot my way through it.</p>
 <p>The data research proved more challenging than I expected, but good data is the literal cornerstone of a good project. Utilizing two completely different data sources, finding the shapefiles, inspecting the data tables then ensuring my joins would be adequate, took up the first third of my semester.</p>
 <p>Creating a formula that answered the question, “What gives a precinct a higher priority over another?” proved to be the largest challenge. My answer: a top priority precinct will have a moderate to high population density, high voter turnout in the 2012 General Election, and a high rate of Democrat and unaffiliated voters. These are the best areas to send an individual out into the field to canvass and expect not only a good number of contacts made, but fair majority of positive interactions.</p>
@@ -497,35 +517,70 @@ was the opportunity to dive right into the spatial analysis tools like the raste
 <hr>
 <ol>
 <li id="fn:1">
-<p><a href="https://www.census.gov/geo/maps-data/data/tiger-data.html">https://www.census.gov/geo/maps-data/data/tiger-data.html</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="https://www.census.gov/geo/maps-data/data/tiger-data.html" target="_blank" rel="noreferrer">https://www.census.gov/geo/maps-data/data/tiger-data.html</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2">
-<p><a href="http://statewidedatabase.org/d10/index.html">http://statewidedatabase.org/d10/index.html</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p><a href="http://statewidedatabase.org/d10/index.html" target="_blank" rel="noreferrer">http://statewidedatabase.org/d10/index.html</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
 
       </div>
     </section>
-    <footer class="pt-8 max-w-prose print:hidden">
+    <footer class="max-w-prose pt-8 print:hidden">
       
   <div class="flex">
+    
+    
     
       
       
         
-        <img
-          class="w-24 h-24 !mt-0 !mb-0 ltr:mr-4 rtl:ml-4 rounded-full"
-          width="96"
-          height="96"
-          alt="Jes LaCourse"
-          src="/images/bio-photo_hu48cb0bfab1d130b60b08d8771d05ca5a_370940_192x192_fill_q75_box_smart1.jpg"
-        />
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="1134"
+        height="1134"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="Jes LaCourse"
+        loading="lazy" decoding="async"
+        
+          src="/images/bio-photo_hu48cb0bfab1d130b60b08d8771d05ca5a_370940_660x0_resize_q75_box.jpg"
+          srcset="/images/bio-photo_hu48cb0bfab1d130b60b08d8771d05ca5a_370940_330x0_resize_q75_box.jpg 330w,/images/bio-photo_hu48cb0bfab1d130b60b08d8771d05ca5a_370940_660x0_resize_q75_box.jpg 660w
+          
+            ,/images/bio-photo_hu48cb0bfab1d130b60b08d8771d05ca5a_370940_1024x0_resize_q75_box.jpg 1024w
+          
+          
+            ,/images/bio-photo.jpg 1134w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
       
     
     <div class="place-self-center">
       
-        <div class="text-[0.6rem] leading-3 text-neutral-500 dark:text-neutral-400 uppercase">
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
           Author
         </div>
         <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
@@ -540,55 +595,27 @@ was the opportunity to dive right into the spatial analysis tools like the raste
     
       
         <a
-          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
           href="https://github.com/jeslacourse"
           target="_blank"
           aria-label="Github"
           rel="me noopener noreferrer"
-          >
-
-  <span class="relative inline-block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-
-  </span>
-
-</a
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
         >
       
     
       
         <a
-          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
           href="https://linkedin.com/in/jeslacourse"
           target="_blank"
           aria-label="Linkedin"
           rel="me noopener noreferrer"
-          >
-
-  <span class="relative inline-block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-
-  </span>
-
-</a
-        >
-      
-    
-      
-        <a
-          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
-          href="https://twitter.com/jeslacourse"
-          target="_blank"
-          aria-label="Twitter"
-          rel="me noopener noreferrer"
-          >
-
-  <span class="relative inline-block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
-
-  </span>
-
-</a
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
         >
       
     
@@ -611,14 +638,11 @@ was the opportunity to dive right into the spatial analysis tools like the raste
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group" href="/docs/2020-04-16-git-commands/2020-04-16-git-commands/">
+            <a class="group flex" href="/docs/2020-04-16-git-commands/2020-04-16-git-commands/">
               <span
-                class="mr-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-              <span
-                class="ml-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
-                >&rarr;</span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
               >
               <span class="flex flex-col">
                 <span
@@ -627,7 +651,7 @@ was the opportunity to dive right into the spatial analysis tools like the raste
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2020-04-16 00:00:00 &#43;0000 UTC">April 16, 2020</time>
+                    <time datetime="2020-04-16 00:00:00 &#43;0000 UTC">16 April 2020</time>
                   
                 </span>
               </span>
@@ -636,7 +660,7 @@ was the opportunity to dive right into the spatial analysis tools like the raste
         </span>
         <span>
           
-            <a class="flex text-right group" href="/docs/2020-05-12-facet-figures/2020-05-12-facet-figures/">
+            <a class="group flex text-right" href="/docs/2020-05-12-facet-figures/2020-05-12-facet-figures/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
@@ -644,17 +668,14 @@ was the opportunity to dive right into the spatial analysis tools like the raste
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2020-05-12 00:00:00 &#43;0000 UTC">May 12, 2020</time>
+                    <time datetime="2020-05-12 00:00:00 &#43;0000 UTC">12 May 2020</time>
                   
                 </span>
               </span>
               <span
-                class="ml-3 ltr:inline rtl:hidden text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 ltr:hidden rtl:inline text-neutral-700 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400"
-                >&larr;</span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
               >
             </a>
           
@@ -669,12 +690,10 @@ was the opportunity to dive right into the spatial analysis tools like the raste
   </article>
 
         
-          <div
-            class="absolute top-[100vh] ltr:right-0 rtl:left-0 w-12 pointer-events-none bottom-0"
-          >
+          <div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12">
             <a
               href="#the-top"
-              class="w-12 h-12 sticky pointer-events-auto top-[calc(100vh-5.5rem)] bg-neutral/50 dark:bg-neutral-800/50 backdrop-blur rounded-full text-xl flex items-center justify-center text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400"
+              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
               aria-label="Scroll to top"
               title="Scroll to top"
             >
@@ -686,17 +705,22 @@ was the opportunity to dive right into the spatial analysis tools like the raste
   
   
     <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
-      <ul class="flex flex-col list-none sm:flex-row">
+      <ul class="flex list-none flex-col sm:flex-row">
         
-          <li
-            class="mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0"
-          >
-            <a
-              class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-              href="/tags/"
-              title="Tags"
-              >Tags</a
-            >
+          
+          <li class="group mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0">
+            
+              <a
+                href="/tags/"
+                title=""
+                
+                ><span
+                    class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                    >Tags</span
+                  >
+                </a
+              >
+            
           </li>
         
       </ul>
@@ -718,45 +742,41 @@ was the opportunity to dive right into the spatial analysis tools like the raste
           
           
           Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
-            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://git.io/hugo-congo" target="_blank" rel="noopener noreferrer">Congo</a>
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
         </p>
       
     </div>
-    
-    
-      <div
-        class="text-sm cursor-pointer text-neutral-700 dark:text-neutral hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-14 rtl:ml-14"
-      >
-        <button
-          id="appearance-switcher"
-          class="w-12 h-12 "
-          type="button"
-          title="Switch to dark appearance"
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
         >
-          <span class="inline dark:hidden">
-
-  <span class="relative inline-block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
-
-  </span>
-
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Switch to dark appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
 </span>
-          <span class="hidden dark:inline">
-
-  <span class="relative inline-block align-text-bottom icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
-
-  </span>
-
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Switch to light appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
 </span>
-        </button>
-      </div>
-    
+            </div>
+          </button>
+        </div>
+      
+    </div>
   </div>
   
   
 </footer>
-
 
 
 
@@ -780,7 +800,6 @@ was the opportunity to dive right into the spatial analysis tools like the raste
     });
     </script>
     
-
     </div>
   </body>
 </html>

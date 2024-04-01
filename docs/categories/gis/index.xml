@@ -6,15 +6,14 @@
     <description>Recent content in GIS on jeslacourse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 18 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://jeslacourse.github.io/categories/gis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jeslacourse.github.io/categories/gis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>California Canvass Map</title>
       <link>https://jeslacourse.github.io/docs/2020-04-18-california-canvass-map/2020-04-18-california-canvass-map/</link>
       <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://jeslacourse.github.io/docs/2020-04-18-california-canvass-map/2020-04-18-california-canvass-map/</guid>
       <description>The intent of this project is to determine the best voting precincts, within the state of California, in which to send political canvassers. The map will be best utilized by a small team or individual campaign coordinator who will then send teams out to the highest priority precincts.</description>
     </item>
-    
   </channel>
 </rss>

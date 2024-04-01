@@ -1,56 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>rstats on jeslacourse</title>
+    <title>Rstats on jeslacourse</title>
     <link>https://jeslacourse.github.io/tags/rstats/</link>
-    <description>Recent content in rstats on jeslacourse</description>
+    <description>Recent content in Rstats on jeslacourse</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 13 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jeslacourse.github.io/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jeslacourse.github.io/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Model Fit and Residuals with R</title>
       <link>https://jeslacourse.github.io/docs/2022-10-06-errors-and-residuals-with-r/</link>
       <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://jeslacourse.github.io/docs/2022-10-06-errors-and-residuals-with-r/</guid>
       <description>Reading &lt;code&gt;lm()&lt;/code&gt; outputs and residual analysis for linear models</description>
     </item>
-    
     <item>
       <title>Simple Regression with R</title>
       <link>https://jeslacourse.github.io/docs/2022-10-02-simple-regression/</link>
       <pubDate>Sun, 02 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://jeslacourse.github.io/docs/2022-10-02-simple-regression/</guid>
       <description>An introduction to linear regression with &lt;code&gt;lm()&lt;/code&gt; in R</description>
     </item>
-    
     <item>
       <title>Barriers in Biology</title>
       <link>https://jeslacourse.github.io/docs/2021-11-18-barriers-in-biology/barriers/</link>
       <pubDate>Thu, 18 Nov 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://jeslacourse.github.io/docs/2021-11-18-barriers-in-biology/barriers/</guid>
       <description>This study tracks the impact of course-taking and change-in-major habits on award-earning and transfers for the 224 Biology for Transfer majors in the 2017-18 cohort.</description>
     </item>
-    
     <item>
       <title>Feature Choice in Classification of Wheat Kernels</title>
       <link>https://jeslacourse.github.io/docs/2020-05-17-feature-choice-in-classification/2020-05-17-feature-choice-in-classification/</link>
       <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://jeslacourse.github.io/docs/2020-05-17-feature-choice-in-classification/2020-05-17-feature-choice-in-classification/</guid>
       <description>Feature selection is just as important as hyperparameter choice, yet many classifiers cherry-pick features without much empirical basis. While hyperparameters are easier to tweak, we must account for the impact of boosting these hyperparameters and the risk and impact of overfit.</description>
     </item>
-    
     <item>
       <title>Highlights and Facets for Visualizing Categorical Data</title>
       <link>https://jeslacourse.github.io/docs/2020-05-12-facet-figures/2020-05-12-facet-figures/</link>
       <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://jeslacourse.github.io/docs/2020-05-12-facet-figures/2020-05-12-facet-figures/</guid>
       <description>Using &lt;code&gt;gghighlight()&lt;/code&gt; to effectively visualize comparisons between factors</description>
     </item>
-    
   </channel>
 </rss>
