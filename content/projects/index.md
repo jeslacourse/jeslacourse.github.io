@@ -103,7 +103,10 @@ Multivariate normal distribution; Mahalanobis distance; sampling distributions o
 Fundamental concepts of probability theory, discrete and continuous random variables, standard distributions, moments and moment-generating functions, laws of large numbers and the central limit theorem. R.
 
 ### Regression Analysis 
-Simple and multi linear regression, variable selection techniques, stepwise regression, analysis of covariance, influence measures. R.
+
+Project: [Regression Notes](/regression/)
+
+Simple and multi- linear regression, variable selection techniques, stepwise regression, analysis of covariance, influence measures. R.
 
 ### Statistical Learning 
 Fundamental concepts and methods in statistical learning with emphasis on supervised learning. Principles, methodologies and applications of parametric and nonparametric regression, classification, resampling and model selection techniques. Python.
